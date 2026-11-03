@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بنك الأسئلة — إعداد الاختبارات</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef2f7; --card:#fff; --ink:#0f172a; --muted:#64748b;
+  --primary:#2563eb; --primary-d:#1d4ed8; --accent:#0ea5e9;
+  --border:#e2e8f0; --danger:#dc2626; --ok:#16a34a; --warn:#d97706;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:'Cairo','Segoe UI',Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.6}
+button,input,select,textarea{font-family:inherit;font-size:inherit;color:inherit}
+
+header{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0ea5e9);color:#fff;padding:18px 0 22px;box-shadow:0 6px 24px rgba(30,58,138,.25);position:sticky;top:0;z-index:50}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+.hdr{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{width:46px;height:46px;border-radius:13px;background:rgba(255,255,255,.18);display:grid;place-items:center;font-size:24px;flex:0 0 auto;border:1px solid rgba(255,255,255,.28)}
+.hdr h1{font-size:20px;margin:0;font-weight:700;line-height:1.25}
+.hdr p{margin:2px 0 0;font-size:12.5px;opacity:.85}
+.hdr-actions{margin-inline-start:auto;display:flex;gap:8px;flex-wrap:wrap}
+
+.btn{display:inline-flex;align-items:center;gap:7px;border:1px solid transparent;background:#fff;color:var(--ink);padding:9px 15px;border-radius:10px;cursor:pointer;font-weight:600;font-size:14px;transition:.15s;white-space:nowrap}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn.primary{background:var(--primary);color:#fff;box-shadow:0 4px 12px rgba(37,99,235,.35)}
+.btn.primary:hover{background:var(--primary-d)}
+.btn.light{background:rgba(255,255,255,.16);color:#fff;border-color:rgba(255,255,255,.35)}
+.btn.light:hover{background:rgba(255,255,255,.28)}
+.btn.ghost{background:#fff;border-color:var(--border)}
+.btn.ghost:hover{background:#f8fafc}
+.btn.danger{background:#fee2e2;color:#b91c1c;border-color:#fecaca}
+.btn.danger:hover{background:#fecaca}
+.btn.tiny{padding:5px 10px;font-size:12.5px;border-radius:8px;background:#eff6ff;color:#1d4ed8;border:1px solid #dbeafe}
+.btn.tiny:hover{background:#dbeafe}
+.icon-btn{border:none;background:transparent;width:34px;height:34px;border-radius:9px;cursor:pointer;display:grid;place-items:center;font-size:15px;color:var(--muted);transition:.15s}
+.icon-btn:hover{background:#f1f5f9;color:var(--ink)}
+.icon-btn.danger:hover{background:#fee2e2;color:#b91c1c}
+
+.toolbar{background:var(--card);border-radius:var(--radius);padding:14px;margin:20px 0 16px;box-shadow:0 2px 10px rgba(15,23,42,.06);display:flex;gap:10px;flex-wrap:wrap;align-items:center;border:1px solid var(--border)}
+.toolbar .search{flex:1 1 260px;position:relative}
+.toolbar .search input{width:100%;padding:10px 38px 10px 12px;border:1px solid var(--border);border-radius:10px;background:#f8fafc;outline:none}
+.toolbar .search input:focus{border-color:var(--primary);background:#fff;box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.toolbar .search::before{content:"🔍";position:absolute;inset-inline-end:12px;top:50%;transform:translateY(-50%);font-size:14px;opacity:.6}
+.toolbar select{padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:#f8fafc;outline:none;cursor:pointer;min-width:150px}
+.toolbar select:focus{border-color:var(--primary);background:#fff}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.stat .ic{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-size:18px;background:#eff6ff}
+.stat .ic.g{background:#dcfce7}.stat .ic.o{background:#ffedd5}.stat .ic.p{background:#ede9fe}
+.stat b{display:block;font-size:19px;line-height:1.2}
+.stat span{font-size:12px;color:var(--muted)}
+
+.list{display:flex;flex-direction:column;gap:12px;padding-bottom:60px}
+.qcard{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:0 1px 6px rgba(15,23,42,.05);transition:.18s;position:relative}
+.qcard:hover{box-shadow:0 8px 24px rgba(15,23,42,.10);border-color:#cbd5e1}
+.qcard-top{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:9px}
+.badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
+.badge.type{background:#eff6ff;color:#1d4ed8;border-color:#dbeafe}
+.badge.cat{background:#f0fdf4;color:#15803d;border-color:#dcfce7}
+.badge.easy{background:#ecfdf5;color:#047857}
+.badge.medium{background:#fffbeb;color:#b45309}
+.badge.hard{background:#fef2f2;color:#b91c1c}
+.badge.pts{margin-inline-start:auto;background:#f8fafc;color:#475569;border-color:var(--border)}
+.qcard-text{font-size:15px;font-weight:600;line-height:1.7;white-space:pre-wrap;word-break:break-word}
+.qcard-sub{font-size:12.5px;color:var(--muted);margin-top:6px}
+.qcard-actions{display:flex;gap:4px;margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);justify-content:flex-end}
+.qcard-actions .btn{padding:6px 12px;font-size:13px}
+.empty{text-align:center;padding:60px 20px;color:var(--muted);background:var(--card);border:2px dashed var(--border);border-radius:var(--radius)}
+.empty .big{font-size:44px;margin-bottom:10px}
+
+.modal{position:fixed;inset:0;background:rgba(15,23,42,.55);display:none;align-items:flex-start;justify-content:center;padding:24px 14px;z-index:200;overflow:auto;backdrop-filter:blur(3px)}
+.modal.open{display:flex}
+.modal-card{background:#fff;border-radius:16px;width:100%;max-width:760px;box-shadow:0 24px 60px rgba(0,0,0,.3);animation:pop .18s ease-out;margin:auto}
+.modal-card.wide{max-width:1000px}
+@keyframes pop{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+.modal-head{display:flex;align-items:center;padding:16px 20px;border-bottom:1px solid var(--border)}
+.modal-head h2{margin:0;font-size:17px}
+.modal-head .icon-btn{margin-inline-start:auto}
+.modal-body{padding:20px;max-height:70vh;overflow:auto}
+.modal-foot{display:flex;justify-content:flex-end;gap:10px;padding:14px 20px;border-top:1px solid var(--border);background:#f8fafc;border-radius:0 0 16px 16px}
+
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:12px}
+.fld{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.fld>span{font-size:13px;font-weight:700;color:#334155}
+.fld small{font-weight:400;color:var(--muted)}
+.fld input[type=text],.fld input[type=number],.fld input[type=color],.fld input[type=date],.fld select,.fld textarea{padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:#f8fafc;outline:none;width:100%;transition:.15s}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--primary);background:#fff;box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.fld input[type=color]{padding:2px;height:40px;cursor:pointer}
+.fld textarea{resize:vertical;min-height:76px;line-height:1.7}
+.fld-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+.fld-head span{font-size:13px;font-weight:700;color:#334155}
+.sect-label{font-size:13px;font-weight:700;color:var(--primary-d);background:#eff6ff;padding:6px 12px;border-radius:8px;margin:16px 0 10px;border-right:3px solid var(--primary)}
+
+.sub-item-card{background:#fff;border:1px solid #cbd5e1;border-radius:10px;padding:12px;margin-bottom:12px}
+.sub-item-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-weight:700;color:#1d4ed8;font-size:13px}
+.sub-item-text{width:100%;min-height:60px;padding:8px 10px;border:1px solid #e2e8f0;border-radius:8px;resize:vertical;margin-bottom:8px;font-family:inherit;font-size:14px;background:#f8fafc;outline:none}
+.sub-item-text:focus{border-color:var(--primary);background:#fff;box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+
+.opt-list,.pair-list,.item-list{display:flex;flex-direction:column;gap:8px}
+.opt-row,.pair-row,.item-row{display:flex;align-items:center;gap:8px;background:#f8fafc;border:1px solid var(--border);border-radius:10px;padding:6px 10px}
+.opt-row input[type=text],.pair-row input[type=text],.item-row input[type=text]{flex:1;padding:8px 10px;border:1px solid var(--border);border-radius:8px;background:#fff;outline:none;min-width:0}
+.opt-row input[type=text]:focus,.pair-row input[type=text]:focus,.item-row input[type=text]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.opt-row input[type=radio],.opt-row input[type=checkbox]{width:18px;height:18px;accent-color:var(--primary);cursor:pointer;flex:0 0 auto}
+.opt-letter{font-weight:700;color:#1d4ed8;font-size:13px;min-width:18px;text-align:center}
+.pair-row .arrow{color:var(--muted);font-size:14px;flex:0 0 auto}
+.item-row .num{font-weight:700;color:#1d4ed8;font-size:13px;min-width:22px;text-align:center}
+.tf-group{display:flex;gap:10px;flex-wrap:wrap;padding:4px 0}
+.tf-group label{display:flex;align-items:center;gap:8px;background:#f8fafc;border:1px solid var(--border);border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.tf-group label:hover{background:#eff6ff;border-color:#bfdbfe}
+.tf-group input{width:18px;height:18px;accent-color:var(--primary);cursor:pointer}
+.checks{display:flex;flex-wrap:wrap;gap:16px;padding:12px;background:#f8fafc;border:1px solid var(--border);border-radius:10px}
+.checks label{display:flex;align-items:center;gap:8px;cursor:pointer;font-size:14px;font-weight:600}
+.checks input{width:18px;height:18px;accent-color:var(--primary);cursor:pointer}
+.hint{font-size:12.5px;color:var(--muted);background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:8px 12px;margin-top:8px}
+
+.preview-scroll{overflow:auto;background:#e2e8f0;padding:18px;border-radius:0 0 16px 16px;max-height:75vh}
+.page{width:21cm;min-height:29.7cm;padding:2cm;background:#fff;margin:0 auto;box-shadow:0 6px 30px rgba(0,0,0,.18);border-radius:2px}
+.page + .page{margin-top:24px}
+@media(max-width:1000px){ .page{width:100%;padding:20px;min-height:auto} }
+
+/* أنماط المستند الأساسية */
+.doc{font-family:'Cairo','Segoe UI',Arial,sans-serif;color:#000;font-size:13px;line-height:1.75;direction:rtl}
+.doc-header{width:100%;border-collapse:collapse;font-size:12.5px;margin-bottom:4px}
+.doc-header td{vertical-align:top;padding:2px 6px}
+.doc-header .hdr-r{width:32%;text-align:right}
+.doc-header .hdr-c{width:36%;text-align:center}
+.doc-header .hdr-l{width:32%;text-align:left;padding-left:1.5cm}
+.doc-header .hdr-title{font-size:14px;font-weight:700;margin-bottom:2px}
+.doc-header .hdr-sub{font-size:12px}
+.doc-header .line{white-space:nowrap}
+.doc-meta{width:100%;border-collapse:collapse;font-size:11.5px;margin:2px 0 0}
+.doc-meta td{padding:1px 4px;text-align:center;color:#222}
+.doc-hr{border:0;border-top:1.5px solid #000;margin:8px 0 12px}
+.doc table.two-col{width:100%;border-collapse:collapse;table-layout:fixed;margin-top:4px}
+.doc table.two-col td{vertical-align:top;padding:0 4px}
+.doc table.two-col td.col-r{width:50%;border-left:1.2px solid #000;padding-left:8px}
+.doc table.two-col td.col-l{width:50%;padding-right:8px}
+.doc .section-title{font-size:16px;font-weight:700;margin:16px 0 10px;padding-bottom:3px;border-bottom:1px solid #000}
+
+/* الإطار الرقيق لكل مجموعة */
+.doc .q {
+  margin-bottom: 14px;
+  page-break-inside: avoid;
+  border: 1px solid #000;
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+
+.doc .q-head{font-size:13.5px;font-weight:700;line-height:1.8;margin-bottom:6px}
+.doc .q-head-group{ border-bottom: 1px dashed #555; padding-bottom: 6px; margin-bottom: 10px; }
+.doc .sub-items{margin-top:4px}
+.doc .sub-q{margin-bottom:12px;page-break-inside:avoid}
+.doc .sub-q-text{font-size:13px;line-height:1.8;font-weight:400}
+.doc .sub-q-num{font-weight:700;margin-left:4px}
+.doc .parens{font-weight:bold;letter-spacing:2px;margin-right:6px;white-space:nowrap}
+
+.doc .qp{font-weight:400;font-size:11.5px;color:#555;margin-inline-start:4px}
+
+/* خيارات اختيار من متعدد - تحت السؤال */
+.doc table.opts{width:100%;border-collapse:collapse;margin-top:5px;margin-bottom:5px}
+.doc table.opts td.opt{padding:2px 8px;font-size:12.5px;vertical-align:top;width:50%;font-weight:400}
+
+/* خيارات اختيار من متعدد - بجانب العبارة (Inline) */
+.doc .opts-inline{display:inline;}
+.doc .opt-inline{display:inline-block;white-space:nowrap;font-size:12.5px;font-weight:400;}
+
+.doc table.two-col table.opts td.opt{width:auto}
+.doc .ansline{border-bottom:1px solid #999;height:22px;margin-top:8px}
+.doc .answer-key{margin-top:22px;border-top:2px solid #000;padding-top:10px}
+.doc .answer-key.separate{page-break-before:always}
+.doc .answer-key h2{font-size:16px;text-align:center;margin:0 0 10px}
+.doc .answer-key ul{margin:0;padding:0;list-style:none;font-size:12.5px}
+.doc .answer-key li{margin-bottom:4px}
+
+#toast{position:fixed;bottom:26px;left:50%;transform:translate(-50%,20px);background:#0f172a;color:#fff;padding:11px 22px;border-radius:12px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:.25s;z-index:999;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:640px){.hdr h1{font-size:17px}.btn{padding:8px 12px;font-size:13px}.toolbar select{min-width:0;flex:1 1 130px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hdr">
+    <div class="logo">📚</div>
+    <div>
+      <h1>بنك الأسئلة التفاعلي</h1>
+      <p>أضف أسئلتك بكل الأنواع • عدّل • احذف • عاين • صدّر Word بمقاس A4</p>
+    </div>
+    <div class="hdr-actions">
+      <button class="btn light" id="btnSettings">⚙️ الإعدادات</button>
+      <button class="btn light" id="btnPreview">👁️ معاينة</button>
+      <button class="btn light" id="btnWord">📄 تصدير Word</button>
+      <button class="btn primary" id="btnAdd">＋ سؤال جديد</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="toolbar">
+    <div class="search"><input id="fSearch" placeholder="ابحث في نص الأسئلة والتصنيفات..."></div>
+    <select id="fFilterCat"><option value="">كل التصنيفات</option></select>
+    <select id="fFilterType"><option value="">كل الأنواع</option></select>
+    <select id="fFilterDiff">
+      <option value="">كل المستويات</option>
+      <option value="easy">سهل</option>
+      <option value="medium">متوسط</option>
+      <option value="hard">صعب</option>
+    </select>
+    <button class="icon-btn" id="btnBackup" title="نسخة احتياطية (JSON)">💾</button>
+    <button class="icon-btn" id="btnRestore" title="استيراد نسخة (JSON)">📥</button>
+    <input type="file" id="fileRestore" accept=".json" hidden>
+  </div>
+
+  <div class="stats" id="stats"></div>
+  <div class="list" id="list"></div>
+</div>
+
+<!-- Modal: Question -->
+<div class="modal" id="qModal">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h2 id="qModalTitle">سؤال جديد</h2>
+      <button class="icon-btn" data-close>✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-grid">
+        <label class="fld"><span>نوع السؤال</span><select id="fType"></select></label>
+        <label class="fld"><span>التصنيف / الوحدة <small>(اختياري)</small></span>
+          <input type="text" id="fCategory" list="catList" placeholder="اتركه فارغاً إن لم ترغب">
+          <datalist id="catList"></datalist>
+        </label>
+        <label class="fld"><span>مستوى الصعوبة</span>
+          <select id="fDifficulty">
+            <option value="easy">سهل</option>
+            <option value="medium" selected>متوسط</option>
+            <option value="hard">صعب</option>
+          </select>
+        </label>
+        <label class="fld"><span>الدرجة الكلية للمجموعة</span><input type="number" id="fPoints" min="0" step="0.25" value="1"></label>
+      </div>
+
+      <div id="typeFields"></div>
+
+      <label class="fld" style="margin-top:14px">
+        <span>ملاحظات / مرجع <small>(اختياري)</small></span>
+        <input type="text" id="fNotes" placeholder="مثال: صفحة 42 من الكتاب">
+      </label>
+    </div>
+    <div class="modal-foot">
+      <button class="btn ghost" data-close>إلغاء</button>
+      <button class="btn primary" id="btnSaveQ">💾 حفظ السؤال</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Preview -->
+<div class="modal" id="previewModal">
+  <div class="modal-card wide">
+    <div class="modal-head">
+      <h2>معاينة الاختبار</h2>
+      <button class="btn tiny" id="btnPrint" style="margin-inline-start:auto">🖨️ طباعة</button>
+      <button class="icon-btn" data-close>✕</button>
+    </div>
+    <div class="preview-scroll">
+      <div id="previewBody"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Settings -->
+<div class="modal" id="settingsModal">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h2>إعدادات الاختبار والتصدير</h2>
+      <button class="icon-btn" data-close>✕</button>
+    </div>
+    <div class="modal-body">
+
+      <div class="sect-label">🏛️ معلومات الجهة</div>
+      <div class="form-grid">
+        <label class="fld" style="grid-column:1/-1">
+          <span>المديرية <small>(اكتب النص كاملاً)</small></span>
+          <input type="text" id="sDirectorate" placeholder="مثال: مديرية التربية في حلب">
+        </label>
+        <label class="fld"><span>اسم المدرسة</span><input type="text" id="sSchool"></label>
+        <label class="fld"><span>اسم المعلم</span><input type="text" id="sTeacher"></label>
+      </div>
+
+      <div class="sect-label">📝 معلومات الاختبار</div>
+      <div class="form-grid">
+        <label class="fld"><span>نوع الاختبار</span>
+          <select id="sExamType">
+            <option value="امتحان">امتحان</option>
+            <option value="مذاكرة">مذاكرة</option>
+          </select>
+        </label>
+        <label class="fld"><span>المادة</span><input type="text" id="sSubject"></label>
+        <label class="fld"><span>الصف</span><input type="text" id="sGrade"></label>
+        <label class="fld"><span>الفصل</span>
+          <select id="sSemester">
+            <option value="الفصل الأول">الفصل الأول</option>
+            <option value="الفصل الثاني">الفصل الثاني</option>
+          </select>
+        </label>
+        <label class="fld"><span>العام الدراسي</span><input type="text" id="sAcademicYear" placeholder="مثال: 2024/2025"></label>
+        <label class="fld"><span>التاريخ</span><input type="date" id="sDate"></label>
+        <label class="fld"><span>زمن الاختبار</span><input type="text" id="sDuration" placeholder="مثال: ساعة واحدة"></label>
+        <label class="fld"><span>الدرجة الكلية المخصصة <small>(اختياري)</small></span>
+          <input type="text" id="sCustomTotal" placeholder="مثال: 10 درجات (اتركه فارغاً للحساب التلقائي)">
+        </label>
+      </div>
+
+      <div class="sect-label">📐 تخطيط الصفحة والعرض</div>
+      <div class="form-grid">
+        <label class="fld"><span>طريقة عرض خيارات (اختيار من متعدد)</span>
+          <select id="sMcqLayout">
+            <option value="below">تحت السؤال (عمودين)</option>
+            <option value="inline">بجانب العبارة مباشرة</option>
+          </select>
+        </label>
+        <label class="fld"><span>المسافة بين الخيارات</span>
+          <select id="sMcqGap">
+            <option value="5px">ضيقة (5px)</option>
+            <option value="15px">متوسطة (15px)</option>
+            <option value="30px">واسعة (30px)</option>
+            <option value="50px">واسعة جداً (50px)</option>
+          </select>
+        </label>
+      </div>
+      <div class="checks">
+        <label><input type="checkbox" id="sTwoColumns"> صفحتان (عمودان) مع خط فاصل رأسي</label>
+      </div>
+      <div id="startFromWrap" style="display:none;margin-top:10px">
+        <div class="fld">
+          <span>بداية الأسئلة من</span>
+          <div class="checks">
+            <label><input type="radio" name="startFrom" value="right"> العمود الأيمن أولاً</label>
+            <label><input type="radio" name="startFrom" value="left"> العمود الأيسر أولاً</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="sect-label">👁️ خيارات العرض الأخرى</div>
+      <div class="form-grid">
+        <label class="fld" style="grid-column:1/-1">
+          <span>نموذج الإجابة</span>
+          <select id="sAnswerKeyMode">
+            <option value="none">لا يظهر أبداً</option>
+            <option value="same">في نهاية نفس الصفحة</option>
+            <option value="separate">في صفحة مستقلة</option>
+          </select>
+        </label>
+      </div>
+      <div class="checks">
+        <label><input type="checkbox" id="sShowPoints"> إظهار الدرجات</label>
+        <label><input type="checkbox" id="sGroup"> تجميع الأسئلة حسب التصنيف</label>
+      </div>
+
+      <div class="sect-label">🎨 تخصيص الخطوط والألوان (لكل نوع سؤال)</div>
+      <div id="fontSettingsContainer" style="display:flex;flex-direction:column;gap:10px;">
+        <!-- سيتم توليدها بالجافاسكربت -->
+      </div>
+
+      <div class="hint">💡 هذه الإعدادات تُحفظ تلقائياً وتُستخدم في المعاينة والتصدير والطباعة.</div>
+      
+      <div style="margin-top:20px; padding-top:15px; border-top:1px solid #e2e8f0; text-align:center;">
+        <button class="btn danger" id="btnClearAll" style="width:100%;">🗑️ مسح جميع البيانات (البدء من جديد)</button>
+      </div>
+
+    </div>
+    <div class="modal-foot">
+      <button class="btn primary" data-close>تم</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+/* =========================================================
+   الثوابت
+   ========================================================= */
+const KEY = 'qbank_ar_v1';
+const LETTERS = ['أ','ب','ج','د','هـ','و','ز','ح','ط','ي','ك','ل'];
+
+const TYPES = {
+  mcq:       { label:'اختيار من متعدد',      icon:'◉' },
+  multi:     { label:'اختيار متعدد الإجابات', icon:'☑' },
+  truefalse: { label:'صح / خطأ',              icon:'✔' },
+  short:     { label:'إجابة قصيرة',           icon:'✎' },
+  essay:     { label:'سؤال مقالي',            icon:'✍' },
+  fill:      { label:'إكمال الفراغات',        icon:'▭' },
+  match:     { label:'توصيل / مطابقة',        icon:'⇄' },
+  order:     { label:'ترتيب خطوات',           icon:'⇅' }
+};
+
+const DIFF = {
+  easy:   { label:'سهل',   cls:'easy'   },
+  medium: { label:'متوسط', cls:'medium' },
+  hard:   { label:'صعب',   cls:'hard'   }
+};
+
+const DEFAULT_INSTRUCTIONS = {
+  truefalse: 'ضع علامة (✓) أو (✗) أمام العبارات التالية:',
+  mcq: 'اختر الإجابة الصحيحة:',
+  multi: 'اختر الإجابات الصحيحة:',
+  short: 'أجب عن الأسئلة التالية:',
+  essay: 'أجب عن الأسئلة التالية:',
+  fill: 'أكمل الفراغات التالية:',
+  match: 'صل بين العمودين:',
+  order: 'رتب الخطوات التالية:'
+};
+
+const DEFAULT_TYPE_STYLES = {};
+Object.keys(TYPES).forEach(k => {
+  DEFAULT_TYPE_STYLES[k] = { font: 'inherit', size: '13px', color: '#000000' };
+});
+
+const DEFAULT_SETTINGS = {
+  directorate:'', school:'', teacher:'',
+  examType:'امتحان', semester:'الفصل الأول', academicYear:'',
+  subject:'', grade:'', date:'', duration:'', customTotal:'',
+  twoColumns:false, startFrom:'right',
+  answerKeyMode:'same',
+  showPoints:true, groupByCategory:false,
+  mcqLayout: 'below',
+  mcqGap: '15px',
+  typeStyles: JSON.parse(JSON.stringify(DEFAULT_TYPE_STYLES))
+};
+
+/* =========================================================
+   الحالة
+   ========================================================= */
+let state = { questions: [], settings: {...DEFAULT_SETTINGS} };
+let filters = { q:'', cat:'', type:'', diff:'' };
+let draft = null;
+let editingId = null;
+
+const $  = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2,7);
+
+/* =========================================================
+   التهيئة والترحيل
+   ========================================================= */
+function createEmptySubItem(type) {
+  const base = { text: '' };
+  if (type === 'mcq' || type === 'multi') {
+    base.options = [{text:'', correct:true}, {text:'', correct:false}, {text:'', correct:false}, {text:'', correct:false}];
+  } else if (type === 'truefalse') {
+    base.correctBool = true;
+  } else if (type === 'short' || type === 'essay' || type === 'fill') {
+    base.answer = '';
+  } else if (type === 'match') {
+    base.pairs = [{left:'', right:''}, {left:'', right:''}];
+  } else if (type === 'order') {
+    base.sequence = ['', '', ''];
+  }
+  return base;
+}
+
+function migrateQuestion(q) {
+  if (q.subItems) return q;
+  const sub = { text: q.text || '' };
+  if (q.type === 'mcq' || q.type === 'multi') sub.options = q.options || [];
+  else if (q.type === 'truefalse') sub.correctBool = q.correctBool !== undefined ? q.correctBool : true;
+  else if (q.type === 'short' || q.type === 'essay' || q.type === 'fill') sub.answer = q.answer || '';
+  else if (q.type === 'match') sub.pairs = q.pairs || [];
+  else if (q.type === 'order') sub.sequence = q.items || [];
+  
+  return {
+    id: q.id || uid(), type: q.type || 'mcq', category: q.category || '',
+    difficulty: q.difficulty || 'medium', points: q.points || 1,
+    instruction: '', subItems: [sub], notes: q.notes || ''
+  };
+}
+
+function migrateSettings(raw){
+  const saved = raw || {};
+  if(saved.answerKeyMode === undefined){
+    if(saved.showAnswers === false) saved.answerKeyMode = 'none';
+    else saved.answerKeyMode = 'same';
+  }
+  delete saved.showAnswers;
+  
+  if(!saved.typeStyles) saved.typeStyles = {};
+  Object.keys(TYPES).forEach(k => {
+    if(!saved.typeStyles[k]) {
+      saved.typeStyles[k] = { font: 'inherit', size: '13px', color: '#000000' };
+    }
+  });
+  return saved;
+}
+
+function loadState(){
+  try{
+    const raw = localStorage.getItem(KEY);
+    if(raw){
+      const p = JSON.parse(raw);
+      state.questions = (Array.isArray(p.questions) ? p.questions : []).map(migrateQuestion);
+      state.settings = Object.assign({}, DEFAULT_SETTINGS, migrateSettings(p.settings));
+      return;
+    }
+  }catch(e){ console.warn(e); }
+  // البدء بقائمة فارغة تماماً
+  state.questions = [];
+  saveState();
+}
+
+function saveState(){
+  try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){ toast('تعذّر الحفظ'); }
+}
+
+/* =========================================================
+   أدوات مساعدة
+   ========================================================= */
+function esc(t){ return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function escAttr(t){ return esc(t).replace(/"/g,'&quot;'); }
+function nl2br(t){ return esc(t).replace(/\n/g,'<br>'); }
+function toast(msg){ const el=$('#toast'); el.textContent=msg; el.classList.add('show'); clearTimeout(el._t); el._t=setTimeout(()=>el.classList.remove('show'),2200); }
+function openModal(sel){ $(sel).classList.add('open'); document.body.style.overflow='hidden'; }
+function closeModal(sel){ $(sel).classList.remove('open'); document.body.style.overflow=''; }
+function getFileTitle(){
+  const s = state.settings;
+  const parts = [s.examType, s.subject, s.grade].filter(x => x && String(x).trim());
+  return parts.length ? parts.join(' - ') : 'اختبار';
+}
+
+/* =========================================================
+   التهيئة
+   ========================================================= */
+function init(){
+  loadState();
+  $('#fType').innerHTML = Object.entries(TYPES).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('');
+  $('#fFilterType').innerHTML = '<option value="">كل الأنواع</option>' + Object.entries(TYPES).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('');
+  bindEvents();
+  render();
+}
+
+function bindEvents(){
+  document.addEventListener('click', e=>{
+    if(e.target.closest('[data-close]')){
+      const m = e.target.closest('.modal'); if(m) closeModal('#'+m.id);
+    }
+    if(e.target.classList.contains('modal')) closeModal('#'+e.target.id);
+  });
+  document.addEventListener('keydown', e=>{
+    if(e.key==='Escape') $$('.modal.open').forEach(m=>closeModal('#'+m.id));
+  });
+
+  $('#btnAdd').onclick = ()=> openQuestionModal(null);
+  $('#btnSettings').onclick = openSettings;
+  $('#btnPreview').onclick = openPreview;
+  $('#btnWord').onclick = exportWord;
+  $('#btnPrint').onclick = printDoc;
+
+  $('#fSearch').addEventListener('input', e=>{ filters.q=e.target.value.trim(); renderList(); });
+  $('#fFilterCat').addEventListener('change', e=>{ filters.cat=e.target.value; renderList(); });
+  $('#fFilterType').addEventListener('change', e=>{ filters.type=e.target.value; renderList(); });
+  $('#fFilterDiff').addEventListener('change', e=>{ filters.diff=e.target.value; renderList(); });
+
+  $('#fType').addEventListener('change', ()=>{
+    syncTypeFields();
+    const newType = $('#fType').value;
+    if(newType !== draft.type){
+      if(confirm('تغيير نوع السؤال سيؤدي إلى إعادة تعيين الحقول. هل تريد المتابعة؟')){
+        draft.type = newType;
+        draft.subItems = [createEmptySubItem(newType)];
+      } else {
+        $('#fType').value = draft.type;
+      }
+    }
+    renderTypeFields();
+  });
+  
+  $('#btnSaveQ').onclick = saveQuestion;
+
+  const box = $('#typeFields');
+  
+  box.addEventListener('click', e=>{
+    const btn = e.target.closest('[data-act]'); if(!btn) return;
+    const act = btn.dataset.act; 
+    const idx = btn.dataset.idx != null ? +btn.dataset.idx : -1;
+    const optidx = btn.dataset.optidx != null ? +btn.dataset.optidx : -1;
+    
+    syncTypeFields(); 
+
+    if(act === 'addSubItem') draft.subItems.push(createEmptySubItem(draft.type));
+    else if(act === 'delSubItem'){
+      if(draft.subItems.length > 1) draft.subItems.splice(idx, 1);
+      else { toast('يجب أن يحتوي السؤال على عبارة واحدة على الأقل'); return; }
+    }
+    else if(act === 'addSubOpt') draft.subItems[idx].options.push({text:'', correct:false});
+    else if(act === 'delSubOpt'){
+      const item = draft.subItems[idx];
+      const wasCorrect = item.options[optidx]?.correct;
+      item.options.splice(optidx, 1);
+      if(wasCorrect && draft.type === 'mcq' && item.options.length && !item.options.some(o=>o.correct)){
+        item.options[0].correct = true;
+      }
+    }
+    else if(act === 'addSubPair') draft.subItems[idx].pairs.push({left:'', right:''});
+    else if(act === 'delSubPair') draft.subItems[idx].pairs.splice(optidx, 1);
+    else if(act === 'addSubSeq') draft.subItems[idx].sequence.push('');
+    else if(act === 'delSubSeq') draft.subItems[idx].sequence.splice(optidx, 1);
+    
+    renderTypeFields();
+  });
+
+  box.addEventListener('change', e=>{
+    const t = e.target;
+    if(t.name.startsWith('corr_')){
+      syncTypeFields();
+      const idx = +t.dataset.idx;
+      const optidx = +t.dataset.optidx;
+      const item = draft.subItems[idx];
+      if(draft.type === 'mcq'){
+        item.options.forEach((o, j)=> o.correct = (j === optidx));
+      } else {
+        item.options[optidx].correct = t.checked;
+      }
+    }
+    if(t.name.startsWith('tf_')){
+      syncTypeFields();
+    }
+  });
+
+  $('#btnBackup').onclick = backup;
+  $('#btnRestore').onclick = ()=> $('#fileRestore').click();
+  $('#fileRestore').addEventListener('change', restore);
+
+  // زر مسح جميع البيانات
+  $('#btnClearAll').onclick = () => {
+    if(confirm('هل أنت متأكد من مسح جميع الأسئلة والإعدادات والبدء من جديد؟ لا يمكن التراجع عن هذه الخطوة.')) {
+      localStorage.removeItem(KEY);
+      window.location.reload();
+    }
+  };
+}
+
+/* =========================================================
+   العرض
+   ========================================================= */
+function render(){ renderStats(); renderList(); renderCategoryOptions(); }
+
+function renderStats(){
+  const all = state.questions; const shown = getFiltered();
+  const pts = shown.reduce((a,q)=>a+(+q.points||0),0);
+  const cats = new Set(all.map(q=>q.category).filter(Boolean)).size;
+  $('#stats').innerHTML = `
+    <div class="stat"><div class="ic">📝</div><div><b>${all.length}</b><span>إجمالي الأسئلة</span></div></div>
+    <div class="stat"><div class="ic g">🔎</div><div><b>${shown.length}</b><span>الأسئلة المعروضة</span></div></div>
+    <div class="stat"><div class="ic o">🎯</div><div><b>${pts%1===0?pts:pts.toFixed(2)}</b><span>مجموع الدرجات</span></div></div>
+    <div class="stat"><div class="ic p">🗂️</div><div><b>${cats}</b><span>التصنيفات</span></div></div>`;
+}
+
+function renderCategoryOptions(){
+  const cats = [...new Set(state.questions.map(q=>q.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ar'));
+  const sel = $('#fFilterCat'); const cur = sel.value;
+  sel.innerHTML = '<option value="">كل التصنيفات</option>' + cats.map(c=>`<option value="${escAttr(c)}">${esc(c)}</option>`).join('');
+  sel.value = cats.includes(cur) ? cur : '';
+  $('#catList').innerHTML = cats.map(c=>`<option value="${escAttr(c)}">`).join('');
+}
+
+function getFiltered(){
+  const q = filters.q.toLowerCase();
+  return state.questions.filter(item=>{
+    if(filters.cat && (item.category||'') !== filters.cat) return false;
+    if(filters.type && item.type !== filters.type) return false;
+    if(filters.diff && item.difficulty !== filters.diff) return false;
+    if(q){
+      const hay = [
+        item.instruction, item.category || '',
+        ...(item.subItems || []).map(sub => sub.text),
+        ...(item.subItems || []).flatMap(sub => (sub.options || []).map(o => o.text)),
+        ...(item.subItems || []).flatMap(sub => (sub.pairs || []).flatMap(p => [p.left, p.right])),
+        ...(item.subItems || []).flatMap(sub => sub.sequence || [])
+      ].join(' ').toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    return true;
+  });
+}
+
+function renderList(){
+  const list = $('#list'); const items = getFiltered();
+  if(!items.length){
+    list.innerHTML = `<div class="empty"><div class="big">🗒️</div><h3 style="margin:0 0 6px">لا توجد أسئلة</h3><p style="margin:0 0 16px">ابدأ بإضافة سؤال جديد أو عدّل معايير البحث.</p><button class="btn primary" onclick="openQuestionModal(null)">＋ إضافة سؤال</button></div>`;
+    renderStats(); return;
+  }
+  list.innerHTML = items.map(q=>{
+    const t = TYPES[q.type] || {label:'سؤال'}; const d = DIFF[q.difficulty] || DIFF.medium;
+    const mainText = q.instruction ? q.instruction : (q.subItems[0] ? q.subItems[0].text : '');
+    const subCount = q.subItems ? q.subItems.length : 0;
+    const badgeSub = subCount > 1 ? `<span class="badge" style="background:#f3e8ff;color:#7e22ce">${subCount} أسئلة فرعية</span>` : '';
+    const badgeCat = q.category ? `<span class="badge cat">🗂️ ${esc(q.category)}</span>` : '';
+
+    return `<article class="qcard" data-id="${q.id}">
+      <div class="qcard-top">
+        <span class="badge type">${t.icon} ${t.label}</span>
+        ${badgeSub}
+        ${badgeCat}
+        <span class="badge ${d.cls}">${d.label}</span>
+        <span class="badge pts">${(+q.points||0)} درجة</span>
+      </div>
+      <div class="qcard-text">${nl2br(mainText)}</div>
+      ${q.notes ? `<div class="qcard-sub">📌 ${esc(q.notes)}</div>` : ''}
+      <div class="qcard-actions">
+        <button class="btn ghost" data-edit="${q.id}">✏️ تعديل</button>
+        <button class="btn ghost" data-dup="${q.id}">⧉ تكرار</button>
+        <button class="btn danger" data-del="${q.id}">🗑️ حذف</button>
+      </div>
+    </article>`;
+  }).join('');
+  list.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>openQuestionModal(b.dataset.edit));
+  list.querySelectorAll('[data-dup]').forEach(b=>b.onclick=()=>duplicateQuestion(b.dataset.dup));
+  list.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>deleteQuestion(b.dataset.del));
+  renderStats();
+}
+
+/* =========================================================
+   نموذج السؤال
+   ========================================================= */
+function newDraft(type = 'mcq'){
+  return { 
+    id:uid(), type:type, category:'', difficulty:'medium', points:1, 
+    instruction:'', subItems:[createEmptySubItem(type)], notes:'' 
+  };
+}
+
+function openQuestionModal(id){
+  const found = id ? state.questions.find(q=>q.id===id) : null;
+  draft = found ? JSON.parse(JSON.stringify(found)) : newDraft('mcq');
+  
+  if(!draft.subItems) draft = migrateQuestion(draft);
+  
+  editingId = id || null;
+  $('#qModalTitle').textContent = id ? 'تعديل السؤال' : 'سؤال جديد';
+  $('#fType').value = draft.type;
+  $('#fCategory').value = draft.category || '';
+  $('#fDifficulty').value = draft.difficulty || 'medium';
+  $('#fPoints').value = (draft.points ?? 1);
+  $('#fNotes').value = draft.notes || '';
+  
+  renderTypeFields(); 
+  openModal('#qModal');
+  setTimeout(()=>$('#fInstruction')?.focus(),80);
+}
+
+function renderTypeFields(){
+  const box = $('#typeFields'); const t = draft.type;
+  
+  let html = `
+    <div class="fld">
+      <span>نص التوجيه / التعليمات <small>(اختياري - يظهر قبل الأسئلة)</small></span>
+      <input type="text" id="fInstruction" value="${escAttr(draft.instruction || '')}" placeholder="${DEFAULT_INSTRUCTIONS[t] || ''}">
+    </div>
+    <div class="fld">
+      <span>الأسئلة / العبارات</span>
+      <div id="subItemsContainer">
+  `;
+  
+  draft.subItems.forEach((item, i) => {
+    html += `<div class="sub-item-card" data-idx="${i}">
+      <div class="sub-item-header">
+        <span>السؤال / العبارة ${i + 1}</span>
+        ${draft.subItems.length > 1 ? `<button type="button" class="icon-btn danger" data-act="delSubItem" data-idx="${i}" title="حذف">✕</button>` : ''}
+      </div>
+      <textarea class="sub-item-text" data-idx="${i}" placeholder="اكتب هنا...">${esc(item.text)}</textarea>
+    `;
+    
+    if (t === 'truefalse') {
+      html += `<div class="tf-group">
+        <label><input type="radio" name="tf_${i}" value="true" ${item.correctBool ? 'checked' : ''}> ✔ صح</label>
+        <label><input type="radio" name="tf_${i}" value="false" ${!item.correctBool ? 'checked' : ''}> ✘ خطأ</label>
+      </div>`;
+    }
+    else if (t === 'mcq' || t === 'multi') {
+      const isMulti = t === 'multi';
+      html += `<div class="opt-list">`;
+      item.options.forEach((o, j) => {
+        html += `<div class="opt-row">
+          <input type="${isMulti ? 'checkbox' : 'radio'}" name="corr_${i}" data-idx="${i}" data-optidx="${j}" ${o.correct ? 'checked' : ''}>
+          <span class="opt-letter">${LETTERS[j] || j+1}</span>
+          <input type="text" class="sub-opt-text" data-idx="${i}" data-optidx="${j}" value="${escAttr(o.text)}" placeholder="نص الخيار">
+          <button type="button" class="icon-btn danger" data-act="delSubOpt" data-idx="${i}" data-optidx="${j}">✕</button>
+        </div>`;
+      });
+      html += `</div>
+        <button type="button" class="btn tiny" data-act="addSubOpt" data-idx="${i}" style="margin-top:6px">＋ إضافة خيار</button>`;
+    }
+    else if (t === 'short' || t === 'essay' || t === 'fill') {
+      html += `<input type="text" class="sub-answer" data-idx="${i}" value="${escAttr(item.answer)}" placeholder="الإجابة النموذجية">`;
+    }
+    else if (t === 'match') {
+      html += `<div class="pair-list">`;
+      item.pairs.forEach((p, j) => {
+        html += `<div class="pair-row">
+          <input type="text" class="sub-pair-left" data-idx="${i}" data-pairidx="${j}" value="${escAttr(p.left)}" placeholder="العنصر (أ)">
+          <span class="arrow">⇄</span>
+          <input type="text" class="sub-pair-right" data-idx="${i}" data-pairidx="${j}" value="${escAttr(p.right)}" placeholder="المطابق">
+          <button type="button" class="icon-btn danger" data-act="delSubPair" data-idx="${i}" data-pairidx="${j}">✕</button>
+        </div>`;
+      });
+      html += `</div>
+        <button type="button" class="btn tiny" data-act="addSubPair" data-idx="${i}" style="margin-top:6px">＋ إضافة زوج</button>`;
+    }
+    else if (t === 'order') {
+      html += `<div class="item-list">`;
+      item.sequence.forEach((it, j) => {
+        html += `<div class="item-row">
+          <span class="num">${j+1}</span>
+          <input type="text" class="sub-seq-input" data-idx="${i}" data-seqidx="${j}" value="${escAttr(it)}" placeholder="العنصر ${j+1}">
+          <button type="button" class="icon-btn danger" data-act="delSubSeq" data-idx="${i}" data-seqidx="${j}">✕</button>
+        </div>`;
+      });
+      html += `</div>
+        <button type="button" class="btn tiny" data-act="addSubSeq" data-idx="${i}" style="margin-top:6px">＋ إضافة عنصر</button>`;
+    }
+    html += `</div>`;
+  });
+  
+  html += `</div>
+    <button type="button" class="btn primary" data-act="addSubItem" style="margin-top:12px;width:100%">＋ إضافة سؤال / عبارة أخرى لنفس المجموعة</button>
+  </div>`;
+  
+  box.innerHTML = html;
+}
+
+function syncTypeFields(){
+  if(!draft) return;
+  draft.instruction = ($('#fInstruction')?.value || '').trim();
+  
+  draft.subItems.forEach((item, i) => {
+    const textEl = document.querySelector(`.sub-item-text[data-idx="${i}"]`);
+    if (textEl) item.text = textEl.value;
+    
+    if (draft.type === 'truefalse') {
+      const checked = document.querySelector(`input[name="tf_${i}"]:checked`);
+      if (checked) item.correctBool = (checked.value === 'true');
+    }
+    else if (draft.type === 'mcq' || draft.type === 'multi') {
+      item.options.forEach((opt, j) => {
+        const optTextEl = document.querySelector(`.sub-opt-text[data-idx="${i}"][data-optidx="${j}"]`);
+        if (optTextEl) opt.text = optTextEl.value;
+        
+        const corrEl = document.querySelector(`input[name="corr_${i}"][data-optidx="${j}"]`);
+        if (corrEl) opt.correct = corrEl.checked;
+      });
+    }
+    else if (draft.type === 'short' || draft.type === 'essay' || draft.type === 'fill') {
+      const ansEl = document.querySelector(`.sub-answer[data-idx="${i}"]`);
+      if (ansEl) item.answer = ansEl.value;
+    }
+    else if (draft.type === 'match') {
+      item.pairs.forEach((p, j) => {
+        const l = document.querySelector(`.sub-pair-left[data-idx="${i}"][data-pairidx="${j}"]`);
+        const r = document.querySelector(`.sub-pair-right[data-idx="${i}"][data-pairidx="${j}"]`);
+        if (l) p.left = l.value;
+        if (r) p.right = r.value;
+      });
+    }
+    else if (draft.type === 'order') {
+      item.sequence.forEach((it, j) => {
+        const seqEl = document.querySelector(`.sub-seq-input[data-idx="${i}"][data-seqidx="${j}"]`);
+        if (seqEl) item.sequence[j] = seqEl.value;
+      });
+    }
+  });
+}
+
+function syncDraft(){
+  draft.type = $('#fType').value;
+  draft.category = $('#fCategory').value.trim();
+  draft.difficulty = $('#fDifficulty').value;
+  draft.points = parseFloat($('#fPoints').value) || 0;
+  draft.notes = $('#fNotes').value.trim();
+  syncTypeFields();
+}
+
+function saveQuestion(){
+  syncDraft();
+  
+  if (draft.subItems.length === 0) { toast('⚠️ أضف سؤالاً واحداً على الأقل'); return; }
+  
+  for (let i = 0; i < draft.subItems.length; i++) {
+    const item = draft.subItems[i];
+    if (!item.text.trim()) { toast(`⚠️ السؤال ${i+1}: أدخل النص`); return; }
+    
+    if (draft.type === 'mcq' || draft.type === 'multi') {
+      const nonEmpty = item.options.filter(o => o.text.trim());
+      if (nonEmpty.length < 2) { toast(`⚠️ السؤال ${i+1}: أضف خيارين على الأقل`); return; }
+      if (!nonEmpty.some(o => o.correct)) { toast(`⚠️ السؤال ${i+1}: حدد الإجابة الصحيحة`); return; }
+      item.options = nonEmpty;
+    }
+    else if (draft.type === 'match') {
+      item.pairs = item.pairs.filter(p => p.left.trim() || p.right.trim());
+      if (item.pairs.length < 2) { toast(`⚠️ السؤال ${i+1}: أضف زوجين على الأقل`); return; }
+    }
+    else if (draft.type === 'order') {
+      item.sequence = item.sequence.map(s => s.trim()).filter(Boolean);
+      if (item.sequence.length < 2) { toast(`⚠️ السؤال ${i+1}: أضف عنصرين على الأقل`); return; }
+    }
+    else if (draft.type === 'fill' && !item.answer.trim()) {
+      toast(`⚠️ السؤال ${i+1}: أدخل الإجابة`); return;
+    }
+  }
+  
+  if (editingId) {
+    const i = state.questions.findIndex(q => q.id === editingId);
+    if (i > -1) state.questions[i] = draft;
+  } else {
+    state.questions.push(draft);
+  }
+  saveState(); closeModal('#qModal'); render();
+  toast(editingId ? '✅ تم تعديل السؤال' : '✅ تم إضافة السؤال');
+}
+
+function duplicateQuestion(id){
+  const q = state.questions.find(x=>x.id===id); if(!q) return;
+  const copy = JSON.parse(JSON.stringify(q)); copy.id = uid();
+  const i = state.questions.findIndex(x=>x.id===id);
+  state.questions.splice(i+1,0,copy); saveState(); render();
+  toast('⧉ تم تكرار السؤال');
+}
+
+function deleteQuestion(id){
+  const q = state.questions.find(x=>x.id===id); if(!q) return;
+  if(!confirm('حذف هذا السؤال نهائياً؟\n\n'+(q.instruction || q.subItems[0].text).slice(0,90))) return;
+  state.questions = state.questions.filter(x=>x.id!==id); saveState(); render();
+  toast('🗑️ تم حذف السؤال');
+}
+
+/* =========================================================
+   الإعدادات
+   ========================================================= */
+function renderFontSettingsUI() {
+  const container = $('#fontSettingsContainer');
+  let html = '';
+  
+  const fontOptions = ['inherit', 'Cairo', 'Tajawal', 'Amiri', 'Arial', 'Times New Roman', 'Traditional Arabic', 'Tahoma'];
+  
+  for (const [key, type] of Object.entries(TYPES)) {
+    const style = state.settings.typeStyles[key] || { font: 'inherit', size: '13px', color: '#000000' };
+    
+    html += `<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:10px;display:grid;grid-template-columns: 1.5fr 1fr 1fr 1fr;gap:10px;align-items:end;">
+      <div style="font-weight:700;font-size:13px;color:#1e293b;padding-bottom:8px;">${type.icon} ${type.label}</div>
+      
+      <label class="fld" style="margin-bottom:0">
+        <span style="font-size:11px;">الخط</span>
+        <select class="font-select" data-type="${key}" data-prop="font" style="padding:6px;font-size:12px;">
+          ${fontOptions.map(f => `<option value="${f}" ${style.font === f ? 'selected' : ''}>${f === 'inherit' ? 'الافتراضي' : f}</option>`).join('')}
+        </select>
+      </label>
+      
+      <label class="fld" style="margin-bottom:0">
+        <span style="font-size:11px;">الحجم</span>
+        <input type="text" class="font-input" data-type="${key}" data-prop="size" value="${style.size}" style="padding:6px;font-size:12px;text-align:center;">
+      </label>
+      
+      <label class="fld" style="margin-bottom:0">
+        <span style="font-size:11px;">اللون</span>
+        <input type="color" class="font-input" data-type="${key}" data-prop="color" value="${style.color}" style="padding:0;height:30px;cursor:pointer;">
+      </label>
+    </div>`;
+  }
+  
+  container.innerHTML = html;
+  
+  container.querySelectorAll('.font-input, .font-select').forEach(el => {
+    el.onchange = el.oninput = (e) => {
+      const type = e.target.dataset.type;
+      const prop = e.target.dataset.prop;
+      const val = e.target.value;
+      if (!state.settings.typeStyles[type]) state.settings.typeStyles[type] = {};
+      state.settings.typeStyles[type][prop] = val;
+      saveState();
+    };
+  });
+}
+
+function openSettings(){
+  const s = state.settings;
+  $('#sDirectorate').value = s.directorate || '';
+  $('#sSchool').value = s.school || '';
+  $('#sTeacher').value = s.teacher || '';
+  $('#sExamType').value = s.examType || 'امتحان';
+  $('#sSubject').value = s.subject || '';
+  $('#sGrade').value = s.grade || '';
+  $('#sSemester').value = s.semester || 'الفصل الأول';
+  $('#sAcademicYear').value = s.academicYear || '';
+  $('#sDate').value = s.date || '';
+  $('#sDuration').value = s.duration || '';
+  $('#sCustomTotal').value = s.customTotal || '';
+  $('#sAnswerKeyMode').value = s.answerKeyMode || 'same';
+  $('#sShowPoints').checked = !!s.showPoints;
+  $('#sGroup').checked = !!s.groupByCategory;
+  $('#sTwoColumns').checked = !!s.twoColumns;
+  $('#sMcqLayout').value = s.mcqLayout || 'below';
+  $('#sMcqGap').value = s.mcqGap || '15px';
+  
+  $('#startFromWrap').style.display = s.twoColumns ? '' : 'none';
+  $$('input[name="startFrom"]').forEach(r=>{ r.checked = (r.value === (s.startFrom||'right')); });
+
+  renderFontSettingsUI();
+
+  const bind = (sel, prop) => {
+    $(sel).oninput = $(sel).onchange = e=>{
+      state.settings[prop] = e.target.type==='checkbox' ? e.target.checked : e.target.value;
+      saveState();
+      if(prop==='twoColumns') $('#startFromWrap').style.display = e.target.checked ? '' : 'none';
+    };
+  };
+  bind('#sDirectorate','directorate'); bind('#sSchool','school'); bind('#sTeacher','teacher');
+  bind('#sExamType','examType'); bind('#sSubject','subject'); bind('#sGrade','grade');
+  bind('#sSemester','semester'); bind('#sAcademicYear','academicYear');
+  bind('#sDate','date'); bind('#sDuration','duration');
+  bind('#sCustomTotal','customTotal');
+  bind('#sAnswerKeyMode','answerKeyMode');
+  bind('#sShowPoints','showPoints'); bind('#sGroup','groupByCategory');
+  bind('#sTwoColumns','twoColumns');
+  bind('#sMcqLayout','mcqLayout'); bind('#sMcqGap','mcqGap');
+
+  $$('input[name="startFrom"]').forEach(r=>{
+    r.onchange = e=>{ state.settings.startFrom = e.target.value; saveState(); };
+  });
+  openModal('#settingsModal');
+}
+
+/* =========================================================
+   رأس الصفحة والمستند
+   ========================================================= */
+function headerHTML(){
+  const s = state.settings;
+  const directorate = (s.directorate || '').trim() || 'مديرية التربية في ................';
+  const school      = (s.school || '').trim() || '................';
+  const examType    = (s.examType || 'امتحان').trim();
+  const subject     = (s.subject || '').trim() || '................';
+  const grade       = (s.grade || '').trim() || '................';
+  const semester    = (s.semester || 'الفصل الأول').trim();
+  const year        = (s.academicYear || '').trim() || '................';
+
+  return `
+    <table class="doc-header">
+      <tr>
+        <td class="hdr-r">
+          <div class="line">${esc(directorate)}</div>
+          <div class="line">${esc(school)}</div>
+        </td>
+        <td class="hdr-c">
+          <div class="hdr-title">${esc(examType)} ${esc(subject)} - ${esc(grade)}</div>
+          <div class="hdr-sub">${esc(semester)} - العام الدراسي ${esc(year)}</div>
+        </td>
+        <td class="hdr-l">
+          <div class="line">اسم الطالب: ................</div>
+          <div class="line">الشعبة: ................</div>
+        </td>
+      </tr>
+    </table>`;
+}
+
+function metaHTML(totalTxt){
+  const s = state.settings;
+  const parts = [];
+  if(s.teacher) parts.push(`المعلم: ${esc(s.teacher)}`);
+  if(s.duration) parts.push(`الزمن: ${esc(s.duration)}`);
+  if(s.date) parts.push(`التاريخ: ${esc(s.date)}`);
+  parts.push(`الدرجة الكلية: ${totalTxt}`);
+  return `<table class="doc-meta"><tr><td>${parts.join(' &nbsp;|&nbsp; ')}</td></tr></table>`;
+}
+
+function getDynamicCSS() {
+  let css = '';
+  for (const [type, style] of Object.entries(state.settings.typeStyles)) {
+    const font = style.font === 'inherit' ? "'Cairo','Segoe UI',Arial,sans-serif" : `'${style.font}', sans-serif`;
+    css += `
+      .q-type-${type} .q-head, 
+      .q-type-${type} .sub-q-text, 
+      .q-type-${type} .opt,
+      .q-type-${type} .opt-inline {
+        font-family: ${font} !important;
+        font-size: ${style.size} !important;
+        color: ${style.color} !important;
+      }
+    `;
+  }
+  return css;
+}
+
+/* =========================================================
+   بناء العمودين
+   ========================================================= */
+function buildColumns(qs){
+  const startFrom = state.settings.startFrom || 'right';
+  const half = Math.ceil(qs.length / 2);
+  let rightQs, leftQs, orderedQs;
+
+  if(startFrom === 'left'){
+    leftQs  = qs.slice(0, half);
+    rightQs = qs.slice(half);
+    orderedQs = [...leftQs, ...rightQs];
+  } else {
+    rightQs = qs.slice(0, half);
+    leftQs  = qs.slice(half);
+    orderedQs = [...rightQs, ...leftQs];
+  }
+
+  const num = new Map();
+  orderedQs.forEach((q,i)=> num.set(q.id, i+1));
+
+  const rightHTML = rightQs.map(q => questionHTML(q, num.get(q.id), true)).join('');
+  const leftHTML  = leftQs.map(q => questionHTML(q, num.get(q.id), true)).join('');
+
+  return { rightHTML, leftHTML, orderedQs, num };
+}
+
+/* =========================================================
+   بناء السؤال الواحد
+   ========================================================= */
+function questionHTML(q, n, narrow){
+  const s = state.settings;
+  const pts = (s.showPoints && +q.points) ? `<span class="qp">(${(+q.points)})</span>` : '';
+  
+  // سؤال مفرد بدون توجيه
+  if (q.subItems.length === 1 && !q.instruction) {
+    const item = q.subItems[0];
+    let extra = '';
+    let inlineOpts = '';
+    let isInline = (s.mcqLayout === 'inline' && !narrow);
+    
+    if (q.type === 'mcq' || q.type === 'multi') {
+      const opts = (item.options || []).filter(o => o.text && o.text.trim());
+      const mark = q.type === 'multi' ? '□ ' : '';
+      
+      if (isInline) {
+        inlineOpts = opts.map((o, i) => `<span class="opt-inline" style="margin-right:${s.mcqGap};">${mark}(${LETTERS[i]||i+1}) ${esc(o.text)}</span>`).join('');
+      } else {
+        let rows = '';
+        if (narrow) {
+          rows = opts.map((o, i) => `<tr><td class="opt">${mark}(${LETTERS[i]||i+1}) ${esc(o.text)}</td></tr>`).join('');
+        } else {
+          for (let i = 0; i < opts.length; i += 2) {
+            rows += '<tr>';
+            rows += `<td class="opt">${mark}(${LETTERS[i]||i+1}) ${esc(opts[i].text)}</td>`;
+            rows += (i+1 < opts.length) ? `<td class="opt">${mark}(${LETTERS[i+1]||i+2}) ${esc(opts[i+1].text)}</td>` : '<td class="opt"></td>';
+            rows += '</tr>';
+          }
+        }
+        extra = `<table class="opts">${rows}</table>`;
+      }
+    }
+    else if (q.type === 'truefalse') {
+      return `<div class="q q-type-${q.type}">
+        <div class="q-head">${n}. ${nl2br(item.text)} <span class="parens">( &nbsp;&nbsp; )</span> ${pts}</div>
+      </div>`;
+    }
+    else if (q.type === 'short') {
+      extra = `<div class="ansline"></div>`;
+    }
+    else if (q.type === 'essay') {
+      extra = `<div class="ansline"></div>`.repeat(narrow ? 3 : 5);
+    }
+    else if (q.type === 'match') {
+      const pairs = item.pairs || [];
+      const n2 = pairs.length;
+      let rows = '';
+      for (let i = 0; i < n2; i++) {
+        const left = pairs[i];
+        const right = pairs[(i+1) % n2];
+        rows += `<tr>
+          <td class="opt">${i+1}. ${esc(left.left)}</td>
+          <td class="opt">${LETTERS[i]||i+1}. ${esc(right.right)}</td>
+        </tr>`;
+      }
+      extra = `<table class="opts">${rows}</table>`;
+    }
+    else if (q.type === 'order') {
+      const seq = item.sequence || [];
+      extra = `<table class="opts">${seq.map((it, i) =>
+        `<tr><td class="opt">(${LETTERS[i]||i+1}) ${esc(it)}</td><td class="opt"></td></tr>`
+      ).join('')}</table>`;
+    }
+    
+    return `<div class="q q-type-${q.type}">
+      <div class="q-head">${n}. ${nl2br(item.text)} ${inlineOpts ? '<span class="opts-inline">'+inlineOpts+'</span>' : ''} ${pts}</div>
+      ${extra}
+    </div>`;
+  }
+  
+  // مجموعة أسئلة أو يوجد توجيه
+  const instr = q.instruction || DEFAULT_INSTRUCTIONS[q.type] || '';
+  let itemsHTML = '';
+  
+  q.subItems.forEach((item, idx) => {
+    let subExtra = '';
+    let subInlineOpts = '';
+    let subPrefix = `<span class="sub-q-num">(${idx + 1})</span> `;
+    let isInline = (s.mcqLayout === 'inline' && !narrow);
+    
+    if (q.type === 'truefalse') {
+      itemsHTML += `<div class="sub-q"><div class="sub-q-text">${subPrefix}${nl2br(item.text)} <span class="parens">( &nbsp;&nbsp; )</span></div></div>`;
+      return;
+    }
+    
+    if (q.type === 'mcq' || q.type === 'multi') {
+      const opts = (item.options || []).filter(o => o.text && o.text.trim());
+      const mark = q.type === 'multi' ? '□ ' : '';
+      
+      if (isInline) {
+        subInlineOpts = opts.map((o, i) => `<span class="opt-inline" style="margin-right:${s.mcqGap};">${mark}(${LETTERS[i]||i+1}) ${esc(o.text)}</span>`).join('');
+      } else {
+        let rows = '';
+        if (narrow) {
+          rows = opts.map((o, i) => `<tr><td class="opt">${mark}(${LETTERS[i]||i+1}) ${esc(o.text)}</td></tr>`).join('');
+        } else {
+          for (let i = 0; i < opts.length; i += 2) {
+            rows += '<tr>';
+            rows += `<td class="opt">${mark}(${LETTERS[i]||i+1}) ${esc(opts[i].text)}</td>`;
+            rows += (i+1 < opts.length) ? `<td class="opt">${mark}(${LETTERS[i+1]||i+2}) ${esc(opts[i+1].text)}</td>` : '<td class="opt"></td>';
+            rows += '</tr>';
+          }
+        }
+        subExtra = `<table class="opts">${rows}</table>`;
+      }
+    }
+    else if (q.type === 'short') {
+      subExtra = `<div class="ansline"></div>`;
+    }
+    else if (q.type === 'essay') {
+      subExtra = `<div class="ansline"></div>`.repeat(narrow ? 3 : 5);
+    }
+    else if (q.type === 'match') {
+      const pairs = item.pairs || [];
+      const n2 = pairs.length;
+      let rows = '';
+      for (let i = 0; i < n2; i++) {
+        const left = pairs[i];
+        const right = pairs[(i+1) % n2];
+        rows += `<tr>
+          <td class="opt">${i+1}. ${esc(left.left)}</td>
+          <td class="opt">${LETTERS[i]||i+1}. ${esc(right.right)}</td>
+        </tr>`;
+      }
+      subExtra = `<table class="opts">${rows}</table>`;
+    }
+    else if (q.type === 'order') {
+      const seq = item.sequence || [];
+      subExtra = `<table class="opts">${seq.map((it, i) =>
+        `<tr><td class="opt">(${LETTERS[i]||i+1}) ${esc(it)}</td><td class="opt"></td></tr>`
+      ).join('')}</table>`;
+    }
+    
+    itemsHTML += `<div class="sub-q">
+      <div class="sub-q-text">${subPrefix}${nl2br(item.text)} ${subInlineOpts ? '<span class="opts-inline">'+subInlineOpts+'</span>' : ''}</div>
+      ${subExtra}
+    </div>`;
+  });
+  
+  return `<div class="q q-type-${q.type}">
+    <div class="q-head q-head-group">${n}. ${nl2br(instr)} ${pts}</div>
+    <div class="sub-items">${itemsHTML}</div>
+  </div>`;
+}
+
+function correctAnswerTextForItem(type, item) {
+  switch(type) {
+    case 'mcq':
+    case 'multi': {
+      const letters = (item.options || []).map((o, i) => o.correct ? (LETTERS[i] || (i+1)) : null).filter(Boolean);
+      return letters.length ? letters.join(' ، ') : '—';
+    }
+    case 'truefalse': return item.correctBool ? 'صح ✔' : 'خطأ ✘';
+    case 'short': case 'fill': return (item.answer || '').trim() || '—';
+    case 'essay': return (item.answer || '').trim() || 'إجابة مفتوحة';
+    case 'match': return (item.pairs || []).map(p => `${p.left} ← ${p.right}`).join('  |  ') || '—';
+    case 'order': return (item.sequence || []).join(' ← ') || '—';
+    default: return '—';
+  }
+}
+
+function correctAnswerText(q) {
+  if (q.subItems.length === 1 && !q.instruction) {
+    return correctAnswerTextForItem(q.type, q.subItems[0]);
+  }
+  
+  return q.subItems.map((item, idx) => {
+    const ans = correctAnswerTextForItem(q.type, item);
+    return `(${idx + 1}) ${ans}`;
+  }).join(' &nbsp;|&nbsp; ');
+}
+
+/* =========================================================
+   بناء الأجزاء النهائية
+   ========================================================= */
+function buildDocParts(qs){
+  // التحقق من وجود درجة كلية مخصصة أم حساب تلقائي
+  let totalTxt;
+  if (state.settings.customTotal && state.settings.customTotal.trim()) {
+    totalTxt = state.settings.customTotal.trim();
+  } else {
+    const total = qs.reduce((a,q)=>a+(+q.points||0),0);
+    totalTxt = total % 1 === 0 ? total : total.toFixed(2);
+  }
+
+  let bodyHTML = '';
+  let keyQs = qs;
+
+  if(state.settings.twoColumns && qs.length){
+    const {rightHTML, leftHTML, orderedQs} = buildColumns(qs);
+    bodyHTML = `<table class="two-col"><tr>
+      <td class="col-r">${rightHTML}</td>
+      <td class="col-l">${leftHTML}</td>
+    </tr></table>`;
+    keyQs = orderedQs;
+  } else {
+    let n = 0;
+    const parts = [];
+    if(state.settings.groupByCategory){
+      const map = new Map();
+      qs.forEach(q=>{
+        const c = q.category || '';
+        if(!map.has(c)) map.set(c, []);
+        map.get(c).push(q);
+      });
+      map.forEach((list, cat)=>{
+        if(cat) {
+          parts.push(`<div class="section-title">${esc(cat)}</div>`);
+        }
+        list.forEach(q=>{ n++; parts.push(questionHTML(q, n)); });
+      });
+    } else {
+      qs.forEach(q=>{ n++; parts.push(questionHTML(q, n)); });
+    }
+    bodyHTML = parts.join('');
+  }
+
+  if(!qs.length){
+    bodyHTML = `<div style="text-align:center;padding:30px;color:#666">لا توجد أسئلة للتصدير.</div>`;
+  }
+
+  return {
+    header: headerHTML(),
+    meta: metaHTML(totalTxt),
+    hr: '<hr class="doc-hr">',
+    bodyHTML,
+    keyQs,
+    totalTxt
+  };
+}
+
+function docHTML(){
+  const qs = getFiltered();
+  const parts = buildDocParts(qs);
+  const mode = state.settings.answerKeyMode || 'none';
+  const dynamicCSS = getDynamicCSS();
+
+  let keyHTML = '';
+  if(mode !== 'none' && parts.keyQs.length){
+    const items = parts.keyQs.map((q,i)=>`<li><b>${i+1}.</b> ${esc(correctAnswerText(q))}</li>`).join('');
+    const cls = mode === 'separate' ? 'answer-key separate' : 'answer-key';
+    const styleAttr = mode === 'separate' ? ' style="page-break-before: always;"' : '';
+    keyHTML = `<div class="${cls}"${styleAttr}>
+      <h2>نموذج الإجابة</h2>
+      <ul>${items}</ul>
+    </div>`;
+  }
+
+  return `<style>${dynamicCSS}</style><div class="doc">${parts.header}${parts.meta}${parts.hr}${parts.bodyHTML}${keyHTML}</div>`;
+}
+
+/* =========================================================
+   المعاينة والطباعة
+   ========================================================= */
+function openPreview(){
+  const qs = getFiltered();
+  if(!qs.length){ toast('⚠️ لا توجد أسئلة'); return; }
+
+  const parts = buildDocParts(qs);
+  const mode = state.settings.answerKeyMode || 'none';
+  const dynamicCSS = getDynamicCSS();
+
+  let keyHTML = '';
+  if(mode !== 'none' && parts.keyQs.length){
+    const items = parts.keyQs.map((q,i)=>`<li><b>${i+1}.</b> ${esc(correctAnswerText(q))}</li>`).join('');
+    keyHTML = `<div class="answer-key"><h2>نموذج الإجابة</h2><ul>${items}</ul></div>`;
+  }
+
+  const mainDoc = `<div class="doc">${parts.header}${parts.meta}${parts.hr}${parts.bodyHTML}</div>`;
+  const keyDoc  = keyHTML ? `<div class="doc">${keyHTML}</div>` : '';
+
+  let html;
+  if(mode === 'separate' && keyDoc){
+    html = `<style>${dynamicCSS}</style><div class="page">${mainDoc}</div><div class="page">${keyDoc}</div>`;
+  } else if(mode === 'same' && keyHTML){
+    html = `<style>${dynamicCSS}</style><div class="page"><div class="doc">${parts.header}${parts.meta}${parts.hr}${parts.bodyHTML}${keyHTML}</div></div>`;
+  } else {
+    html = `<style>${dynamicCSS}</style><div class="page">${mainDoc}</div>`;
+  }
+
+  $('#previewBody').innerHTML = html;
+  openModal('#previewModal');
+}
+
+function printDoc(){
+  const qs = getFiltered();
+  if(!qs.length){ toast('⚠️ لا توجد أسئلة'); return; }
+  const w = window.open('', '_blank');
+  if(!w){ toast('⚠️ اسمح بالنوافذ المنبثقة'); return; }
+  w.document.write(`<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+    <title>${esc(getFileTitle())}</title>
+    <style>
+      @page { size: A4; margin: 2cm; }
+      body{margin:0;font-family:'Cairo','Segoe UI',Arial,sans-serif;font-size:13px;line-height:1.75;color:#000}
+      ${DOC_CSS}
+    </style></head><body>${docHTML()}</body></html>`);
+  w.document.close(); w.focus();
+  setTimeout(()=>{ w.print(); }, 400);
+}
+
+/* =========================================================
+   أنماط المستند (للطباعة وWord)
+   ========================================================= */
+const DOC_CSS = `
+.doc{direction:rtl}
+.doc-header{width:100%;border-collapse:collapse;font-size:12.5px;margin-bottom:4px}
+.doc-header td{vertical-align:top;padding:2px 6px}
+.doc-header .hdr-r{width:32%;text-align:right}
+.doc-header .hdr-c{width:36%;text-align:center}
+.doc-header .hdr-l{width:32%;text-align:left;padding-left:1.5cm}
+.doc-header .hdr-title{font-size:14px;font-weight:bold;margin-bottom:2px}
+.doc-header .hdr-sub{font-size:12px}
+.doc-header .line{white-space:nowrap}
+.doc-meta{width:100%;border-collapse:collapse;font-size:11.5px;margin:2px 0 0}
+.doc-meta td{padding:1px 4px;text-align:center;color:#222}
+.doc-hr{border:0;border-top:1.5px solid #000;margin:8px 0 12px}
+.doc table.two-col{width:100%;border-collapse:collapse;table-layout:fixed;margin-top:4px}
+.doc table.two-col td{vertical-align:top;padding:0 4px}
+.doc table.two-col td.col-r{width:50%;border-left:1.2px solid #000;padding-left:8px}
+.doc table.two-col td.col-l{width:50%;padding-right:8px}
+.doc .section-title{font-size:16px;font-weight:bold;margin:16px 0 10px;padding-bottom:3px;border-bottom:1px solid #000}
+
+/* الإطار الرقيق لكل مجموعة */
+.doc .q {
+  margin-bottom: 14px;
+  page-break-inside: avoid;
+  border: 1px solid #000;
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+
+.doc .q-head{font-size:13.5px;font-weight:bold;line-height:1.8;margin-bottom:6px}
+.doc .q-head-group{ border-bottom: 1px dashed #555; padding-bottom: 6px; margin-bottom: 10px; }
+.doc .sub-items{margin-top:4px}
+.doc .sub-q{margin-bottom:12px}
+.doc .sub-q-text{font-size:13px;line-height:1.8;font-weight:normal}
+.doc .sub-q-num{font-weight:bold;margin-left:4px}
+.doc .parens{font-weight:bold;letter-spacing:2px;margin-right:6px;white-space:nowrap}
+
+.doc .qp{font-weight:normal;font-size:11.5px;color:#555;margin-right:4px}
+.doc table.opts{width:100%;border-collapse:collapse;margin-top:5px;margin-bottom:5px}
+.doc table.opts td.opt{padding:2px 8px;font-size:12.5px;vertical-align:top;width:50%;font-weight:normal}
+.doc .opts-inline{display:inline;}
+.doc .opt-inline{display:inline-block;white-space:nowrap;font-size:12.5px;font-weight:normal;}
+.doc table.two-col table.opts td.opt{width:auto}
+.doc .ansline{border-bottom:1px solid #999;height:22px;margin-top:8px}
+.doc .answer-key{margin-top:22px;border-top:2px solid #000;padding-top:10px}
+.doc .answer-key.separate{page-break-before:always}
+.doc .answer-key h2{font-size:16px;text-align:center;margin:0 0 10px}
+.doc .answer-key ul{margin:0;padding:0;list-style:none;font-size:12.5px}
+.doc .answer-key li{margin-bottom:4px}
+`;
+
+/* =========================================================
+   تصدير Word
+   ========================================================= */
+function exportWord(){
+  const qs = getFiltered();
+  if(!qs.length){ toast('⚠️ لا توجد أسئلة للتصدير'); return; }
+
+  const title = getFileTitle();
+  const dynamicCSS = getDynamicCSS();
+
+  const html = `<!DOCTYPE html>
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:w="urn:schemas-microsoft-com:office:word"
+      xmlns="http://www.w3.org/TR/REC-html40" lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>${esc(title)}</title>
+<!--[if gte mso 9]>
+<xml><w:WordDocument><w:View>Print</w:View><w:Zoom>100</w:Zoom><w:DoNotOptimizeForBrowser/></w:WordDocument></xml>
+<![endif]-->
+<style>
+  @page WordSection1 { size: 21.0cm 29.7cm; margin: 2.0cm 2.0cm 2.0cm 2.0cm; }
+  div.WordSection1 { page: WordSection1; }
+  body { font-family:'Arial','Traditional Arabic',sans-serif; font-size:12pt; direction:rtl; color:#000; }
+  ${DOC_CSS}
+  ${dynamicCSS}
+  .doc-header .hdr-title{font-size:12pt}
+  .doc-header .line{white-space:nowrap}
+  .doc .q-head{font-size:11.5pt}
+  .doc table.opts td.opt{font-size:11pt}
+  .doc .opt-inline{font-size:11pt}
+  .doc .section-title{font-size:13pt}
+  .doc .sub-q-text{font-size:11.5pt}
+</style>
+</head>
+<body>
+<div class="WordSection1">
+${docHTML()}
+</div>
+</body>
+</html>`;
+
+  const blob = new Blob(['\ufeff', html], { type:'application/msword;charset=utf-8' });
+  download(blob, sanitize(title) + '.doc');
+  toast('📄 تم تصدير الملف بصيغة Word');
+}
+
+function sanitize(name){
+  return String(name).replace(/[\\/:*?"<>|]/g,'_').trim() || 'اختبار';
+}
+function download(blob, filename){
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename;
+  document.body.appendChild(a); a.click();
+  setTimeout(()=>{ URL.revokeObjectURL(url); a.remove(); }, 200);
+}
+
+/* =========================================================
+   النسخ الاحتياطي
+   ========================================================= */
+function backup(){
+  const blob = new Blob([JSON.stringify(state,null,2)], {type:'application/json;charset=utf-8'});
+  download(blob, 'نسخة_احتياطية_بنك_الأسئلة.json');
+  toast('💾 تم تنزيل النسخة الاحتياطية');
+}
+function restore(e){
+  const file = e.target.files[0]; if(!file) return;
+  const reader = new FileReader();
+  reader.onload = ev=>{
+    try{
+      const data = JSON.parse(ev.target.result);
+      if(!data || !Array.isArray(data.questions)) throw new Error('bad');
+      if(!confirm(`سيتم استبدال البيانات الحالية بـ ${data.questions.length} سؤال. متابعة؟`)) return;
+      state.questions = data.questions.map(migrateQuestion);
+      state.settings = Object.assign({}, DEFAULT_SETTINGS, migrateSettings(data.settings));
+      saveState(); render();
+      toast('📥 تم استيراد البيانات');
+    }catch(err){ toast('⚠️ الملف غير صالح'); }
+  };
+  reader.readAsText(file);
+  e.target.value = '';
+}
+
+init();
+</script>
+</body>
+</html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>
+    Hello, World!
+  </h1>
+</body>
+</html>
