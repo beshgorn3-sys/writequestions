@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -38,6 +37,8 @@ header{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0ea5e9);color:#fff
 .btn.ghost:hover{background:#f8fafc}
 .btn.danger{background:#fee2e2;color:#b91c1c;border-color:#fecaca}
 .btn.danger:hover{background:#fecaca}
+.btn.cloud{background:#10b981;color:#fff;box-shadow:0 4px 12px rgba(16,185,129,.35)}
+.btn.cloud:hover{background:#059669}
 .btn.tiny{padding:5px 10px;font-size:12.5px;border-radius:8px;background:#eff6ff;color:#1d4ed8;border:1px solid #dbeafe}
 .btn.tiny:hover{background:#dbeafe}
 .icon-btn{border:none;background:transparent;width:34px;height:34px;border-radius:9px;cursor:pointer;display:grid;place-items:center;font-size:15px;color:var(--muted);transition:.15s}
@@ -49,7 +50,7 @@ header{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0ea5e9);color:#fff
 .toolbar .search input{width:100%;padding:10px 38px 10px 12px;border:1px solid var(--border);border-radius:10px;background:#f8fafc;outline:none}
 .toolbar .search input:focus{border-color:var(--primary);background:#fff;box-shadow:0 0 0 3px rgba(37,99,235,.12)}
 .toolbar .search::before{content:"🔍";position:absolute;inset-inline-end:12px;top:50%;transform:translateY(-50%);font-size:14px;opacity:.6}
-.toolbar select{padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:#f8fafc;outline:none;cursor:pointer;min-width:150px}
+.toolbar select{padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:#f8fafc;outline:none;cursor:pointer;min-width:130px;font-size:13px}
 .toolbar select:focus{border-color:var(--primary);background:#fff}
 
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
@@ -62,7 +63,7 @@ header{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0ea5e9);color:#fff
 .list{display:flex;flex-direction:column;gap:12px;padding-bottom:60px}
 .qcard{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:0 1px 6px rgba(15,23,42,.05);transition:.18s;position:relative}
 .qcard:hover{box-shadow:0 8px 24px rgba(15,23,42,.10);border-color:#cbd5e1}
-.qcard-top{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:9px}
+.qcard-top{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:9px}
 .badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
 .badge.type{background:#eff6ff;color:#1d4ed8;border-color:#dbeafe}
 .badge.cat{background:#f0fdf4;color:#15803d;border-color:#dcfce7}
@@ -70,10 +71,12 @@ header{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0ea5e9);color:#fff
 .badge.medium{background:#fffbeb;color:#b45309}
 .badge.hard{background:#fef2f2;color:#b91c1c}
 .badge.pts{margin-inline-start:auto;background:#f8fafc;color:#475569;border-color:var(--border)}
+.badge.cloud{background:#ecfdf5;color:#059669;border-color:#a7f3d0}
 .qcard-text{font-size:15px;font-weight:600;line-height:1.7;white-space:pre-wrap;word-break:break-word}
 .qcard-sub{font-size:12.5px;color:var(--muted);margin-top:6px}
 .qcard-actions{display:flex;gap:4px;margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);justify-content:flex-end}
 .qcard-actions .btn{padding:6px 12px;font-size:13px}
+.qcard .passage-preview{font-size:13.5px;color:#475569;background:#f8fafc;border:1px dashed var(--border);border-radius:8px;padding:8px 12px;margin:8px 0;white-space:pre-wrap;max-height:110px;overflow:hidden}
 .empty{text-align:center;padding:60px 20px;color:var(--muted);background:var(--card);border:2px dashed var(--border);border-radius:var(--radius)}
 .empty .big{font-size:44px;margin-bottom:10px}
 
@@ -86,7 +89,7 @@ header{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0ea5e9);color:#fff
 .modal-head h2{margin:0;font-size:17px}
 .modal-head .icon-btn{margin-inline-start:auto}
 .modal-body{padding:20px;max-height:70vh;overflow:auto}
-.modal-foot{display:flex;justify-content:flex-end;gap:10px;padding:14px 20px;border-top:1px solid var(--border);background:#f8fafc;border-radius:0 0 16px 16px}
+.modal-foot{display:flex;justify-content:flex-end;gap:10px;padding:14px 20px;border-top:1px solid var(--border);background:#f8fafc;border-radius:0 0 16px 16px;flex-wrap:wrap;align-items:center}
 
 .form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:12px}
 .fld{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
@@ -101,7 +104,7 @@ header{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0ea5e9);color:#fff
 .sect-label{font-size:13px;font-weight:700;color:var(--primary-d);background:#eff6ff;padding:6px 12px;border-radius:8px;margin:16px 0 10px;border-right:3px solid var(--primary)}
 
 .sub-item-card{background:#fff;border:1px solid #cbd5e1;border-radius:10px;padding:12px;margin-bottom:12px}
-.sub-item-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-weight:700;color:#1d4ed8;font-size:13px}
+.sub-item-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-weight:700;color:#1d4ed8;font-size:13px;gap:8px;flex-wrap:wrap}
 .sub-item-text{width:100%;min-height:60px;padding:8px 10px;border:1px solid #e2e8f0;border-radius:8px;resize:vertical;margin-bottom:8px;font-family:inherit;font-size:14px;background:#f8fafc;outline:none}
 .sub-item-text:focus{border-color:var(--primary);background:#fff;box-shadow:0 0 0 3px rgba(37,99,235,.12)}
 
@@ -127,7 +130,6 @@ header{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0ea5e9);color:#fff
 .page + .page{margin-top:24px}
 @media(max-width:1000px){ .page{width:100%;padding:20px;min-height:auto} }
 
-/* أنماط المستند الأساسية */
 .doc{font-family:'Cairo','Segoe UI',Arial,sans-serif;color:#000;font-size:13px;line-height:1.75;direction:rtl}
 .doc-header{width:100%;border-collapse:collapse;font-size:12.5px;margin-bottom:4px}
 .doc-header td{vertical-align:top;padding:2px 6px}
@@ -146,33 +148,21 @@ header{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0ea5e9);color:#fff
 .doc table.two-col td.col-l{width:50%;padding-right:8px}
 .doc .section-title{font-size:16px;font-weight:700;margin:16px 0 10px;padding-bottom:3px;border-bottom:1px solid #000}
 
-/* الإطار الرقيق لكل مجموعة */
-.doc .q {
-  margin-bottom: 14px;
-  page-break-inside: avoid;
-  border: 1px solid #000;
-  padding: 10px 12px;
-  border-radius: 6px;
-}
-
+.doc .q {margin-bottom:14px;page-break-inside:avoid;border:1px solid #000;padding:10px 12px;border-radius:6px}
+.doc.no-border .q{border:none !important;padding:0 !important;border-radius:0 !important;margin-bottom:14px}
+.doc.no-border .q-head-group{border-bottom:none !important;padding-bottom:0 !important;margin-bottom:6px !important}
 .doc .q-head{font-size:13.5px;font-weight:700;line-height:1.8;margin-bottom:6px}
-.doc .q-head-group{ border-bottom: 1px dashed #555; padding-bottom: 6px; margin-bottom: 10px; }
+.doc .q-head-group{border-bottom:1px dashed #555;padding-bottom:6px;margin-bottom:10px}
 .doc .sub-items{margin-top:4px}
 .doc .sub-q{margin-bottom:12px;page-break-inside:avoid}
 .doc .sub-q-text{font-size:13px;line-height:1.8;font-weight:400}
 .doc .sub-q-num{font-weight:700;margin-left:4px}
 .doc .parens{font-weight:bold;letter-spacing:2px;margin-right:6px;white-space:nowrap}
-
 .doc .qp{font-weight:400;font-size:11.5px;color:#555;margin-inline-start:4px}
-
-/* خيارات اختيار من متعدد - تحت السؤال */
 .doc table.opts{width:100%;border-collapse:collapse;margin-top:5px;margin-bottom:5px}
 .doc table.opts td.opt{padding:2px 8px;font-size:12.5px;vertical-align:top;width:50%;font-weight:400}
-
-/* خيارات اختيار من متعدد - بجانب العبارة (Inline) */
-.doc .opts-inline{display:inline;}
-.doc .opt-inline{display:inline-block;white-space:nowrap;font-size:12.5px;font-weight:400;}
-
+.doc .opts-inline{display:inline}
+.doc .opt-inline{display:inline-block;white-space:nowrap;font-size:12.5px;font-weight:400}
 .doc table.two-col table.opts td.opt{width:auto}
 .doc .ansline{border-bottom:1px solid #999;height:22px;margin-top:8px}
 .doc .answer-key{margin-top:22px;border-top:2px solid #000;padding-top:10px}
@@ -181,9 +171,24 @@ header{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0ea5e9);color:#fff
 .doc .answer-key ul{margin:0;padding:0;list-style:none;font-size:12.5px}
 .doc .answer-key li{margin-bottom:4px}
 
+.passage-box{background:#fafafa;border:1px dashed #999;border-radius:6px;padding:10px 14px;margin:8px 0 12px}
+.passage-text{font-size:13.5px;line-height:2;text-align:justify;white-space:pre-wrap}
+.poetry-table{width:100%;border-collapse:collapse;margin:4px 0}
+.poetry-table td{padding:3px 8px;vertical-align:middle}
+.poetry-table td.poetry-cell{width:45%;text-align:center;font-size:13.5px;line-height:2;font-family:'Amiri','Cairo',serif}
+.poetry-table td.poetry-sep{width:10%;text-align:center;font-weight:bold;color:#888}
+.poetry-table td.poetry-sep::before{content:"❁"}
+
 #toast{position:fixed;bottom:26px;left:50%;transform:translate(-50%,20px);background:#0f172a;color:#fff;padding:11px 22px;border-radius:12px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:.25s;z-index:999;box-shadow:0 8px 24px rgba(0,0,0,.28)}
 #toast.show{opacity:1;transform:translate(-50%,0)}
 @media(max-width:640px){.hdr h1{font-size:17px}.btn{padding:8px 12px;font-size:13px}.toolbar select{min-width:0;flex:1 1 130px}}
+
+#cloudStatus{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;opacity:.9;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28)}
+#cloudStatus .dot{width:8px;height:8px;border-radius:50%;background:#fbbf24;box-shadow:0 0 6px #fbbf24}
+#cloudStatus.online .dot{background:#34d399;box-shadow:0 0 6px #34d399}
+#cloudStatus.offline .dot{background:#f87171;box-shadow:0 0 6px #f87171}
+#cloudStatus.saving .dot{background:#60a5fa;box-shadow:0 0 6px #60a5fa;animation:pulse 1s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 </style>
 </head>
 <body>
@@ -193,12 +198,15 @@ header{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0ea5e9);color:#fff
     <div class="logo">📚</div>
     <div>
       <h1>بنك الأسئلة التفاعلي</h1>
-      <p>أضف أسئلتك بكل الأنواع • عدّل • احذف • عاين • صدّر Word بمقاس A4</p>
+      <p>إضافة • تعديل • نصوص وأبيات • مزامنة Firebase • تصدير Word</p>
     </div>
     <div class="hdr-actions">
+      <span id="cloudStatus" class="offline"><span class="dot"></span><span id="cloudStatusText">غير متصل</span></span>
       <button class="btn light" id="btnSettings">⚙️ الإعدادات</button>
       <button class="btn light" id="btnPreview">👁️ معاينة</button>
       <button class="btn light" id="btnWord">📄 تصدير Word</button>
+      <button class="btn light" id="btnBrowseCloud">📚 تصفح السحابة</button>
+      <button class="btn cloud" id="btnCloudSave">☁️ حفظ في السحابة</button>
       <button class="btn primary" id="btnAdd">＋ سؤال جديد</button>
     </div>
   </div>
@@ -206,8 +214,18 @@ header{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0ea5e9);color:#fff
 
 <div class="wrap">
   <div class="toolbar">
-    <div class="search"><input id="fSearch" placeholder="ابحث في نص الأسئلة والتصنيفات..."></div>
-    <select id="fFilterCat"><option value="">كل التصنيفات</option></select>
+    <div class="search"><input id="fSearch" placeholder="ابحث في نص الأسئلة..."></div>
+    <select id="fFilterSchool"><option value="">كل المدارس</option></select>
+    <select id="fFilterSemester"><option value="">كل الفصول</option></select>
+    <select id="fFilterSubject"><option value="">كل المواد</option></select>
+    <select id="fFilterGrade"><option value="">كل الصفوف</option></select>
+    <select id="fFilterExamType">
+      <option value="">امتحان/مذاكرة</option>
+      <option value="امتحان">امتحان</option>
+      <option value="مذاكرة">مذاكرة</option>
+    </select>
+    <select id="fFilterUnit"><option value="">كل الوحدات</option></select>
+    <select id="fFilterLesson"><option value="">كل الدروس</option></select>
     <select id="fFilterType"><option value="">كل الأنواع</option></select>
     <select id="fFilterDiff">
       <option value="">كل المستويات</option>
@@ -215,8 +233,8 @@ header{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0ea5e9);color:#fff
       <option value="medium">متوسط</option>
       <option value="hard">صعب</option>
     </select>
-    <button class="icon-btn" id="btnBackup" title="نسخة احتياطية (JSON)">💾</button>
-    <button class="icon-btn" id="btnRestore" title="استيراد نسخة (JSON)">📥</button>
+    <button class="icon-btn" id="btnBackup" title="نسخة احتياطية محلية (JSON)">💾</button>
+    <button class="icon-btn" id="btnRestore" title="استيراد نسخة محلية (JSON)">📥</button>
     <input type="file" id="fileRestore" accept=".json" hidden>
   </div>
 
@@ -232,10 +250,25 @@ header{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0ea5e9);color:#fff
       <button class="icon-btn" data-close>✕</button>
     </div>
     <div class="modal-body">
+      <div class="sect-label">📖 التصنيف المنهجي</div>
+      <div class="form-grid" style="margin-bottom:14px;">
+        <label class="fld">
+          <span>📖 الوحدة</span>
+          <select id="fUnit"></select>
+        </label>
+        <label class="fld">
+          <span>📑 الدرس</span>
+          <select id="fLesson"></select>
+        </label>
+      </div>
+      <div class="hint" style="margin-bottom:12px;">
+        ℹ️ المدرسة، الفصل، المادة، الصف، ونوع الاختبار (امتحان/مذاكرة) تُؤخذ تلقائياً من ⚙️ الإعدادات عند الحفظ.
+      </div>
+
       <div class="form-grid">
         <label class="fld"><span>نوع السؤال</span><select id="fType"></select></label>
-        <label class="fld"><span>التصنيف / الوحدة <small>(اختياري)</small></span>
-          <input type="text" id="fCategory" list="catList" placeholder="اتركه فارغاً إن لم ترغب">
+        <label class="fld"><span>التصنيف الحر <small>(اختياري)</small></span>
+          <input type="text" id="fCategory" list="catList" placeholder="اتركه فارغاً">
           <datalist id="catList"></datalist>
         </label>
         <label class="fld"><span>مستوى الصعوبة</span>
@@ -363,12 +396,11 @@ header{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0ea5e9);color:#fff
       <div class="checks">
         <label><input type="checkbox" id="sShowPoints"> إظهار الدرجات</label>
         <label><input type="checkbox" id="sGroup"> تجميع الأسئلة حسب التصنيف</label>
+        <label><input type="checkbox" id="sShowBorder"> وضع إطار حول كل سؤال</label>
       </div>
 
       <div class="sect-label">🎨 تخصيص الخطوط والألوان (لكل نوع سؤال)</div>
-      <div id="fontSettingsContainer" style="display:flex;flex-direction:column;gap:10px;">
-        <!-- سيتم توليدها بالجافاسكربت -->
-      </div>
+      <div id="fontSettingsContainer" style="display:flex;flex-direction:column;gap:10px;"></div>
 
       <div class="hint">💡 هذه الإعدادات تُحفظ تلقائياً وتُستخدم في المعاينة والتصدير والطباعة.</div>
       
@@ -383,14 +415,140 @@ header{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0ea5e9);color:#fff
   </div>
 </div>
 
+<!-- Modal: Browse Cloud -->
+<div class="modal" id="browseModal">
+  <div class="modal-card wide">
+    <div class="modal-head">
+      <h2>📚 تصفح الأسئلة في السحابة</h2>
+      <button class="icon-btn" data-close>✕</button>
+    </div>
+    <div class="modal-body">
+      
+      <div class="sect-label">🔎 الفلترة (كل الحقول اختيارية — اترك ما تريد فارغاً)</div>
+      
+      <div class="form-grid">
+        <label class="fld">
+          <span>🏫 المدرسة</span>
+          <select id="browseSchool"><option value="">كل المدارس</option></select>
+        </label>
+        <label class="fld">
+          <span>📅 الفصل</span>
+          <select id="browseSemester"><option value="">كل الفصول</option></select>
+        </label>
+        <label class="fld">
+          <span>📕 المادة</span>
+          <select id="browseSubject"><option value="">كل المواد</option></select>
+        </label>
+        <label class="fld">
+          <span>📚 الصف</span>
+          <select id="browseGrade"><option value="">كل الصفوف</option></select>
+        </label>
+        <label class="fld">
+          <span>📋 نوع الاختبار</span>
+          <select id="browseExamType">
+            <option value="">كل الأنواع</option>
+            <option value="امتحان">امتحان</option>
+            <option value="مذاكرة">مذاكرة</option>
+          </select>
+        </label>
+        <label class="fld">
+          <span>📖 الوحدة</span>
+          <select id="browseUnit"><option value="">كل الوحدات</option></select>
+        </label>
+        <label class="fld">
+          <span>📑 الدرس</span>
+          <select id="browseLesson"><option value="">كل الدروس</option></select>
+        </label>
+        <label class="fld">
+          <span>📝 نوع السؤال</span>
+          <select id="browseType"><option value="">كل الأنواع</option></select>
+        </label>
+        <label class="fld">
+          <span>💪 الصعوبة</span>
+          <select id="browseDiff">
+            <option value="">كل المستويات</option>
+            <option value="easy">سهل</option>
+            <option value="medium">متوسط</option>
+            <option value="hard">صعب</option>
+          </select>
+        </label>
+      </div>
+
+      <button class="btn primary" id="btnBrowseSearch" style="width:100%;margin:10px 0;">
+        🔍 بحث
+      </button>
+
+      <div id="browseResults">
+        <div class="hint">💡 اضغط "بحث" لعرض كل الأسئلة، أو اختر فلاتر لتضييق النتائج.</div>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <span id="browseSelectionCount" style="margin-inline-end:auto;font-weight:600;color:var(--muted);">0 سؤال محدد</span>
+      <button class="btn ghost" data-close>إغلاق</button>
+      <button class="btn primary" id="btnBrowseAddSelected" disabled>➕ إضافة المحدد للاختبار</button>
+    </div>
+  </div>
+</div>
+
 <div id="toast"></div>
 
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
 <script>
+/* =========================================================
+   Firebase
+   ========================================================= */
+const firebaseConfig = {
+  apiKey: "AIzaSyC9RO1IEt6vRnQVRlPuvLDysbISEtBgyws",
+  authDomain: "anki-cards-9c738.firebaseapp.com",
+  projectId: "anki-cards-9c738",
+  storageBucket: "anki-cards-9c738.firebasestorage.app",
+  messagingSenderId: "153726944053",
+  appId: "1:153726944053:web:38869cad141ac426f4427c"
+};
+
+let db = null;
+let cloudReady = false;
+
+function initFirebase(){
+  try{
+    firebase.initializeApp(firebaseConfig);
+    db = firebase.firestore();
+    cloudReady = true;
+    setCloudStatus('online', 'متصل');
+  }catch(e){
+    console.error('Firebase init error:', e);
+    setCloudStatus('offline', 'غير متصل');
+  }
+}
+
+function setCloudStatus(stateName, text){
+  const el = document.getElementById('cloudStatus');
+  const txt = document.getElementById('cloudStatusText');
+  if(!el || !txt) return;
+  el.classList.remove('online','offline','saving');
+  el.classList.add(stateName);
+  txt.textContent = text;
+}
+
 /* =========================================================
    الثوابت
    ========================================================= */
 const KEY = 'qbank_ar_v1';
 const LETTERS = ['أ','ب','ج','د','هـ','و','ز','ح','ط','ي','ك','ل'];
+
+const UNITS = [
+  'الوحدة الأولى','الوحدة الثانية','الوحدة الثالثة','الوحدة الرابعة','الوحدة الخامسة',
+  'الوحدة السادسة','الوحدة السابعة','الوحدة الثامنة','الوحدة التاسعة','الوحدة العاشرة'
+];
+
+const LESSONS = [
+  'الدرس الأول','الدرس الثاني','الدرس الثالث','الدرس الرابع','الدرس الخامس',
+  'الدرس السادس','الدرس السابع','الدرس الثامن','الدرس التاسع','الدرس العاشر'
+];
+
+const SEMESTERS = ['الفصل الأول', 'الفصل الثاني'];
 
 const TYPES = {
   mcq:       { label:'اختيار من متعدد',      icon:'◉' },
@@ -400,7 +558,8 @@ const TYPES = {
   essay:     { label:'سؤال مقالي',            icon:'✍' },
   fill:      { label:'إكمال الفراغات',        icon:'▭' },
   match:     { label:'توصيل / مطابقة',        icon:'⇄' },
-  order:     { label:'ترتيب خطوات',           icon:'⇅' }
+  order:     { label:'ترتيب خطوات',           icon:'⇅' },
+  passage:   { label:'نص/أبيات + أسئلة فرعية', icon:'📜' }
 };
 
 const DIFF = {
@@ -417,7 +576,8 @@ const DEFAULT_INSTRUCTIONS = {
   essay: 'أجب عن الأسئلة التالية:',
   fill: 'أكمل الفراغات التالية:',
   match: 'صل بين العمودين:',
-  order: 'رتب الخطوات التالية:'
+  order: 'رتب الخطوات التالية:',
+  passage: 'اقرأ النص/الأبيات التالية ثم أجب عن الأسئلة:'
 };
 
 const DEFAULT_TYPE_STYLES = {};
@@ -432,6 +592,7 @@ const DEFAULT_SETTINGS = {
   twoColumns:false, startFrom:'right',
   answerKeyMode:'same',
   showPoints:true, groupByCategory:false,
+  showQuestionBorder:true,
   mcqLayout: 'below',
   mcqGap: '15px',
   typeStyles: JSON.parse(JSON.stringify(DEFAULT_TYPE_STYLES))
@@ -441,7 +602,12 @@ const DEFAULT_SETTINGS = {
    الحالة
    ========================================================= */
 let state = { questions: [], settings: {...DEFAULT_SETTINGS} };
-let filters = { q:'', cat:'', type:'', diff:'' };
+let filters = { 
+  q:'', cat:'', type:'', diff:'', 
+  school:'', semester:'', subject:'', grade:'', 
+  unit:'', lesson:'',
+  examType:''
+};
 let draft = null;
 let editingId = null;
 
@@ -450,7 +616,7 @@ const $$ = s => [...document.querySelectorAll(s)];
 const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2,7);
 
 /* =========================================================
-   التهيئة والترحيل
+   دوال مساعدة
    ========================================================= */
 function createEmptySubItem(type) {
   const base = { text: '' };
@@ -468,7 +634,38 @@ function createEmptySubItem(type) {
   return base;
 }
 
+function createEmptySubQuestion(type = 'mcq') {
+  const q = { type: type, points: 1, text: '' };
+  if (type === 'mcq' || type === 'multi') {
+    q.options = [
+      {text:'', correct:true},
+      {text:'', correct:false},
+      {text:'', correct:false},
+      {text:'', correct:false}
+    ];
+  } else if (type === 'truefalse') {
+    q.correctBool = true;
+  } else if (type === 'short' || type === 'essay' || type === 'fill') {
+    q.answer = '';
+  } else if (type === 'match') {
+    q.pairs = [{left:'', right:''}, {left:'', right:''}];
+  } else if (type === 'order') {
+    q.sequence = ['', '', ''];
+  }
+  return q;
+}
+
 function migrateQuestion(q) {
+  if (q.unit === undefined) q.unit = 'الوحدة الأولى';
+  if (q.lesson === undefined) q.lesson = 'الدرس الأول';
+  
+  if (q.type === 'passage') {
+    if (!q.subQuestions) q.subQuestions = [createEmptySubQuestion('mcq')];
+    if (q.passageText === undefined) q.passageText = '';
+    if (q.passageFormat === undefined) q.passageFormat = 'text';
+    if (q.points === undefined) q.points = 1;
+    return q;
+  }
   if (q.subItems) return q;
   const sub = { text: q.text || '' };
   if (q.type === 'mcq' || q.type === 'multi') sub.options = q.options || [];
@@ -480,7 +677,8 @@ function migrateQuestion(q) {
   return {
     id: q.id || uid(), type: q.type || 'mcq', category: q.category || '',
     difficulty: q.difficulty || 'medium', points: q.points || 1,
-    instruction: '', subItems: [sub], notes: q.notes || ''
+    instruction: '', subItems: [sub], notes: q.notes || '',
+    unit: q.unit || 'الوحدة الأولى', lesson: q.lesson || 'الدرس الأول'
   };
 }
 
@@ -491,7 +689,7 @@ function migrateSettings(raw){
     else saved.answerKeyMode = 'same';
   }
   delete saved.showAnswers;
-  
+  if(saved.showQuestionBorder === undefined) saved.showQuestionBorder = true;
   if(!saved.typeStyles) saved.typeStyles = {};
   Object.keys(TYPES).forEach(k => {
     if(!saved.typeStyles[k]) {
@@ -511,7 +709,6 @@ function loadState(){
       return;
     }
   }catch(e){ console.warn(e); }
-  // البدء بقائمة فارغة تماماً
   state.questions = [];
   saveState();
 }
@@ -520,9 +717,6 @@ function saveState(){
   try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){ toast('تعذّر الحفظ'); }
 }
 
-/* =========================================================
-   أدوات مساعدة
-   ========================================================= */
 function esc(t){ return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 function escAttr(t){ return esc(t).replace(/"/g,'&quot;'); }
 function nl2br(t){ return esc(t).replace(/\n/g,'<br>'); }
@@ -536,17 +730,72 @@ function getFileTitle(){
 }
 
 /* =========================================================
+   Firebase: الحفظ والتحميل
+   ========================================================= */
+async function cloudSaveAll(){
+  if(!cloudReady){ toast('⚠️ Firebase غير مهيأ'); return; }
+  if(!state.questions.length){ toast('⚠️ لا توجد أسئلة للحفظ'); return; }
+  
+  setCloudStatus('saving', 'جاري الحفظ...');
+  
+  try{
+    const batch = db.batch();
+    const now = firebase.firestore.FieldValue.serverTimestamp();
+    let count = 0;
+    
+    state.questions.forEach(q => {
+      const ref = db.collection('questions').doc(q.id);
+      
+      const payload = JSON.parse(JSON.stringify(q));
+      payload.updatedAt = now;
+      if(!payload.createdAt) payload.createdAt = now;
+      
+      batch.set(ref, payload, { merge: true });
+      count++;
+    });
+    
+    await batch.commit();
+    setCloudStatus('online', 'تم الحفظ ✓');
+    toast(`☁️ تم حفظ ${count} سؤال في السحابة`);
+    setTimeout(()=>setCloudStatus('online','متصل'), 2500);
+  }catch(e){
+    console.error(e);
+    setCloudStatus('offline', 'فشل الحفظ');
+    toast('⚠️ فشل الحفظ: ' + (e.message || 'خطأ غير معروف'));
+    setTimeout(()=>setCloudStatus('online','متصل'), 2500);
+  }
+}
+
+async function cloudDeleteOne(id){
+  if(!cloudReady) return;
+  try{
+    await db.collection('questions').doc(id).delete();
+  }catch(e){
+    console.error('cloudDeleteOne error:', e);
+  }
+}
+
+/* =========================================================
    التهيئة
    ========================================================= */
 function init(){
+  initFirebase();
   loadState();
+  
   $('#fType').innerHTML = Object.entries(TYPES).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('');
   $('#fFilterType').innerHTML = '<option value="">كل الأنواع</option>' + Object.entries(TYPES).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('');
+  $('#fUnit').innerHTML = UNITS.map(u => `<option value="${u}">${u}</option>`).join('');
+  $('#fLesson').innerHTML = LESSONS.map(l => `<option value="${l}">${l}</option>`).join('');
+  $('#fFilterUnit').innerHTML = '<option value="">كل الوحدات</option>' + UNITS.map(u => `<option value="${u}">${u}</option>`).join('');
+  $('#fFilterLesson').innerHTML = '<option value="">كل الدروس</option>' + LESSONS.map(l => `<option value="${l}">${l}</option>`).join('');
+  $('#fFilterSemester').innerHTML = '<option value="">كل الفصول</option>' + SEMESTERS.map(s => `<option value="${s}">${s}</option>`).join('');
+  
   bindEvents();
   render();
 }
 
 function bindEvents(){
+  // إغلاق المودالات
   document.addEventListener('click', e=>{
     if(e.target.closest('[data-close]')){
       const m = e.target.closest('.modal'); if(m) closeModal('#'+m.id);
@@ -557,100 +806,252 @@ function bindEvents(){
     if(e.key==='Escape') $$('.modal.open').forEach(m=>closeModal('#'+m.id));
   });
 
-  $('#btnAdd').onclick = ()=> openQuestionModal(null);
-  $('#btnSettings').onclick = openSettings;
-  $('#btnPreview').onclick = openPreview;
-  $('#btnWord').onclick = exportWord;
-  $('#btnPrint').onclick = printDoc;
-
-  $('#fSearch').addEventListener('input', e=>{ filters.q=e.target.value.trim(); renderList(); });
-  $('#fFilterCat').addEventListener('change', e=>{ filters.cat=e.target.value; renderList(); });
-  $('#fFilterType').addEventListener('change', e=>{ filters.type=e.target.value; renderList(); });
-  $('#fFilterDiff').addEventListener('change', e=>{ filters.diff=e.target.value; renderList(); });
-
-  $('#fType').addEventListener('change', ()=>{
-    syncTypeFields();
-    const newType = $('#fType').value;
-    if(newType !== draft.type){
-      if(confirm('تغيير نوع السؤال سيؤدي إلى إعادة تعيين الحقول. هل تريد المتابعة؟')){
-        draft.type = newType;
-        draft.subItems = [createEmptySubItem(newType)];
-      } else {
-        $('#fType').value = draft.type;
-      }
-    }
-    renderTypeFields();
-  });
+  // ===== أزرار الهيدر (مع فحص الأمان) =====
+  const bindBtn = (sel, fn) => {
+    const el = document.querySelector(sel);
+    if(el) el.onclick = fn;
+    else console.warn('⚠️ عنصر مفقود:', sel);
+  };
   
-  $('#btnSaveQ').onclick = saveQuestion;
-
-  const box = $('#typeFields');
+  bindBtn('#btnAdd', () => openQuestionModal(null));
+  bindBtn('#btnSettings', openSettings);
+  bindBtn('#btnPreview', openPreview);
+  bindBtn('#btnWord', exportWord);
+  bindBtn('#btnPrint', printDoc);
+  bindBtn('#btnCloudSave', cloudSaveAll);
+  bindBtn('#btnBrowseCloud', openBrowseCloud);
+  bindBtn('#btnBrowseSearch', searchCloudByUnit);
+  bindBtn('#btnBrowseAddSelected', addSelectedFromCloud);
+  bindBtn('#btnSaveQ', function(ev){
+    if(ev) ev.preventDefault();
+    try { saveQuestion(); }
+    catch(err){ console.error('Save error:', err); toast('⚠️ ' + err.message); }
+  });
+  bindBtn('#btnBackup', backup);
+  bindBtn('#btnRestore', () => { const f = $('#fileRestore'); if(f) f.click(); });
   
-  box.addEventListener('click', e=>{
-    const btn = e.target.closest('[data-act]'); if(!btn) return;
-    const act = btn.dataset.act; 
-    const idx = btn.dataset.idx != null ? +btn.dataset.idx : -1;
-    const optidx = btn.dataset.optidx != null ? +btn.dataset.optidx : -1;
-    
-    syncTypeFields(); 
-
-    if(act === 'addSubItem') draft.subItems.push(createEmptySubItem(draft.type));
-    else if(act === 'delSubItem'){
-      if(draft.subItems.length > 1) draft.subItems.splice(idx, 1);
-      else { toast('يجب أن يحتوي السؤال على عبارة واحدة على الأقل'); return; }
-    }
-    else if(act === 'addSubOpt') draft.subItems[idx].options.push({text:'', correct:false});
-    else if(act === 'delSubOpt'){
-      const item = draft.subItems[idx];
-      const wasCorrect = item.options[optidx]?.correct;
-      item.options.splice(optidx, 1);
-      if(wasCorrect && draft.type === 'mcq' && item.options.length && !item.options.some(o=>o.correct)){
-        item.options[0].correct = true;
-      }
-    }
-    else if(act === 'addSubPair') draft.subItems[idx].pairs.push({left:'', right:''});
-    else if(act === 'delSubPair') draft.subItems[idx].pairs.splice(optidx, 1);
-    else if(act === 'addSubSeq') draft.subItems[idx].sequence.push('');
-    else if(act === 'delSubSeq') draft.subItems[idx].sequence.splice(optidx, 1);
-    
-    renderTypeFields();
-  });
-
-  box.addEventListener('change', e=>{
-    const t = e.target;
-    if(t.name.startsWith('corr_')){
-      syncTypeFields();
-      const idx = +t.dataset.idx;
-      const optidx = +t.dataset.optidx;
-      const item = draft.subItems[idx];
-      if(draft.type === 'mcq'){
-        item.options.forEach((o, j)=> o.correct = (j === optidx));
-      } else {
-        item.options[optidx].correct = t.checked;
-      }
-    }
-    if(t.name.startsWith('tf_')){
-      syncTypeFields();
-    }
-  });
-
-  $('#btnBackup').onclick = backup;
-  $('#btnRestore').onclick = ()=> $('#fileRestore').click();
-  $('#fileRestore').addEventListener('change', restore);
-
-  // زر مسح جميع البيانات
-  $('#btnClearAll').onclick = () => {
+  const fileRestore = $('#fileRestore');
+  if(fileRestore) fileRestore.addEventListener('change', restore);
+  
+  const clearBtn = $('#btnClearAll');
+  if(clearBtn) clearBtn.onclick = () => {
     if(confirm('هل أنت متأكد من مسح جميع الأسئلة والإعدادات والبدء من جديد؟ لا يمكن التراجع عن هذه الخطوة.')) {
       localStorage.removeItem(KEY);
       window.location.reload();
     }
   };
+
+  // ===== مستمعو الفلاتر (مع فحص الأمان) =====
+  const bindFilter = (sel, filterKey) => {
+    const el = document.querySelector(sel);
+    if(el) el.addEventListener('change', e => { filters[filterKey] = e.target.value; renderList(); });
+  };
+  
+  const searchEl = $('#fSearch');
+  if(searchEl) searchEl.addEventListener('input', e => { filters.q = e.target.value.trim(); renderList(); });
+  
+  bindFilter('#fFilterType', 'type');
+  bindFilter('#fFilterDiff', 'diff');
+  bindFilter('#fFilterSchool', 'school');
+  bindFilter('#fFilterSemester', 'semester');
+  bindFilter('#fFilterSubject', 'subject');
+  bindFilter('#fFilterGrade', 'grade');
+  bindFilter('#fFilterUnit', 'unit');
+  bindFilter('#fFilterLesson', 'lesson');
+  bindFilter('#fFilterExamType', 'examType');
+
+  // ===== تغيير نوع السؤال =====
+  const typeEl = $('#fType');
+  if(typeEl){
+    typeEl.addEventListener('change', function(){
+      if(!draft) return;
+      syncTypeFields();
+      const newType = this.value;
+      if(newType === draft.type){ renderTypeFields(); return; }
+      if(!confirm('تغيير نوع السؤال سيؤدي إلى إعادة تعيين الحقول. هل تريد المتابعة؟')){
+        this.value = draft.type; return;
+      }
+      draft.type = newType;
+      if(newType === 'passage'){
+        draft.passageText = draft.passageText || '';
+        draft.passageFormat = draft.passageFormat || 'text';
+        draft.subQuestions = draft.subQuestions || [createEmptySubQuestion('mcq')];
+        delete draft.subItems;
+      } else {
+        draft.subItems = [createEmptySubItem(newType)];
+        delete draft.subQuestions;
+        delete draft.passageText;
+        delete draft.passageFormat;
+      }
+      renderTypeFields();
+    });
+  }
+
+  // ===== المستمعون المفوَّضون (Delegation) — للحقول الديناميكية =====
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('#typeFields')) return;
+    const btn = e.target.closest('[data-act]');
+    if(!btn) return;
+    e.preventDefault();
+    try { handleTypeFieldsClick(e); }
+    catch(err){ console.error('handleTypeFieldsClick error:', err); toast('⚠️ ' + err.message); }
+  });
+  
+  document.addEventListener('change', function(e){
+    if(!e.target.closest('#typeFields')) return;
+    try { handleTypeFieldsChange(e); }
+    catch(err){ console.error('handleTypeFieldsChange error:', err); }
+  });
+  
+  console.log('✅ جميع المستمعين تم ربطهم بنجاح');
+}
+
+/* ===== معالجة النقر على أزرار #typeFields (مفوَّض) ===== */
+function handleTypeFieldsClick(e){
+  const btn = e.target.closest('[data-act]'); 
+  if(!btn) return;
+  if(!btn.closest('#typeFields')) return;
+  
+  const act = btn.dataset.act; 
+  const idx = btn.dataset.idx != null ? +btn.dataset.idx : -1;
+  const optidx = btn.dataset.optidx != null ? +btn.dataset.optidx : -1;
+  const pairidx = btn.dataset.pairidx != null ? +btn.dataset.pairidx : -1;
+  const seqidx = btn.dataset.seqidx != null ? +btn.dataset.seqidx : -1;
+  
+  if(!draft) return;
+  
+  try { syncTypeFields(); } catch(err){ console.error('sync error:', err); }
+
+  // ========= النوع الجديد: passage =========
+  if(draft.type === 'passage'){
+    if(act === 'addSubQuestion'){
+      if(!draft.subQuestions) draft.subQuestions = [];
+      draft.subQuestions.push(createEmptySubQuestion('mcq'));
+    }
+    else if(act === 'delSubQuestion'){
+      if(draft.subQuestions.length > 1) draft.subQuestions.splice(idx, 1);
+      else { toast('يجب أن يحتوي النص على سؤال فرعي واحد على الأقل'); return; }
+    }
+    else if(act === 'addSubQOpt'){
+      draft.subQuestions[idx].options.push({text:'', correct:false});
+    }
+    else if(act === 'delSubQOpt'){
+      const sq = draft.subQuestions[idx];
+      const wasCorrect = sq.options[optidx]?.correct;
+      sq.options.splice(optidx, 1);
+      if(wasCorrect && sq.type === 'mcq' && sq.options.length && !sq.options.some(o=>o.correct)){
+        sq.options[0].correct = true;
+      }
+    }
+    else if(act === 'addSubQPair'){
+      draft.subQuestions[idx].pairs.push({left:'', right:''});
+    }
+    else if(act === 'delSubQPair'){
+      draft.subQuestions[idx].pairs.splice(pairidx, 1);
+    }
+    else if(act === 'addSubQSeq'){
+      draft.subQuestions[idx].sequence.push('');
+    }
+    else if(act === 'delSubQSeq'){
+      draft.subQuestions[idx].sequence.splice(seqidx, 1);
+    }
+    renderTypeFields();
+    return;
+  }
+
+  // ========= الأنواع العادية =========
+  if(!draft.subItems) draft.subItems = [createEmptySubItem(draft.type)];
+
+  if(act === 'addSubItem'){
+    draft.subItems.push(createEmptySubItem(draft.type));
+  }
+  else if(act === 'delSubItem'){
+    if(draft.subItems.length > 1) draft.subItems.splice(idx, 1);
+    else { toast('يجب أن يحتوي السؤال على عبارة واحدة على الأقل'); return; }
+  }
+  else if(act === 'addSubOpt'){
+    draft.subItems[idx].options.push({text:'', correct:false});
+  }
+  else if(act === 'delSubOpt'){
+    const item = draft.subItems[idx];
+    const wasCorrect = item.options[optidx]?.correct;
+    item.options.splice(optidx, 1);
+    if(wasCorrect && draft.type === 'mcq' && item.options.length && !item.options.some(o=>o.correct)){
+      item.options[0].correct = true;
+    }
+  }
+  else if(act === 'addSubPair'){
+    draft.subItems[idx].pairs.push({left:'', right:''});
+  }
+  else if(act === 'delSubPair'){
+    draft.subItems[idx].pairs.splice(pairidx, 1);
+  }
+  else if(act === 'addSubSeq'){
+    draft.subItems[idx].sequence.push('');
+  }
+  else if(act === 'delSubSeq'){
+    draft.subItems[idx].sequence.splice(seqidx, 1);
+  }
+  
+  renderTypeFields();
+}
+
+/* ===== معالجة التغيير على #typeFields (مفوَّض) ===== */
+function handleTypeFieldsChange(e){
+  const t = e.target;
+  if(!t.closest('#typeFields')) return;
+  if(!draft) return;
+  
+  if(t.classList.contains('subq-type')){
+    syncTypeFields();
+    const idx = +t.dataset.idx;
+    const newType = t.value;
+    if(draft.subQuestions[idx].type !== newType){
+      if(!confirm('تغيير نوع السؤال الفرعي سيُعيد تعيين حقوله. متابعة؟')){
+        t.value = draft.subQuestions[idx].type;
+        return;
+      }
+      draft.subQuestions[idx] = createEmptySubQuestion(newType);
+      renderTypeFields();
+    }
+    return;
+  }
+  
+  if(t.id === 'fPassageFormat'){
+    syncTypeFields();
+    renderTypeFields();
+    return;
+  }
+  
+  if(t.name.startsWith('subcorr_')){
+    const idx = +t.dataset.idx;
+    const optidx = +t.dataset.optidx;
+    const sq = draft.subQuestions[idx];
+    if(sq.type === 'mcq'){
+      sq.options.forEach((o, j)=> o.correct = (j === optidx));
+    } else {
+      sq.options[optidx].correct = t.checked;
+    }
+    return;
+  }
+  
+  if(t.name.startsWith('corr_')){
+    const idx = +t.dataset.idx;
+    const optidx = +t.dataset.optidx;
+    const item = draft.subItems[idx];
+    if(draft.type === 'mcq'){
+      item.options.forEach((o, j)=> o.correct = (j === optidx));
+    } else {
+      item.options[optidx].correct = t.checked;
+    }
+    return;
+  }
 }
 
 /* =========================================================
    العرض
    ========================================================= */
-function render(){ renderStats(); renderList(); renderCategoryOptions(); }
+function render(){ renderStats(); renderList(); renderCategoryOptions(); renderFilterOptions(); }
 
 function renderStats(){
   const all = state.questions; const shown = getFiltered();
@@ -665,10 +1066,33 @@ function renderStats(){
 
 function renderCategoryOptions(){
   const cats = [...new Set(state.questions.map(q=>q.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ar'));
-  const sel = $('#fFilterCat'); const cur = sel.value;
+  const sel = $('#fFilterCat'); if(!sel) return;
+  const cur = sel.value;
   sel.innerHTML = '<option value="">كل التصنيفات</option>' + cats.map(c=>`<option value="${escAttr(c)}">${esc(c)}</option>`).join('');
   sel.value = cats.includes(cur) ? cur : '';
-  $('#catList').innerHTML = cats.map(c=>`<option value="${escAttr(c)}">`).join('');
+  const dl = $('#catList');
+  if(dl) dl.innerHTML = cats.map(c=>`<option value="${escAttr(c)}">`).join('');
+}
+
+function renderFilterOptions(){
+  const schools = [...new Set(state.questions.map(q=>q.school).filter(Boolean))].sort();
+  const subjects = [...new Set(state.questions.map(q=>q.subject).filter(Boolean))].sort();
+  const grades = [...new Set(state.questions.map(q=>q.grade).filter(Boolean))].sort();
+  
+  const curSchool = $('#fFilterSchool').value;
+  const curSubject = $('#fFilterSubject').value;
+  const curGrade = $('#fFilterGrade').value;
+  
+  $('#fFilterSchool').innerHTML = '<option value="">كل المدارس</option>' + 
+    schools.map(s=>`<option value="${escAttr(s)}">${esc(s)}</option>`).join('');
+  $('#fFilterSubject').innerHTML = '<option value="">كل المواد</option>' + 
+    subjects.map(s=>`<option value="${escAttr(s)}">${esc(s)}</option>`).join('');
+  $('#fFilterGrade').innerHTML = '<option value="">كل الصفوف</option>' + 
+    grades.map(s=>`<option value="${escAttr(s)}">${esc(s)}</option>`).join('');
+  
+  $('#fFilterSchool').value = schools.includes(curSchool) ? curSchool : '';
+  $('#fFilterSubject').value = subjects.includes(curSubject) ? curSubject : '';
+  $('#fFilterGrade').value = grades.includes(curGrade) ? curGrade : '';
 }
 
 function getFiltered(){
@@ -677,13 +1101,27 @@ function getFiltered(){
     if(filters.cat && (item.category||'') !== filters.cat) return false;
     if(filters.type && item.type !== filters.type) return false;
     if(filters.diff && item.difficulty !== filters.diff) return false;
+    if(filters.school && (item.school||'') !== filters.school) return false;
+    if(filters.semester && (item.semester||'') !== filters.semester) return false;
+    if(filters.subject && (item.subject||'') !== filters.subject) return false;
+    if(filters.grade && (item.grade||'') !== filters.grade) return false;
+    if(filters.unit && (item.unit||'') !== filters.unit) return false;
+    if(filters.lesson && (item.lesson||'') !== filters.lesson) return false;
+    if(filters.examType && (item.examType||'') !== filters.examType) return false;
     if(q){
       const hay = [
         item.instruction, item.category || '',
+        item.passageText || '',
+        item.school || '', item.semester || '', item.subject || '', item.grade || '',
+        item.unit || '', item.lesson || '', item.examType || '',
         ...(item.subItems || []).map(sub => sub.text),
+        ...(item.subQuestions || []).map(sq => sq.text),
         ...(item.subItems || []).flatMap(sub => (sub.options || []).map(o => o.text)),
+        ...(item.subQuestions || []).flatMap(sq => (sq.options || []).map(o => o.text)),
         ...(item.subItems || []).flatMap(sub => (sub.pairs || []).flatMap(p => [p.left, p.right])),
-        ...(item.subItems || []).flatMap(sub => sub.sequence || [])
+        ...(item.subQuestions || []).flatMap(sq => (sq.pairs || []).flatMap(p => [p.left, p.right])),
+        ...(item.subItems || []).flatMap(sub => sub.sequence || []),
+        ...(item.subQuestions || []).flatMap(sq => sq.sequence || [])
       ].join(' ').toLowerCase();
       if(!hay.includes(q)) return false;
     }
@@ -699,20 +1137,43 @@ function renderList(){
   }
   list.innerHTML = items.map(q=>{
     const t = TYPES[q.type] || {label:'سؤال'}; const d = DIFF[q.difficulty] || DIFF.medium;
-    const mainText = q.instruction ? q.instruction : (q.subItems[0] ? q.subItems[0].text : '');
-    const subCount = q.subItems ? q.subItems.length : 0;
-    const badgeSub = subCount > 1 ? `<span class="badge" style="background:#f3e8ff;color:#7e22ce">${subCount} أسئلة فرعية</span>` : '';
-    const badgeCat = q.category ? `<span class="badge cat">🗂️ ${esc(q.category)}</span>` : '';
+    
+    let mainText = '';
+    let previewExtra = '';
+    if(q.type === 'passage'){
+      mainText = q.instruction || 'اقرأ النص/الأبيات التالية ثم أجب عن الأسئلة:';
+      previewExtra = `<div class="passage-preview">${nl2br((q.passageText||'').slice(0,300))}${(q.passageText||'').length>300?'...':''}</div>`;
+    } else {
+      mainText = q.instruction ? q.instruction : (q.subItems && q.subItems[0] ? q.subItems[0].text : '');
+    }
+    
+    const subCount = q.type === 'passage' ? (q.subQuestions||[]).length : (q.subItems||[]).length;
+    const badgeSub = subCount > 1 ? `<span class="badge" style="background:#f3e8ff;color:#7e22ce">${subCount} عناصر</span>` : '';
+    
+    const badges = [
+      q.school ? `<span class="badge" style="background:#fef3c7;color:#92400e;border-color:#fde68a">🏫 ${esc(q.school)}</span>` : '',
+      q.semester ? `<span class="badge" style="background:#e0f2fe;color:#075985;border-color:#bae6fd">📅 ${esc(q.semester)}</span>` : '',
+      q.subject ? `<span class="badge" style="background:#f3e8ff;color:#7e22ce;border-color:#e9d5ff">📕 ${esc(q.subject)}</span>` : '',
+      q.grade ? `<span class="badge" style="background:#fce7f3;color:#9d174d;border-color:#fbcfe8">📚 ${esc(q.grade)}</span>` : '',
+      q.examType ? `<span class="badge" style="background:#fee2e2;color:#991b1b;border-color:#fecaca">📋 ${esc(q.examType)}</span>` : '',
+      q.unit ? `<span class="badge" style="background:#fef3c7;color:#92400e;border-color:#fde68a">📖 ${esc(q.unit)}</span>` : '',
+      q.lesson ? `<span class="badge" style="background:#e0e7ff;color:#3730a3;border-color:#c7d2fe">📑 ${esc(q.lesson)}</span>` : '',
+      q.category ? `<span class="badge cat">🗂️ ${esc(q.category)}</span>` : ''
+    ].filter(Boolean).join('');
+    
+    const badgeCloud = q.updatedAt ? `<span class="badge cloud">☁️ محفوظ</span>` : '';
 
     return `<article class="qcard" data-id="${q.id}">
       <div class="qcard-top">
         <span class="badge type">${t.icon} ${t.label}</span>
+        ${badges}
         ${badgeSub}
-        ${badgeCat}
+        ${badgeCloud}
         <span class="badge ${d.cls}">${d.label}</span>
         <span class="badge pts">${(+q.points||0)} درجة</span>
       </div>
       <div class="qcard-text">${nl2br(mainText)}</div>
+      ${previewExtra}
       ${q.notes ? `<div class="qcard-sub">📌 ${esc(q.notes)}</div>` : ''}
       <div class="qcard-actions">
         <button class="btn ghost" data-edit="${q.id}">✏️ تعديل</button>
@@ -731,21 +1192,47 @@ function renderList(){
    نموذج السؤال
    ========================================================= */
 function newDraft(type = 'mcq'){
-  return { 
+  const d = { 
     id:uid(), type:type, category:'', difficulty:'medium', points:1, 
-    instruction:'', subItems:[createEmptySubItem(type)], notes:'' 
+    instruction:'', notes:'',
+    unit: 'الوحدة الأولى',
+    lesson: 'الدرس الأول'
   };
+  if(type === 'passage'){
+    d.passageText = '';
+    d.passageFormat = 'text';
+    d.subQuestions = [createEmptySubQuestion('mcq')];
+  } else {
+    d.subItems = [createEmptySubItem(type)];
+  }
+  return d;
 }
 
 function openQuestionModal(id){
   const found = id ? state.questions.find(q=>q.id===id) : null;
-  draft = found ? JSON.parse(JSON.stringify(found)) : newDraft('mcq');
   
-  if(!draft.subItems) draft = migrateQuestion(draft);
+  try {
+    draft = found ? JSON.parse(JSON.stringify(found)) : newDraft('mcq');
+  } catch(err){
+    console.error('parse error:', err);
+    draft = newDraft('mcq');
+  }
+  
+  if(!draft.subItems && draft.type !== 'passage') draft = migrateQuestion(draft);
+  if(draft.type === 'passage'){
+    if(!draft.subQuestions) draft.subQuestions = [createEmptySubQuestion('mcq')];
+    if(draft.passageText === undefined) draft.passageText = '';
+    if(draft.passageFormat === undefined) draft.passageFormat = 'text';
+  }
+  if(draft.type !== 'passage' && (!draft.subItems || !draft.subItems.length)){
+    draft.subItems = [createEmptySubItem(draft.type)];
+  }
   
   editingId = id || null;
   $('#qModalTitle').textContent = id ? 'تعديل السؤال' : 'سؤال جديد';
   $('#fType').value = draft.type;
+  $('#fUnit').value = draft.unit || 'الوحدة الأولى';
+  $('#fLesson').value = draft.lesson || 'الدرس الأول';
   $('#fCategory').value = draft.category || '';
   $('#fDifficulty').value = draft.difficulty || 'medium';
   $('#fPoints').value = (draft.points ?? 1);
@@ -753,11 +1240,25 @@ function openQuestionModal(id){
   
   renderTypeFields(); 
   openModal('#qModal');
-  setTimeout(()=>$('#fInstruction')?.focus(),80);
+  setTimeout(()=>{ 
+    const inst = $('#fInstruction'); 
+    if(inst) inst.focus(); 
+  }, 80);
 }
 
 function renderTypeFields(){
-  const box = $('#typeFields'); const t = draft.type;
+  const box = $('#typeFields'); 
+  if(!box) return;
+  const t = draft.type;
+  
+  if(t === 'passage'){
+    box.innerHTML = renderPassageFields();
+    return;
+  }
+  
+  if(!draft.subItems || !draft.subItems.length){
+    draft.subItems = [createEmptySubItem(t)];
+  }
   
   let html = `
     <div class="fld">
@@ -770,6 +1271,17 @@ function renderTypeFields(){
   `;
   
   draft.subItems.forEach((item, i) => {
+    if(!item.text) item.text = '';
+    if((t === 'mcq' || t === 'multi') && (!item.options || !item.options.length)){
+      item.options = [{text:'', correct:true}, {text:'', correct:false}];
+    }
+    if(t === 'match' && (!item.pairs || !item.pairs.length)){
+      item.pairs = [{left:'', right:''}, {left:'', right:''}];
+    }
+    if(t === 'order' && (!item.sequence || !item.sequence.length)){
+      item.sequence = ['', ''];
+    }
+    
     html += `<div class="sub-item-card" data-idx="${i}">
       <div class="sub-item-header">
         <span>السؤال / العبارة ${i + 1}</span>
@@ -799,15 +1311,15 @@ function renderTypeFields(){
         <button type="button" class="btn tiny" data-act="addSubOpt" data-idx="${i}" style="margin-top:6px">＋ إضافة خيار</button>`;
     }
     else if (t === 'short' || t === 'essay' || t === 'fill') {
-      html += `<input type="text" class="sub-answer" data-idx="${i}" value="${escAttr(item.answer)}" placeholder="الإجابة النموذجية">`;
+      html += `<input type="text" class="sub-answer" data-idx="${i}" value="${escAttr(item.answer || '')}" placeholder="الإجابة النموذجية">`;
     }
     else if (t === 'match') {
       html += `<div class="pair-list">`;
       item.pairs.forEach((p, j) => {
         html += `<div class="pair-row">
-          <input type="text" class="sub-pair-left" data-idx="${i}" data-pairidx="${j}" value="${escAttr(p.left)}" placeholder="العنصر (أ)">
+          <input type="text" class="sub-pair-left" data-idx="${i}" data-pairidx="${j}" value="${escAttr(p.left || '')}" placeholder="العنصر (أ)">
           <span class="arrow">⇄</span>
-          <input type="text" class="sub-pair-right" data-idx="${i}" data-pairidx="${j}" value="${escAttr(p.right)}" placeholder="المطابق">
+          <input type="text" class="sub-pair-right" data-idx="${i}" data-pairidx="${j}" value="${escAttr(p.right || '')}" placeholder="المطابق">
           <button type="button" class="icon-btn danger" data-act="delSubPair" data-idx="${i}" data-pairidx="${j}">✕</button>
         </div>`;
       });
@@ -819,7 +1331,7 @@ function renderTypeFields(){
       item.sequence.forEach((it, j) => {
         html += `<div class="item-row">
           <span class="num">${j+1}</span>
-          <input type="text" class="sub-seq-input" data-idx="${i}" data-seqidx="${j}" value="${escAttr(it)}" placeholder="العنصر ${j+1}">
+          <input type="text" class="sub-seq-input" data-idx="${i}" data-seqidx="${j}" value="${escAttr(it || '')}" placeholder="العنصر ${j+1}">
           <button type="button" class="icon-btn danger" data-act="delSubSeq" data-idx="${i}" data-seqidx="${j}">✕</button>
         </div>`;
       });
@@ -836,9 +1348,201 @@ function renderTypeFields(){
   box.innerHTML = html;
 }
 
+function renderPassageFields() {
+  const isPoetry = draft.passageFormat === 'poetry';
+  
+  let html = `
+    <div class="fld">
+      <span>التوجيه / التعليمات <small>(اختياري)</small></span>
+      <input type="text" id="fInstruction" value="${escAttr(draft.instruction||'')}" 
+             placeholder="اقرأ النص التالي ثم أجب عن الأسئلة:">
+    </div>
+
+    <div class="fld">
+      <div class="fld-head">
+        <span>📜 النص / الأبيات الرئيسية</span>
+        <select id="fPassageFormat" style="padding:6px;border-radius:8px;border:1px solid var(--border);">
+          <option value="text" ${!isPoetry?'selected':''}>نص عادي</option>
+          <option value="poetry" ${isPoetry?'selected':''}>أبيات شعرية (سطران متقابلان)</option>
+        </select>
+      </div>
+      <textarea id="fPassageText" class="sub-item-text" 
+                style="min-height:140px;font-size:15px;line-height:2;"
+                placeholder="${isPoetry 
+                  ? 'اكتب كل شطر في سطر مستقل، والشطران المتتاليان يُعتبران بيتاً واحداً.' 
+                  : 'اكتب النص هنا...'}">${esc(draft.passageText||'')}</textarea>
+      ${isPoetry ? '<div class="hint">💡 اكتب كل شطر في سطر مستقل، والشطران المتتاليان يُعتبران بيتاً واحداً.</div>' : ''}
+    </div>
+
+    <div class="sect-label" style="margin-top:20px;">🔽 الأسئلة الفرعية على النص</div>
+    <div id="subQuestionsContainer">
+  `;
+  
+  draft.subQuestions.forEach((sq, i) => {
+    html += renderSubQuestionCard(sq, i);
+  });
+  
+  html += `</div>
+    <button type="button" class="btn primary" data-act="addSubQuestion" 
+            style="margin-top:12px;width:100%">
+      ＋ إضافة سؤال فرعي
+    </button>
+  `;
+  
+  return html;
+}
+
+function renderSubQuestionCard(sq, i) {
+  const typeOpts = Object.entries(TYPES)
+    .filter(([k]) => k !== 'passage')
+    .map(([k,v]) => `<option value="${k}" ${sq.type===k?'selected':''}>${v.icon} ${v.label}</option>`)
+    .join('');
+  
+  let fieldsHTML = '';
+  
+  fieldsHTML += `<textarea class="subq-text" data-idx="${i}" placeholder="نص السؤال الفرعي..."
+                   style="width:100%;min-height:52px;margin-bottom:8px;padding:8px 10px;border:1px solid #e2e8f0;border-radius:8px;background:#f8fafc;resize:vertical;">${esc(sq.text||'')}</textarea>`;
+  
+  if (sq.type === 'mcq' || sq.type === 'multi') {
+    const isMulti = sq.type === 'multi';
+    fieldsHTML += `<div class="opt-list">`;
+    (sq.options||[]).forEach((o, j) => {
+      fieldsHTML += `<div class="opt-row">
+        <input type="${isMulti?'checkbox':'radio'}" name="subcorr_${i}" data-idx="${i}" data-optidx="${j}" ${o.correct?'checked':''}>
+        <span class="opt-letter">${LETTERS[j]||j+1}</span>
+        <input type="text" class="subq-opt" data-idx="${i}" data-optidx="${j}" value="${escAttr(o.text)}" placeholder="نص الخيار">
+        <button type="button" class="icon-btn danger" data-act="delSubQOpt" data-idx="${i}" data-optidx="${j}">✕</button>
+      </div>`;
+    });
+    fieldsHTML += `</div>
+      <button type="button" class="btn tiny" data-act="addSubQOpt" data-idx="${i}" style="margin-top:6px">＋ خيار</button>`;
+  }
+  else if (sq.type === 'truefalse') {
+    fieldsHTML += `<div class="tf-group">
+      <label><input type="radio" name="subtf_${i}" value="true" ${sq.correctBool?'checked':''}> ✔ صح</label>
+      <label><input type="radio" name="subtf_${i}" value="false" ${!sq.correctBool?'checked':''}> ✘ خطأ</label>
+    </div>`;
+  }
+  else if (sq.type === 'short' || sq.type === 'essay' || sq.type === 'fill') {
+    fieldsHTML += `<input type="text" class="subq-answer" data-idx="${i}" value="${escAttr(sq.answer||'')}" placeholder="الإجابة النموذجية" style="width:100%;padding:8px 10px;border:1px solid #e2e8f0;border-radius:8px;background:#f8fafc;">`;
+  }
+  else if (sq.type === 'match') {
+    fieldsHTML += `<div class="pair-list">`;
+    (sq.pairs||[]).forEach((p, j) => {
+      fieldsHTML += `<div class="pair-row">
+        <input type="text" class="subq-pair-l" data-idx="${i}" data-pairidx="${j}" value="${escAttr(p.left)}" placeholder="العنصر">
+        <span class="arrow">⇄</span>
+        <input type="text" class="subq-pair-r" data-idx="${i}" data-pairidx="${j}" value="${escAttr(p.right)}" placeholder="المطابق">
+        <button type="button" class="icon-btn danger" data-act="delSubQPair" data-idx="${i}" data-pairidx="${j}">✕</button>
+      </div>`;
+    });
+    fieldsHTML += `</div>
+      <button type="button" class="btn tiny" data-act="addSubQPair" data-idx="${i}" style="margin-top:6px">＋ زوج</button>`;
+  }
+  else if (sq.type === 'order') {
+    fieldsHTML += `<div class="item-list">`;
+    (sq.sequence||[]).forEach((it, j) => {
+      fieldsHTML += `<div class="item-row">
+        <span class="num">${j+1}</span>
+        <input type="text" class="subq-seq" data-idx="${i}" data-seqidx="${j}" value="${escAttr(it)}" placeholder="العنصر ${j+1}">
+        <button type="button" class="icon-btn danger" data-act="delSubQSeq" data-idx="${i}" data-seqidx="${j}">✕</button>
+      </div>`;
+    });
+    fieldsHTML += `</div>
+      <button type="button" class="btn tiny" data-act="addSubQSeq" data-idx="${i}" style="margin-top:6px">＋ عنصر</button>`;
+  }
+  
+  return `
+    <div class="sub-item-card" data-subidx="${i}">
+      <div class="sub-item-header">
+        <span>السؤال الفرعي ${i+1}</span>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <label style="font-size:12px;color:#64748b;">الدرجة:
+            <input type="number" class="subq-points" data-idx="${i}" value="${sq.points||1}" 
+                   min="0" step="0.25" style="width:60px;padding:3px 6px;border-radius:6px;border:1px solid var(--border);">
+          </label>
+          ${draft.subQuestions.length > 1 
+            ? `<button type="button" class="icon-btn danger" data-act="delSubQuestion" data-idx="${i}">✕</button>` 
+            : ''}
+        </div>
+      </div>
+      <label class="fld" style="margin-bottom:8px;">
+        <span style="font-size:12px;">نوع السؤال الفرعي</span>
+        <select class="subq-type" data-idx="${i}" 
+                style="padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:#f8fafc;">
+          ${typeOpts}
+        </select>
+      </label>
+      ${fieldsHTML}
+    </div>
+  `;
+}
+
 function syncTypeFields(){
   if(!draft) return;
-  draft.instruction = ($('#fInstruction')?.value || '').trim();
+  
+  if (draft.type === 'passage') {
+    const instEl = $('#fInstruction');
+    const ptEl = $('#fPassageText');
+    const pfEl = $('#fPassageFormat');
+    
+    if(instEl) draft.instruction = instEl.value.trim();
+    if(ptEl) draft.passageText = ptEl.value;
+    if(pfEl) draft.passageFormat = pfEl.value;
+    
+    if(!draft.subQuestions) draft.subQuestions = [];
+    
+    draft.subQuestions.forEach((sq, i) => {
+      const typeSel = document.querySelector(`.subq-type[data-idx="${i}"]`);
+      if (typeSel) sq.type = typeSel.value;
+      
+      const textEl = document.querySelector(`.subq-text[data-idx="${i}"]`);
+      if (textEl) sq.text = textEl.value;
+      
+      const ptsEl = document.querySelector(`.subq-points[data-idx="${i}"]`);
+      if (ptsEl) sq.points = parseFloat(ptsEl.value) || 0;
+      
+      if (sq.type === 'mcq' || sq.type === 'multi') {
+        if(!sq.options) sq.options = [];
+        sq.options.forEach((o, j) => {
+          const ot = document.querySelector(`.subq-opt[data-idx="${i}"][data-optidx="${j}"]`);
+          if (ot) o.text = ot.value;
+          const cb = document.querySelector(`input[name="subcorr_${i}"][data-optidx="${j}"]`);
+          if (cb) o.correct = cb.checked;
+        });
+      }
+      else if (sq.type === 'truefalse') {
+        const c = document.querySelector(`input[name="subtf_${i}"]:checked`);
+        if (c) sq.correctBool = (c.value === 'true');
+      }
+      else if (sq.type === 'short' || sq.type === 'essay' || sq.type === 'fill') {
+        const a = document.querySelector(`.subq-answer[data-idx="${i}"]`);
+        if (a) sq.answer = a.value;
+      }
+      else if (sq.type === 'match') {
+        if(!sq.pairs) sq.pairs = [];
+        sq.pairs.forEach((p, j) => {
+          const l = document.querySelector(`.subq-pair-l[data-idx="${i}"][data-pairidx="${j}"]`);
+          const r = document.querySelector(`.subq-pair-r[data-idx="${i}"][data-pairidx="${j}"]`);
+          if (l) p.left = l.value;
+          if (r) p.right = r.value;
+        });
+      }
+      else if (sq.type === 'order') {
+        if(!sq.sequence) sq.sequence = [];
+        sq.sequence.forEach((it, j) => {
+          const s = document.querySelector(`.subq-seq[data-idx="${i}"][data-seqidx="${j}"]`);
+          if (s) sq.sequence[j] = s.value;
+        });
+      }
+    });
+    return;
+  }
+  
+  const instEl = $('#fInstruction');
+  if(instEl) draft.instruction = instEl.value.trim();
+  
+  if(!draft.subItems) draft.subItems = [];
   
   draft.subItems.forEach((item, i) => {
     const textEl = document.querySelector(`.sub-item-text[data-idx="${i}"]`);
@@ -849,6 +1553,7 @@ function syncTypeFields(){
       if (checked) item.correctBool = (checked.value === 'true');
     }
     else if (draft.type === 'mcq' || draft.type === 'multi') {
+      if(!item.options) item.options = [];
       item.options.forEach((opt, j) => {
         const optTextEl = document.querySelector(`.sub-opt-text[data-idx="${i}"][data-optidx="${j}"]`);
         if (optTextEl) opt.text = optTextEl.value;
@@ -862,6 +1567,7 @@ function syncTypeFields(){
       if (ansEl) item.answer = ansEl.value;
     }
     else if (draft.type === 'match') {
+      if(!item.pairs) item.pairs = [];
       item.pairs.forEach((p, j) => {
         const l = document.querySelector(`.sub-pair-left[data-idx="${i}"][data-pairidx="${j}"]`);
         const r = document.querySelector(`.sub-pair-right[data-idx="${i}"][data-pairidx="${j}"]`);
@@ -870,6 +1576,7 @@ function syncTypeFields(){
       });
     }
     else if (draft.type === 'order') {
+      if(!item.sequence) item.sequence = [];
       item.sequence.forEach((it, j) => {
         const seqEl = document.querySelector(`.sub-seq-input[data-idx="${i}"][data-seqidx="${j}"]`);
         if (seqEl) item.sequence[j] = seqEl.value;
@@ -879,49 +1586,100 @@ function syncTypeFields(){
 }
 
 function syncDraft(){
-  draft.type = $('#fType').value;
-  draft.category = $('#fCategory').value.trim();
-  draft.difficulty = $('#fDifficulty').value;
-  draft.points = parseFloat($('#fPoints').value) || 0;
-  draft.notes = $('#fNotes').value.trim();
-  syncTypeFields();
+  const typeEl = $('#fType');
+  const unitEl = $('#fUnit');
+  const lessonEl = $('#fLesson');
+  const catEl = $('#fCategory');
+  const diffEl = $('#fDifficulty');
+  const ptsEl = $('#fPoints');
+  const notesEl = $('#fNotes');
+  
+  if(typeEl) draft.type = typeEl.value;
+  if(unitEl) draft.unit = unitEl.value || 'الوحدة الأولى';
+  if(lessonEl) draft.lesson = lessonEl.value || 'الدرس الأول';
+  if(catEl) draft.category = catEl.value.trim();
+  if(diffEl) draft.difficulty = diffEl.value;
+  if(ptsEl) draft.points = parseFloat(ptsEl.value) || 0;
+  if(notesEl) draft.notes = notesEl.value.trim();
+  
+  try { syncTypeFields(); } catch(err){ console.error('syncTypeFields error:', err); }
 }
 
 function saveQuestion(){
+  if(!draft){
+    toast('⚠️ لا يوجد سؤال مفتوح');
+    return;
+  }
+  
   syncDraft();
   
-  if (draft.subItems.length === 0) { toast('⚠️ أضف سؤالاً واحداً على الأقل'); return; }
-  
-  for (let i = 0; i < draft.subItems.length; i++) {
-    const item = draft.subItems[i];
-    if (!item.text.trim()) { toast(`⚠️ السؤال ${i+1}: أدخل النص`); return; }
+  if (draft.type === 'passage') {
+    if (!draft.passageText || !draft.passageText.trim()) { toast('⚠️ أدخل النص أو الأبيات'); return; }
+    if (!draft.subQuestions || !draft.subQuestions.length) { toast('⚠️ أضف سؤالاً فرعياً واحداً على الأقل'); return; }
+    for (let i = 0; i < draft.subQuestions.length; i++) {
+      const sq = draft.subQuestions[i];
+      if (!sq.text || !sq.text.trim()) { toast(`⚠️ السؤال الفرعي ${i+1}: أدخل النص`); return; }
+      if (sq.type === 'mcq' || sq.type === 'multi') {
+        const nonEmpty = (sq.options || []).filter(o => o.text && o.text.trim());
+        if (nonEmpty.length < 2) { toast(`⚠️ س${i+1}: خياران على الأقل`); return; }
+        if (!nonEmpty.some(o => o.correct)) { toast(`⚠️ س${i+1}: حدد الإجابة`); return; }
+        sq.options = nonEmpty;
+      }
+      else if (sq.type === 'match') {
+        sq.pairs = (sq.pairs || []).filter(p => (p.left && p.left.trim()) || (p.right && p.right.trim()));
+        if (sq.pairs.length < 2) { toast(`⚠️ س${i+1}: زوجان على الأقل`); return; }
+      }
+      else if (sq.type === 'order') {
+        sq.sequence = (sq.sequence || []).map(s => s.trim()).filter(Boolean);
+        if (sq.sequence.length < 2) { toast(`⚠️ س${i+1}: عنصران على الأقل`); return; }
+      }
+    }
+  } else {
+    if (!draft.subItems || draft.subItems.length === 0) { toast('⚠️ أضف سؤالاً واحداً على الأقل'); return; }
     
-    if (draft.type === 'mcq' || draft.type === 'multi') {
-      const nonEmpty = item.options.filter(o => o.text.trim());
-      if (nonEmpty.length < 2) { toast(`⚠️ السؤال ${i+1}: أضف خيارين على الأقل`); return; }
-      if (!nonEmpty.some(o => o.correct)) { toast(`⚠️ السؤال ${i+1}: حدد الإجابة الصحيحة`); return; }
-      item.options = nonEmpty;
-    }
-    else if (draft.type === 'match') {
-      item.pairs = item.pairs.filter(p => p.left.trim() || p.right.trim());
-      if (item.pairs.length < 2) { toast(`⚠️ السؤال ${i+1}: أضف زوجين على الأقل`); return; }
-    }
-    else if (draft.type === 'order') {
-      item.sequence = item.sequence.map(s => s.trim()).filter(Boolean);
-      if (item.sequence.length < 2) { toast(`⚠️ السؤال ${i+1}: أضف عنصرين على الأقل`); return; }
-    }
-    else if (draft.type === 'fill' && !item.answer.trim()) {
-      toast(`⚠️ السؤال ${i+1}: أدخل الإجابة`); return;
+    for (let i = 0; i < draft.subItems.length; i++) {
+      const item = draft.subItems[i];
+      if (!item.text || !item.text.trim()) { toast(`⚠️ السؤال ${i+1}: أدخل النص`); return; }
+      
+      if (draft.type === 'mcq' || draft.type === 'multi') {
+        const nonEmpty = (item.options || []).filter(o => o.text && o.text.trim());
+        if (nonEmpty.length < 2) { toast(`⚠️ السؤال ${i+1}: أضف خيارين على الأقل`); return; }
+        if (!nonEmpty.some(o => o.correct)) { toast(`⚠️ السؤال ${i+1}: حدد الإجابة الصحيحة`); return; }
+        item.options = nonEmpty;
+      }
+      else if (draft.type === 'match') {
+        item.pairs = (item.pairs || []).filter(p => (p.left && p.left.trim()) || (p.right && p.right.trim()));
+        if (item.pairs.length < 2) { toast(`⚠️ السؤال ${i+1}: أضف زوجين على الأقل`); return; }
+      }
+      else if (draft.type === 'order') {
+        item.sequence = (item.sequence || []).map(s => s.trim()).filter(Boolean);
+        if (item.sequence.length < 2) { toast(`⚠️ السؤال ${i+1}: أضف عنصرين على الأقل`); return; }
+      }
+      else if (draft.type === 'fill' && (!item.answer || !item.answer.trim())) {
+        toast(`⚠️ السؤال ${i+1}: أدخل الإجابة`); return;
+      }
     }
   }
+  
+  const s = state.settings;
+  draft.school = s.school || '';
+  draft.semester = s.semester || '';
+  draft.subject = s.subject || '';
+  draft.grade = s.grade || '';
+  draft.examType = s.examType || '';
+  draft.academicYear = s.academicYear || '';
   
   if (editingId) {
     const i = state.questions.findIndex(q => q.id === editingId);
-    if (i > -1) state.questions[i] = draft;
+    if (i > -1) state.questions[i] = JSON.parse(JSON.stringify(draft));
   } else {
-    state.questions.push(draft);
+    draft.id = draft.id || uid();
+    state.questions.push(JSON.parse(JSON.stringify(draft)));
   }
-  saveState(); closeModal('#qModal'); render();
+  
+  saveState(); 
+  closeModal('#qModal'); 
+  render();
   toast(editingId ? '✅ تم تعديل السؤال' : '✅ تم إضافة السؤال');
 }
 
@@ -935,8 +1693,14 @@ function duplicateQuestion(id){
 
 function deleteQuestion(id){
   const q = state.questions.find(x=>x.id===id); if(!q) return;
-  if(!confirm('حذف هذا السؤال نهائياً؟\n\n'+(q.instruction || q.subItems[0].text).slice(0,90))) return;
+  const preview = q.type === 'passage' 
+    ? (q.passageText||'').slice(0,90) 
+    : (q.instruction || (q.subItems[0] ? q.subItems[0].text : '')).slice(0,90);
+  if(!confirm('حذف هذا السؤال نهائياً؟\n\n'+preview)) return;
   state.questions = state.questions.filter(x=>x.id!==id); saveState(); render();
+  if(cloudReady && q.updatedAt){
+    cloudDeleteOne(id);
+  }
   toast('🗑️ تم حذف السؤال');
 }
 
@@ -1005,6 +1769,7 @@ function openSettings(){
   $('#sShowPoints').checked = !!s.showPoints;
   $('#sGroup').checked = !!s.groupByCategory;
   $('#sTwoColumns').checked = !!s.twoColumns;
+  $('#sShowBorder').checked = s.showQuestionBorder !== false;
   $('#sMcqLayout').value = s.mcqLayout || 'below';
   $('#sMcqGap').value = s.mcqGap || '15px';
   
@@ -1028,6 +1793,7 @@ function openSettings(){
   bind('#sAnswerKeyMode','answerKeyMode');
   bind('#sShowPoints','showPoints'); bind('#sGroup','groupByCategory');
   bind('#sTwoColumns','twoColumns');
+  bind('#sShowBorder','showQuestionBorder');
   bind('#sMcqLayout','mcqLayout'); bind('#sMcqGap','mcqGap');
 
   $$('input[name="startFrom"]').forEach(r=>{
@@ -1097,7 +1863,7 @@ function getDynamicCSS() {
 }
 
 /* =========================================================
-   بناء العمودين
+   بناء الأعمدة
    ========================================================= */
 function buildColumns(qs){
   const startFrom = state.settings.startFrom || 'right';
@@ -1130,7 +1896,10 @@ function questionHTML(q, n, narrow){
   const s = state.settings;
   const pts = (s.showPoints && +q.points) ? `<span class="qp">(${(+q.points)})</span>` : '';
   
-  // سؤال مفرد بدون توجيه
+  if (q.type === 'passage') {
+    return renderPassageHTML(q, n, narrow);
+  }
+  
   if (q.subItems.length === 1 && !q.instruction) {
     const item = q.subItems[0];
     let extra = '';
@@ -1196,7 +1965,6 @@ function questionHTML(q, n, narrow){
     </div>`;
   }
   
-  // مجموعة أسئلة أو يوجد توجيه
   const instr = q.instruction || DEFAULT_INSTRUCTIONS[q.type] || '';
   let itemsHTML = '';
   
@@ -1243,11 +2011,9 @@ function questionHTML(q, n, narrow){
       const n2 = pairs.length;
       let rows = '';
       for (let i = 0; i < n2; i++) {
-        const left = pairs[i];
-        const right = pairs[(i+1) % n2];
         rows += `<tr>
-          <td class="opt">${i+1}. ${esc(left.left)}</td>
-          <td class="opt">${LETTERS[i]||i+1}. ${esc(right.right)}</td>
+          <td class="opt">${i+1}. ${esc(pairs[i].left)}</td>
+          <td class="opt">${LETTERS[i]||i+1}. ${esc(pairs[(i+1)%n2].right)}</td>
         </tr>`;
       }
       subExtra = `<table class="opts">${rows}</table>`;
@@ -1271,6 +2037,98 @@ function questionHTML(q, n, narrow){
   </div>`;
 }
 
+function renderPassageHTML(q, n, narrow){
+  const s = state.settings;
+  const pts = (s.showPoints && +q.points) ? `<span class="qp">(${(+q.points)})</span>` : '';
+  const instr = q.instruction || 'اقرأ النص التالي ثم أجب عن الأسئلة:';
+  
+  let passageHTML = '';
+  const raw = (q.passageText || '').trim();
+  
+  if (q.passageFormat === 'poetry') {
+    const lines = raw.split('\n').map(l => l.trim()).filter(Boolean);
+    let rows = '';
+    for (let i = 0; i < lines.length; i += 2) {
+      const s1 = lines[i] || '';
+      const s2 = lines[i+1] || '';
+      rows += `<tr>
+        <td class="poetry-cell">${esc(s1)}</td>
+        <td class="poetry-sep"></td>
+        <td class="poetry-cell">${esc(s2)}</td>
+      </tr>`;
+    }
+    passageHTML = `<table class="poetry-table">${rows}</table>`;
+  } else {
+    passageHTML = `<div class="passage-text">${nl2br(raw)}</div>`;
+  }
+  
+  let subHTML = '';
+  (q.subQuestions || []).forEach((sq, i) => {
+    subHTML += renderSubQuestionPrint(sq, i, narrow);
+  });
+  
+  return `<div class="q q-type-passage">
+    <div class="q-head q-head-group">${n}. ${nl2br(instr)} ${pts}</div>
+    <div class="passage-box">${passageHTML}</div>
+    <div class="sub-items">${subHTML}</div>
+  </div>`;
+}
+
+function renderSubQuestionPrint(sq, idx, narrow){
+  const subPts = state.settings.showPoints && +sq.points
+    ? `<span class="qp">(${sq.points})</span>` : '';
+  const prefix = `<span class="sub-q-num">(${idx + 1})</span> `;
+  let extra = '';
+  
+  if (sq.type === 'mcq' || sq.type === 'multi') {
+    const opts = (sq.options||[]).filter(o => o.text && o.text.trim());
+    const mark = sq.type === 'multi' ? '□ ' : '';
+    let rows = '';
+    if (narrow) {
+      rows = opts.map((o,j) => `<tr><td class="opt">${mark}(${LETTERS[j]||j+1}) ${esc(o.text)}</td></tr>`).join('');
+    } else {
+      for (let i = 0; i < opts.length; i += 2) {
+        rows += '<tr>';
+        rows += `<td class="opt">${mark}(${LETTERS[i]||i+1}) ${esc(opts[i].text)}</td>`;
+        rows += (i+1 < opts.length) ? `<td class="opt">${mark}(${LETTERS[i+1]||i+2}) ${esc(opts[i+1].text)}</td>` : '<td class="opt"></td>';
+        rows += '</tr>';
+      }
+    }
+    extra = `<table class="opts">${rows}</table>`;
+  }
+  else if (sq.type === 'truefalse') {
+    return `<div class="sub-q"><div class="sub-q-text">${prefix}${nl2br(sq.text)} <span class="parens">( &nbsp;&nbsp; )</span> ${subPts}</div></div>`;
+  }
+  else if (sq.type === 'short') {
+    extra = `<div class="ansline"></div>`;
+  }
+  else if (sq.type === 'essay') {
+    extra = `<div class="ansline"></div>`.repeat(narrow ? 3 : 5);
+  }
+  else if (sq.type === 'match') {
+    const pairs = sq.pairs || [];
+    const n2 = pairs.length;
+    let rows = '';
+    for (let i = 0; i < n2; i++) {
+      rows += `<tr>
+        <td class="opt">${i+1}. ${esc(pairs[i].left)}</td>
+        <td class="opt">${LETTERS[i]||i+1}. ${esc(pairs[(i+1)%n2].right)}</td>
+      </tr>`;
+    }
+    extra = `<table class="opts">${rows}</table>`;
+  }
+  else if (sq.type === 'order') {
+    extra = `<table class="opts">${(sq.sequence||[]).map((it,i)=>
+      `<tr><td class="opt">(${LETTERS[i]||i+1}) ${esc(it)}</td><td class="opt"></td></tr>`
+    ).join('')}</table>`;
+  }
+  
+  return `<div class="sub-q">
+    <div class="sub-q-text">${prefix}${nl2br(sq.text)} ${subPts}</div>
+    ${extra}
+  </div>`;
+}
+
 function correctAnswerTextForItem(type, item) {
   switch(type) {
     case 'mcq':
@@ -1288,6 +2146,13 @@ function correctAnswerTextForItem(type, item) {
 }
 
 function correctAnswerText(q) {
+  if (q.type === 'passage') {
+    return (q.subQuestions || []).map((sq, idx) => {
+      const ans = correctAnswerTextForItem(sq.type, sq);
+      return `(${idx+1}) ${ans}`;
+    }).join(' &nbsp;|&nbsp; ');
+  }
+  
   if (q.subItems.length === 1 && !q.instruction) {
     return correctAnswerTextForItem(q.type, q.subItems[0]);
   }
@@ -1302,7 +2167,6 @@ function correctAnswerText(q) {
    بناء الأجزاء النهائية
    ========================================================= */
 function buildDocParts(qs){
-  // التحقق من وجود درجة كلية مخصصة أم حساب تلقائي
   let totalTxt;
   if (state.settings.customTotal && state.settings.customTotal.trim()) {
     totalTxt = state.settings.customTotal.trim();
@@ -1357,6 +2221,10 @@ function buildDocParts(qs){
   };
 }
 
+function getDocClass(){
+  return (state.settings.showQuestionBorder === false) ? 'doc no-border' : 'doc';
+}
+
 function docHTML(){
   const qs = getFiltered();
   const parts = buildDocParts(qs);
@@ -1374,7 +2242,7 @@ function docHTML(){
     </div>`;
   }
 
-  return `<style>${dynamicCSS}</style><div class="doc">${parts.header}${parts.meta}${parts.hr}${parts.bodyHTML}${keyHTML}</div>`;
+  return `<style>${dynamicCSS}</style><div class="${getDocClass()}">${parts.header}${parts.meta}${parts.hr}${parts.bodyHTML}${keyHTML}</div>`;
 }
 
 /* =========================================================
@@ -1387,6 +2255,7 @@ function openPreview(){
   const parts = buildDocParts(qs);
   const mode = state.settings.answerKeyMode || 'none';
   const dynamicCSS = getDynamicCSS();
+  const docCls = getDocClass();
 
   let keyHTML = '';
   if(mode !== 'none' && parts.keyQs.length){
@@ -1394,14 +2263,14 @@ function openPreview(){
     keyHTML = `<div class="answer-key"><h2>نموذج الإجابة</h2><ul>${items}</ul></div>`;
   }
 
-  const mainDoc = `<div class="doc">${parts.header}${parts.meta}${parts.hr}${parts.bodyHTML}</div>`;
-  const keyDoc  = keyHTML ? `<div class="doc">${keyHTML}</div>` : '';
+  const mainDoc = `<div class="${docCls}">${parts.header}${parts.meta}${parts.hr}${parts.bodyHTML}</div>`;
+  const keyDoc  = keyHTML ? `<div class="${docCls}">${keyHTML}</div>` : '';
 
   let html;
   if(mode === 'separate' && keyDoc){
     html = `<style>${dynamicCSS}</style><div class="page">${mainDoc}</div><div class="page">${keyDoc}</div>`;
   } else if(mode === 'same' && keyHTML){
-    html = `<style>${dynamicCSS}</style><div class="page"><div class="doc">${parts.header}${parts.meta}${parts.hr}${parts.bodyHTML}${keyHTML}</div></div>`;
+    html = `<style>${dynamicCSS}</style><div class="page"><div class="${docCls}">${parts.header}${parts.meta}${parts.hr}${parts.bodyHTML}${keyHTML}</div></div>`;
   } else {
     html = `<style>${dynamicCSS}</style><div class="page">${mainDoc}</div>`;
   }
@@ -1448,28 +2317,21 @@ const DOC_CSS = `
 .doc table.two-col td.col-l{width:50%;padding-right:8px}
 .doc .section-title{font-size:16px;font-weight:bold;margin:16px 0 10px;padding-bottom:3px;border-bottom:1px solid #000}
 
-/* الإطار الرقيق لكل مجموعة */
-.doc .q {
-  margin-bottom: 14px;
-  page-break-inside: avoid;
-  border: 1px solid #000;
-  padding: 10px 12px;
-  border-radius: 6px;
-}
-
+.doc .q {margin-bottom:14px;page-break-inside:avoid;border:1px solid #000;padding:10px 12px;border-radius:6px}
+.doc.no-border .q{border:none !important;padding:0 !important;border-radius:0 !important;margin-bottom:14px}
+.doc.no-border .q-head-group{border-bottom:none !important;padding-bottom:0 !important;margin-bottom:6px !important}
 .doc .q-head{font-size:13.5px;font-weight:bold;line-height:1.8;margin-bottom:6px}
-.doc .q-head-group{ border-bottom: 1px dashed #555; padding-bottom: 6px; margin-bottom: 10px; }
+.doc .q-head-group{border-bottom:1px dashed #555;padding-bottom:6px;margin-bottom:10px}
 .doc .sub-items{margin-top:4px}
 .doc .sub-q{margin-bottom:12px}
 .doc .sub-q-text{font-size:13px;line-height:1.8;font-weight:normal}
 .doc .sub-q-num{font-weight:bold;margin-left:4px}
 .doc .parens{font-weight:bold;letter-spacing:2px;margin-right:6px;white-space:nowrap}
-
 .doc .qp{font-weight:normal;font-size:11.5px;color:#555;margin-right:4px}
 .doc table.opts{width:100%;border-collapse:collapse;margin-top:5px;margin-bottom:5px}
 .doc table.opts td.opt{padding:2px 8px;font-size:12.5px;vertical-align:top;width:50%;font-weight:normal}
-.doc .opts-inline{display:inline;}
-.doc .opt-inline{display:inline-block;white-space:nowrap;font-size:12.5px;font-weight:normal;}
+.doc .opts-inline{display:inline}
+.doc .opt-inline{display:inline-block;white-space:nowrap;font-size:12.5px;font-weight:normal}
 .doc table.two-col table.opts td.opt{width:auto}
 .doc .ansline{border-bottom:1px solid #999;height:22px;margin-top:8px}
 .doc .answer-key{margin-top:22px;border-top:2px solid #000;padding-top:10px}
@@ -1477,6 +2339,12 @@ const DOC_CSS = `
 .doc .answer-key h2{font-size:16px;text-align:center;margin:0 0 10px}
 .doc .answer-key ul{margin:0;padding:0;list-style:none;font-size:12.5px}
 .doc .answer-key li{margin-bottom:4px}
+.passage-box{background:#fafafa;border:1px dashed #999;border-radius:6px;padding:10px 14px;margin:8px 0 12px}
+.passage-text{font-size:13.5px;line-height:2;text-align:justify;white-space:pre-wrap}
+.poetry-table{width:100%;border-collapse:collapse;margin:4px 0}
+.poetry-table td{padding:3px 8px;vertical-align:middle}
+.poetry-table td.poetry-cell{width:45%;text-align:center;font-size:13.5px;line-height:2;font-family:'Amiri','Cairo',serif}
+.poetry-table td.poetry-sep{width:10%;text-align:center;font-weight:bold;color:#888}
 `;
 
 /* =========================================================
@@ -1563,18 +2431,324 @@ function restore(e){
   e.target.value = '';
 }
 
+/* =========================================================
+   تصفح السحابة
+   ========================================================= */
+let browseResults = [];
+let browseSelected = new Set();
+let browseAllDocs = [];
+let browseLoaded = false;
+
+async function openBrowseCloud(){
+  if(!cloudReady){ toast('⚠️ Firebase غير مهيأ'); return; }
+  
+  $('#browseSemester').innerHTML = '<option value="">كل الفصول</option>' + 
+    SEMESTERS.map(s => `<option value="${s}">${s}</option>`).join('');
+  $('#browseUnit').innerHTML = '<option value="">كل الوحدات</option>' + 
+    UNITS.map(u => `<option value="${u}">${u}</option>`).join('');
+  $('#browseLesson').innerHTML = '<option value="">كل الدروس</option>' + 
+    LESSONS.map(l => `<option value="${l}">${l}</option>`).join('');
+  $('#browseType').innerHTML = '<option value="">كل الأنواع</option>' + 
+    Object.entries(TYPES).map(([k,v]) => `<option value="${k}">${v.label}</option>`).join('');
+  $('#browseExamType').value = '';
+  
+  setCloudStatus('saving', 'جاري تحميل القوائم...');
+  try{
+    const snap = await db.collection('questions').limit(3000).get();
+    browseAllDocs = [];
+    snap.forEach(doc => {
+      browseAllDocs.push({ _cloudId: doc.id, ...doc.data() });
+    });
+    browseLoaded = true;
+    populateBrowseDynamicLists();
+    setCloudStatus('online', 'متصل');
+  }catch(e){
+    console.error(e);
+    setCloudStatus('offline', 'فشل التحميل');
+    setTimeout(()=>setCloudStatus('online','متصل'), 2500);
+  }
+  
+  $('#browseResults').innerHTML = '<div class="hint">💡 اضغط "بحث" لعرض كل الأسئلة، أو اختر فلاتر لتضييق النتائج.</div>';
+  browseResults = [];
+  browseSelected = new Set();
+  updateBrowseSelectionCount();
+  
+  openModal('#browseModal');
+}
+
+function populateBrowseDynamicLists(){
+  const schools = [...new Set(browseAllDocs.map(q => q.school).filter(Boolean))].sort();
+  const subjects = [...new Set(browseAllDocs.map(q => q.subject).filter(Boolean))].sort();
+  const grades = [...new Set(browseAllDocs.map(q => q.grade).filter(Boolean))].sort();
+  
+  $('#browseSchool').innerHTML = '<option value="">كل المدارس</option>' + 
+    schools.map(s => `<option value="${escAttr(s)}">${esc(s)}</option>`).join('');
+  $('#browseSubject').innerHTML = '<option value="">كل المواد</option>' + 
+    subjects.map(s => `<option value="${escAttr(s)}">${esc(s)}</option>`).join('');
+  $('#browseGrade').innerHTML = '<option value="">كل الصفوف</option>' + 
+    grades.map(s => `<option value="${escAttr(s)}">${esc(s)}</option>`).join('');
+}
+
+function searchCloudByUnit(){
+  if(!cloudReady){ toast('⚠️ Firebase غير مهيأ'); return; }
+  if(!browseLoaded){ toast('⚠️ لم يتم تحميل البيانات'); return; }
+  
+  const fSchool = $('#browseSchool').value;
+  const fSemester = $('#browseSemester').value;
+  const fSubject = $('#browseSubject').value;
+  const fGrade = $('#browseGrade').value;
+  const fExamType = $('#browseExamType').value;
+  const fUnit = $('#browseUnit').value;
+  const fLesson = $('#browseLesson').value;
+  const fType = $('#browseType').value;
+  const fDiff = $('#browseDiff').value;
+  
+  browseResults = browseAllDocs.filter(q => {
+    if(fSchool && q.school !== fSchool) return false;
+    if(fSemester && q.semester !== fSemester) return false;
+    if(fSubject && q.subject !== fSubject) return false;
+    if(fGrade && q.grade !== fGrade) return false;
+    if(fExamType && q.examType !== fExamType) return false;
+    if(fUnit && q.unit !== fUnit) return false;
+    if(fLesson && q.lesson !== fLesson) return false;
+    if(fType && q.type !== fType) return false;
+    if(fDiff && q.difficulty !== fDiff) return false;
+    return true;
+  });
+  
+  const unitIdx = u => UNITS.indexOf(u);
+  const lessonIdx = l => LESSONS.indexOf(l);
+  browseResults.sort((a, b) => {
+    const ua = unitIdx(a.unit || '');
+    const ub = unitIdx(b.unit || '');
+    if(ua !== ub) return ua - ub;
+    const la = lessonIdx(a.lesson || '');
+    const lb = lessonIdx(b.lesson || '');
+    return la - lb;
+  });
+  
+  renderBrowseResults();
+}
+
+function renderBrowseResults(){
+  if(!browseResults.length){
+    $('#browseResults').innerHTML = '<div class="empty" style="padding:30px"><div class="big">📭</div><p>لا توجد نتائج مطابقة</p></div>';
+    return;
+  }
+  
+  const html = browseResults.map((q, i) => {
+    const t = TYPES[q.type] || {label:'سؤال', icon:'❓'};
+    const d = DIFF[q.difficulty] || DIFF.medium;
+    const isSelected = browseSelected.has(q._cloudId);
+    
+    let previewText = '';
+    if(q.type === 'passage'){
+      previewText = (q.passageText||'').slice(0, 200);
+    } else if(q.subItems && q.subItems[0]){
+      previewText = q.subItems[0].text || q.instruction || '';
+    }
+
+    // بناء قائمة الأسئلة الفرعية
+    let subItemsHTML = '';
+    const subs = q.type === 'passage' ? (q.subQuestions || []) : (q.subItems || []);
+    
+    if (subs.length > 1) {
+      subItemsHTML = `<div style="margin-top:10px; padding-right:15px; border-right:3px solid #cbd5e1; display:flex; flex-direction:column; gap:6px;">`;
+      
+      subs.forEach((sub, subIdx) => {
+        const subCloudId = `${q._cloudId}___sub_${subIdx}`; 
+        const isSubSelected = browseSelected.has(subCloudId);
+        const subText = sub.text || '';
+        
+        subItemsHTML += `
+          <label style="display:flex; align-items:flex-start; gap:8px; cursor:pointer; background:${isSubSelected ? '#dcfce7' : '#f8fafc'}; padding:8px; border-radius:6px; border:1px solid ${isSubSelected ? '#86efac' : '#e2e8f0'};">
+            <input type="checkbox" data-browse-sub-idx="${i}" data-sub-idx="${subIdx}" ${isSubSelected ? 'checked' : ''} 
+                   style="width:16px; height:16px; margin-top:4px; accent-color:var(--primary);">
+            <div style="font-size:13px; color:#334155; flex:1;">
+              <strong>الفقرة (${subIdx + 1}):</strong> ${esc(subText)} 
+              ${sub.points ? `<span style="color:#64748b; font-size:11px;">(${sub.points} درجة)</span>` : ''}
+            </div>
+          </label>
+        `;
+      });
+      subItemsHTML += `</div>`;
+    }
+    
+    return `<div class="qcard" style="margin-bottom:8px;${isSelected?'border-color:var(--primary);background:#eff6ff':''}">
+      <div class="qcard-top">
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-weight:700;">
+          <input type="checkbox" data-browse-idx="${i}" ${isSelected?'checked':''} 
+                 style="width:18px;height:18px;accent-color:var(--primary);">
+          <span class="badge type">${t.icon} ${t.label}</span>
+          ${subs.length > 1 ? `<span style="font-size:11px; color:#64748b;">(تحديد السؤال كاملاً)</span>` : ''}
+        </label>
+        ${q.school ? `<span class="badge" style="background:#fef3c7;color:#92400e;border-color:#fde68a">🏫 ${esc(q.school)}</span>` : ''}
+        ${q.unit ? `<span class="badge" style="background:#fef3c7;color:#92400e">📖 ${esc(q.unit)}</span>` : ''}
+        ${q.lesson ? `<span class="badge" style="background:#e0e7ff;color:#3730a3">📑 ${esc(q.lesson)}</span>` : ''}
+        <span class="badge ${d.cls}">${d.label}</span>
+      </div>
+      <div class="qcard-text" style="font-size:13.5px; color:#0f172a;">${nl2br(previewText)}${previewText.length >= 200 ? '...' : ''}</div>
+      ${subItemsHTML}
+    </div>`;
+  }).join('');
+  
+  $('#browseResults').innerHTML = `
+    <div style="margin-bottom:8px;font-weight:700;color:var(--primary-d);">
+      📋 ${browseResults.length} نتيجة
+    </div>
+    ${html}
+  `;
+  
+  // ربط مستمعات الأحداث لتحديد السؤال بالكامل
+  $('#browseResults').querySelectorAll('[data-browse-idx]').forEach(cb => {
+    cb.onchange = e => {
+      const idx = +e.target.dataset.browseIdx;
+      const q = browseResults[idx];
+      
+      if(e.target.checked) browseSelected.add(q._cloudId);
+      else browseSelected.delete(q._cloudId);
+      
+      updateBrowseSelectionCount();
+      const card = e.target.closest('.qcard');
+      if(card){
+        card.style.borderColor = e.target.checked ? 'var(--primary)' : '';
+        card.style.background = e.target.checked ? '#eff6ff' : '';
+      }
+    };
+  });
+
+  // ربط مستمعات الأحداث لتحديد فقرة فرعية معينة
+  $('#browseResults').querySelectorAll('[data-browse-sub-idx]').forEach(cb => {
+    cb.onchange = e => {
+      const parentIdx = +e.target.dataset.browseSubIdx;
+      const subIdx = +e.target.dataset.subIdx;
+      const q = browseResults[parentIdx];
+      const subCloudId = `${q._cloudId}___sub_${subIdx}`;
+      
+      if(e.target.checked) browseSelected.add(subCloudId);
+      else browseSelected.delete(subCloudId);
+      
+      updateBrowseSelectionCount();
+      const label = e.target.closest('label');
+      if (label) {
+        label.style.background = e.target.checked ? '#dcfce7' : '#f8fafc';
+        label.style.borderColor = e.target.checked ? '#86efac' : '#e2e8f0';
+      }
+    };
+  });
+}
+
+function updateBrowseSelectionCount(){
+  const n = browseSelected.size;
+  $('#browseSelectionCount').textContent = `${n} سؤال محدد`;
+  $('#btnBrowseAddSelected').disabled = (n === 0);
+}
+
+function addSelectedFromCloud(){
+  if(!browseSelected.size){ toast('⚠️ لم تحدد أي سؤال'); return; }
+  
+  const fullGroupsToAdd = [];      
+  const subItemsToAdd = {};        
+
+  browseSelected.forEach(selId => {
+    if (selId.includes('___sub_')) {
+      const parts = selId.split('___sub_');
+      const groupCloudId = parts[0];
+      const subIdx = parseInt(parts[1], 10);
+      if (!subItemsToAdd[groupCloudId]) subItemsToAdd[groupCloudId] = [];
+      subItemsToAdd[groupCloudId].push(subIdx);
+    } else {
+      const q = browseResults.find(r => r._cloudId === selId);
+      if (q) fullGroupsToAdd.push(q);
+    }
+  });
+
+  const totalToAdd = fullGroupsToAdd.length + Object.values(subItemsToAdd).reduce((a, b) => a + b.length, 0);
+  if(!confirm(`إضافة ${totalToAdd} عنصر إلى الاختبار الحالي؟`)) return;
+  
+  let added = 0, updated = 0;
+  const generateId = () => Date.now().toString(36) + Math.random().toString(36).slice(2,7);
+
+  fullGroupsToAdd.forEach(cloudQ => {
+    const clean = JSON.parse(JSON.stringify(cloudQ));
+    delete clean._cloudId; delete clean.cloudMeta; delete clean.updatedAt; delete clean.createdAt;
+    if(!clean.id) clean.id = generateId();
+    
+    const migrated = migrateQuestion(clean);
+    const existingIdx = state.questions.findIndex(x => x.id === migrated.id);
+    if(existingIdx > -1){ state.questions[existingIdx] = migrated; updated++; }
+    else { state.questions.push(migrated); added++; }
+  });
+
+  Object.keys(subItemsToAdd).forEach(groupCloudId => {
+    const originalQ = browseResults.find(r => r._cloudId === groupCloudId);
+    if (!originalQ) return;
+
+    const indices = subItemsToAdd[groupCloudId];
+    const isPassage = originalQ.type === 'passage';
+    const allSubs = isPassage ? (originalQ.subQuestions || []) : (originalQ.subItems || []);
+    const selectedSubs = indices.map(idx => allSubs[idx]).filter(Boolean);
+    
+    if (!selectedSubs.length) return;
+
+    if (selectedSubs.length === 1 && !isPassage) {
+      const sub = JSON.parse(JSON.stringify(selectedSubs[0]));
+      
+      const newSingleQ = {
+        id: generateId(),
+        type: originalQ.type,          
+        category: originalQ.category || '',
+        difficulty: originalQ.difficulty || 'medium',
+        points: sub.points || originalQ.points || 1,
+        instruction: "",               
+        notes: originalQ.notes || '',
+        unit: originalQ.unit || 'الوحدة الأولى',
+        lesson: originalQ.lesson || 'الدرس الأول',
+        school: originalQ.school || '',
+        semester: originalQ.semester || '',
+        subject: originalQ.subject || '',
+        grade: originalQ.grade || '',
+        examType: originalQ.examType || '',
+        academicYear: originalQ.academicYear || ''
+      };
+
+      newSingleQ.subItems = [{
+        text: sub.text,
+        options: sub.options,
+        pairs: sub.pairs,
+        sequence: sub.sequence,
+        correctBool: sub.correctBool,
+        answer: sub.answer
+      }];
+
+      state.questions.push(migrateQuestion(newSingleQ));
+      added++;
+
+    } else {
+      const clean = JSON.parse(JSON.stringify(originalQ));
+      delete clean._cloudId; delete clean.cloudMeta; delete clean.updatedAt; delete clean.createdAt;
+      clean.id = generateId();
+
+      if (isPassage) {
+        clean.subQuestions = selectedSubs;
+        delete clean.subItems;
+      } else {
+        clean.subItems = selectedSubs;
+        delete clean.subQuestions;
+      }
+
+      state.questions.push(migrateQuestion(clean));
+      added++;
+    }
+  });
+  
+  saveState();
+  render();
+  closeModal('#browseModal');
+  toast(`✅ تمت إضافة ${added} عنصر بنجاح`);
+}
+
 init();
 </script>
-</body>
-</html>
-<html>
-<head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title>Hello, World!</title>
-</head>
-<body>
-  <h1>
-    Hello, World!
-  </h1>
 </body>
 </html>
