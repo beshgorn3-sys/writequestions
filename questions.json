@@ -24,22 +24,10 @@
         {
           "text": "ما هو تعريف \"التوقع\" في البحث العلمي؟",
           "options": [
-            {
-              "text": "قول ما أعتقد أنه سيحدث خلال عملية بحثي",
-              "correct": true
-            },
-            {
-              "text": "خطوة إجراء التجربة في المختبر",
-              "correct": false
-            },
-            {
-              "text": "تصميم جدول لترتيب النتائج",
-              "correct": false
-            },
-            {
-              "text": "طرح الأسئلة والاستفسارات",
-              "correct": false
-            }
+            { "text": "قول ما أعتقد أنه سيحدث خلال عملية بحثي", "correct": true },
+            { "text": "خطوة إجراء التجربة في المختبر", "correct": false },
+            { "text": "تصميم جدول لترتيب النتائج", "correct": false },
+            { "text": "طرح الأسئلة والاستفسارات", "correct": false }
           ]
         }
       ]
@@ -58,22 +46,10 @@
         {
           "text": "ما هو الشيء الذي نبقيه في التجربة بلا تغيير ويُسمى (المتغيرات...)؟",
           "options": [
-            {
-              "text": "المستقلة",
-              "correct": false
-            },
-            {
-              "text": "التحكم",
-              "correct": true
-            },
-            {
-              "text": "التابعة",
-              "correct": false
-            },
-            {
-              "text": "المنخفضة",
-              "correct": false
-            }
+            { "text": "المستقلة", "correct": false },
+            { "text": "التحكم", "correct": true },
+            { "text": "التابعة", "correct": false },
+            { "text": "المنخفضة", "correct": false }
           ]
         }
       ]
@@ -130,22 +106,10 @@
         {
           "text": "نبات الجرة (النبات المفترس) يتغذى على:",
           "options": [
-            {
-              "text": "الديدان والحشرات",
-              "correct": true
-            },
-            {
-              "text": "اللحوم الكبيرة",
-              "correct": false
-            },
-            {
-              "text": "الطحالب فقط",
-              "correct": false
-            },
-            {
-              "text": "الماء فقط",
-              "correct": false
-            }
+            { "text": "الديدان والحشرات", "correct": true },
+            { "text": "اللحوم الكبيرة", "correct": false },
+            { "text": "الطحالب فقط", "correct": false },
+            { "text": "الماء فقط", "correct": false }
           ]
         }
       ]
@@ -164,22 +128,10 @@
         {
           "text": "في علاقة الافتراس بين القرش والسمكة، يُسمى القرش:",
           "options": [
-            {
-              "text": "فريسة",
-              "correct": false
-            },
-            {
-              "text": "مفترس",
-              "correct": true
-            },
-            {
-              "text": "متطفل",
-              "correct": false
-            },
-            {
-              "text": "منتج",
-              "correct": false
-            }
+            { "text": "فريسة", "correct": false },
+            { "text": "مفترس", "correct": true },
+            { "text": "متطفل", "correct": false },
+            { "text": "منتج", "correct": false }
           ]
         }
       ]
@@ -215,18 +167,9 @@
         {
           "text": "المفاهيم العلمية:",
           "pairs": [
-            {
-              "left": "المتغيرات المستقلة",
-              "right": "ما سأغيّره في التجربة"
-            },
-            {
-              "left": "المتغير التابع",
-              "right": "الشيء الذي أقيسه"
-            },
-            {
-              "left": "التوقع",
-              "right": "قول ما أعتقد أنه سيحدث"
-            }
+            { "left": "المتغيرات المستقلة", "right": "ما سأغيّره في التجربة" },
+            { "left": "المتغير التابع", "right": "الشيء الذي أقيسه" },
+            { "left": "التوقع", "right": "قول ما أعتقد أنه سيحدث" }
           ]
         }
       ]
@@ -269,6 +212,2439 @@
         {
           "text": "اذكر ثلاثة أسئلة يمكنك طرحها عند تقييم نتائج بحثك في نهايته؟",
           "answer": "١- هل كان توقعي صحيحاً؟ ٢- ما مدى صحة نتائجي؟ ٣- هل يمكنني أن أفكر بطرائق تجعل بحثي أكثر دقة؟ ٤- ما التالي؟"
+        }
+      ]
+    }
+  ]
+}
+{
+  "meta": {
+    "version": "1.0",
+    "title": "بنك أسئلة العلوم - الصف السادس - الجزء الثاني",
+    "author": "مستخرج من كتاب العلوم",
+    "updatedAt": "2026-11-16",
+    "school": "وزارة التربية",
+    "subject": "العلوم",
+    "grade": "الصف السادس",
+    "semester": "الفصل الأول"
+  },
+  "questions": [
+    {
+      "id": "sci6_p2_01",
+      "type": "mcq",
+      "category": "النظام البيئي",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الثانية",
+      "lesson": "الدرس الثاني",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 20",
+      "subItems": [
+        {
+          "text": "ماذا يُسمى النظام الذي يضم الكائنات الحية والمكونات غير الحية في بيئة معينة؟",
+          "options": [
+            { "text": "النظام البيئي", "correct": true },
+            { "text": "السلسلة الغذائية", "correct": false },
+            { "text": "الافتراس", "correct": false },
+            { "text": "التقابض", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p2_02",
+      "type": "truefalse",
+      "category": "النظام البيئي",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الثانية",
+      "lesson": "الدرس الثاني",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 20",
+      "subItems": [
+        { "text": "السلسلة الغذائية تبين انتقال الطاقة من كائن حي إلى كائن حي آخر.", "correctBool": true },
+        { "text": "الشبكة الغذائية تتكون من سلسلة غذائية واحدة فقط.", "correctBool": false }
+      ]
+    },
+    {
+      "id": "sci6_p2_03",
+      "type": "short",
+      "category": "النظام البيئي",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الثانية",
+      "lesson": "الدرس الثالث",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 23",
+      "subItems": [
+        { "text": "اذكر مثالين على تأثير الإنسان السلبي في النظام البيئي.", "answer": "قطع الأشجار، تلويث المياه، الصيد الجائر، رمي النفايات." }
+      ]
+    },
+    {
+      "id": "sci6_p2_04",
+      "type": "match",
+      "category": "القوى في الطبيعة",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الثالثة",
+      "lesson": "الدرس الأول",
+      "instruction": "صل بين نوع القوة وتأثيرها:",
+      "notes": "صفحة 30",
+      "subItems": [
+        {
+          "text": "أنواع القوى:",
+          "pairs": [
+            { "left": "قوة الجذب", "right": "تقرب الأجسام من بعضها" },
+            { "left": "قوة التنافر", "right": "تبعِد الأجسام عن بعضها" },
+            { "left": "قوة الاحتكاك", "right": "تعيق حركة الأجسام" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p2_05",
+      "type": "mcq",
+      "category": "القوى في الطبيعة",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الثالثة",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 30",
+      "subItems": [
+        {
+          "text": "القوة التي تعيق حركة الأجسام على الأسطح تُسمى:",
+          "options": [
+            { "text": "قوة الجذب", "correct": false },
+            { "text": "قوة الاحتكاك", "correct": true },
+            { "text": "قوة الدفع", "correct": false },
+            { "text": "قوة الطفو", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p2_06",
+      "type": "truefalse",
+      "category": "القوى في الطبيعة",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الثالثة",
+      "lesson": "الدرس الثاني",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 40",
+      "subItems": [
+        { "text": "قوة الاحتكاك تساعد الأجسام على الحركة بسهولة.", "correctBool": false },
+        { "text": "المغناطيس يجذب الحديد.", "correctBool": true }
+      ]
+    },
+    {
+      "id": "sci6_p2_07",
+      "type": "mcq",
+      "category": "الإطراح",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الرابعة",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 56",
+      "subItems": [
+        {
+          "text": "ما العضو الرئيسي المسؤول عن طرح الفضلات السائلة من الجسم؟",
+          "options": [
+            { "text": "الكبد", "correct": false },
+            { "text": "الكلية", "correct": true },
+            { "text": "الرئة", "correct": false },
+            { "text": "القلب", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p2_08",
+      "type": "short",
+      "category": "الإطراح",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الرابعة",
+      "lesson": "الدرس الثاني",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 64",
+      "subItems": [
+        { "text": "اذكر ثلاث عادات صحية للحفاظ على جهاز البول.", "answer": "شرب كميات كافية من الماء، عدم كتم البول، النظافة الشخصية، تجنب الأطعمة الحارة." }
+      ]
+    },
+    {
+      "id": "sci6_p2_09",
+      "type": "mcq",
+      "category": "الإطراح",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الرابعة",
+      "lesson": "الدرس الثالث",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 67",
+      "subItems": [
+        {
+          "text": "أي من الحيوانات التالية يُصنَّف من الفقاريات؟",
+          "options": [
+            { "text": "الديدان", "correct": false },
+            { "text": "الحشرات", "correct": false },
+            { "text": "الأسماك", "correct": true },
+            { "text": "قنديل البحر", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p2_10",
+      "type": "truefalse",
+      "category": "الإطراح",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الرابعة",
+      "lesson": "الدرس الثالث",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 67",
+      "subItems": [
+        { "text": "الفقاريات حيوانات تمتلك عموداً فقرياً.", "correctBool": true },
+        { "text": "الإطراح في الفقاريات يتم بنفس الطريقة عند كل الحيوانات.", "correctBool": false }
+      ]
+    },
+    {
+      "id": "sci6_p2_11",
+      "type": "mcq",
+      "category": "الرداء الواقي",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الخامسة",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 70",
+      "subItems": [
+        {
+          "text": "ماذا يُسمى الغطاء الذي يحمي جسم الإنسان من العوامل الخارجية؟",
+          "options": [
+            { "text": "الجلد", "correct": true },
+            { "text": "الشعر", "correct": false },
+            { "text": "العضلات", "correct": false },
+            { "text": "العظام", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p2_12",
+      "type": "short",
+      "category": "الرداء الواقي",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الخامسة",
+      "lesson": "الدرس الثاني",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 76",
+      "subItems": [
+        { "text": "اذكر طريقتين للعناية بصحة الجلد.", "answer": "الاستحمام المنتظم، شرب الماء، التعرض المعتدل للشمس، استخدام واقي الشمس." }
+      ]
+    },
+    {
+      "id": "sci6_p2_13",
+      "type": "truefalse",
+      "category": "الرداء الواقي",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الخامسة",
+      "lesson": "الدرس الثاني",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 76",
+      "subItems": [
+        { "text": "التعرض المفرط لأشعة الشمس مفيد للجلد دائماً.", "correctBool": false }
+      ]
+    },
+    {
+      "id": "sci6_p2_14",
+      "type": "mcq",
+      "category": "السطح المائل",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 85",
+      "subItems": [
+        {
+          "text": "ما فائدة استخدام السطح المائل في رفع الأجسام؟",
+          "options": [
+            { "text": "يزيد الجهد المطلوب", "correct": false },
+            { "text": "يقلل الجهد المطلوب", "correct": true },
+            { "text": "لا يؤثر على الجهد", "correct": false },
+            { "text": "يمنع الحركة", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p2_15",
+      "type": "short",
+      "category": "السطح المائل",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الأول",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 85",
+      "subItems": [
+        { "text": "اذكر مثالين على استخدام السطح المائل في الحياة اليومية.", "answer": "المنحدر، السلم، الطريق الجبلي، الزلاقة، منحدر رصيف المشاة." }
+      ]
+    },
+    {
+      "id": "sci6_p2_16",
+      "type": "mcq",
+      "category": "الرافعة",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الثاني",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 93",
+      "subItems": [
+        {
+          "text": "ما هي الرافعة؟",
+          "options": [
+            { "text": "قضيب يدور حول نقطة ارتكاز", "correct": true },
+            { "text": "عجلة مسننة", "correct": false },
+            { "text": "سطح مائل", "correct": false },
+            { "text": "بكرة مزدوجة", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p2_17",
+      "type": "truefalse",
+      "category": "الرافعة",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الثاني",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 93",
+      "subItems": [
+        { "text": "الرافعة تساعد في رفع الأثقال بقوة أقل.", "correctBool": true }
+      ]
+    },
+    {
+      "id": "sci6_p2_18",
+      "type": "match",
+      "category": "الرافعة",
+      "difficulty": "hard",
+      "points": 2,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الثاني",
+      "instruction": "صل بين المصطلح وتعريفه:",
+      "notes": "صفحة 93",
+      "subItems": [
+        {
+          "text": "أجزاء الرافعة:",
+          "pairs": [
+            { "left": "نقطة الارتكاز", "right": "النقطة التي تدور حولها الرافعة" },
+            { "left": "القوة", "right": "الجهد المؤثر على الرافعة" },
+            { "left": "الحمل", "right": "الجسم المراد رفعه" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p2_19",
+      "type": "mcq",
+      "category": "البكرة",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الثالث",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 100",
+      "subItems": [
+        {
+          "text": "ماذا تُسمى عجلة محيطها مجرى يمر فيه حبل؟",
+          "options": [
+            { "text": "الرافعة", "correct": false },
+            { "text": "البكرة", "correct": true },
+            { "text": "العجلة والمحور", "correct": false },
+            { "text": "السطح المائل", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p2_20",
+      "type": "short",
+      "category": "البكرة",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الثالث",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 100",
+      "subItems": [
+        { "text": "اذكر نوعين من البكرات.", "answer": "بكرة ثابتة، بكرة متحركة، بكرة مركبة." }
+      ]
+    },
+    {
+      "id": "sci6_p2_21",
+      "type": "truefalse",
+      "category": "البكرة",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الثالث",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 100",
+      "subItems": [
+        { "text": "البكرة المتحركة تقلل من الجهد المطلوب أكثر من البكرة الثابتة.", "correctBool": true },
+        { "text": "البكرة الثابتة تغير اتجاه القوة فقط.", "correctBool": true }
+      ]
+    },
+    {
+      "id": "sci6_p2_22",
+      "type": "mcq",
+      "category": "العجلة والمحور",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الرابع",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 108",
+      "subItems": [
+        {
+          "text": "أي من الأدوات التالية تستخدم مبدأ العجلة والمحور؟",
+          "options": [
+            { "text": "المفتاح (مفتاح الربط)", "correct": false },
+            { "text": "عجلة القيادة في السيارة", "correct": true },
+            { "text": "السلم", "correct": false },
+            { "text": "المنحدر", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p2_23",
+      "type": "mcq",
+      "category": "العجلة والمحور",
+      "difficulty": "hard",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الرابع",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 108",
+      "subItems": [
+        {
+          "text": "كلما كان نصف قطر العجلة أكبر بالمقارنة مع المحور، فإن:",
+          "options": [
+            { "text": "الجهد يزيد", "correct": false },
+            { "text": "الجهد يقل", "correct": true },
+            { "text": "لا يوجد تأثير", "correct": false },
+            { "text": "العجلة تتوقف", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p2_24",
+      "type": "short",
+      "category": "أجدادي العظماء",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الخامس",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 113",
+      "subItems": [
+        { "text": "اذكر عالماً عربياً مشهوراً في مجال الفيزياء أو الهندسة وأفد شيئاً عن إنجازه.", "answer": "مثال: الحسن بن الهيثم - رائد في علم البصريات، ابن سينا - الطب والفلسفة، الجزري - علم الميكانيكا." }
+      ]
+    },
+    {
+      "id": "sci6_p2_25",
+      "type": "truefalse",
+      "category": "أجدادي العظماء",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الخامس",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 113",
+      "subItems": [
+        { "text": "قدم العلماء العرب والمسلمون إسهامات كبيرة في مجالات العلوم المختلفة.", "correctBool": true }
+      ]
+    },
+    {
+      "id": "sci6_p2_26",
+      "type": "order",
+      "category": "البحث العلمي",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "رتب مراحل تقييم نتائج البحث العلمي:",
+      "notes": "صفحة 6",
+      "subItems": [
+        {
+          "text": "خطوات تقييم النتائج:",
+          "sequence": [
+            "ملاحظة الجدول بتمعن",
+            "مقارنة النتائج",
+            "اختيار المشروب الأعلى سكراً",
+            "طرح أسئلة عن صحة التوقع"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p2_27",
+      "type": "essay",
+      "category": "البحث العلمي",
+      "difficulty": "hard",
+      "points": 4,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 5-6",
+      "subItems": [
+        { "text": "اشرح خطوات إجراء بحث علمي حول \"أعلى نسبة سكر في المشروبات\" كما ورد في الكتاب.", "answer": "١- طرح السؤال: ما المشروبات التي تحتوي على أعلى نسبة سكر؟ ٢- التوقع: المشروبات الغازية والسبب أنها حلوة المذاق. ٣- التخطيط: تحديد المتغيرات (المستقلة: نوع المشروب، التابعة: كمية السكر). ٤- إجراء البحث: قياس حجوم متساوية وتبخير السوائل ووزن السكر. ٥- تسجيل النتائج في جدول. ٦- تقييم النتائج ومقارنتها بالتوقع." }
+      ]
+    },
+    {
+      "id": "sci6_p2_28",
+      "type": "mcq",
+      "category": "العلاقات بين الأحياء",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 8",
+      "subItems": [
+        {
+          "text": "أي من العلاقات التالية يُعدّ علاقة تكافل؟",
+          "options": [
+            { "text": "علاقة بين نبات الجرة والحشرات", "correct": false },
+            { "text": "علاقة بين الفقمة والقمل", "correct": false },
+            { "text": "علاقة بين بعض الطيور والتماسيح", "correct": true },
+            { "text": "علاقة بين القرش والسمكة", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p2_29",
+      "type": "match",
+      "category": "العلاقات بين الأحياء",
+      "difficulty": "hard",
+      "points": 3,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "صل بين نوع العلاقة ومثالها:",
+      "notes": "صفحة 8-9",
+      "subItems": [
+        {
+          "text": "أنواع العلاقات:",
+          "pairs": [
+            { "left": "الافتراس", "right": "القرش والسمكة" },
+            { "left": "التطفل", "right": "نبات الجرة والحشرات" },
+            { "left": "التقابض", "right": "بعض الطيور والتماسيح" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p2_30",
+      "type": "truefalse",
+      "category": "العلاقات بين الأحياء",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 9",
+      "subItems": [
+        { "text": "الحيوانات المفترسة تستخدم أساليب متعددة لصيد فرائسها.", "correctBool": true },
+        { "text": "الفرائس لا تمتلك أي وسيلة دفاع عن نفسها.", "correctBool": false }
+      ]
+    }
+  ]
+}
+{
+  "meta": {
+    "version": "1.0",
+    "title": "بنك أسئلة العلوم - الصف السادس - الجزء الثالث",
+    "author": "مستخرج من كتاب العلوم",
+    "updatedAt": "2026-11-16",
+    "school": "وزارة التربية",
+    "subject": "العلوم",
+    "grade": "الصف السادس",
+    "semester": "الفصل الأول"
+  },
+  "questions": [
+    {
+      "id": "sci6_p3_01",
+      "type": "mcq",
+      "category": "العلاقات بين الأحياء",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 8",
+      "subItems": [
+        {
+          "text": "ما العلاقة التي يستفيد منها كلا الكائنين معاً؟",
+          "options": [
+            { "text": "الافتراس", "correct": false },
+            { "text": "التطفل", "correct": false },
+            { "text": "التقابض (التكافل)", "correct": true },
+            { "text": "التنافس", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_02",
+      "type": "mcq",
+      "category": "العلاقات بين الأحياء",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 8-9",
+      "subItems": [
+        {
+          "text": "في علاقة التطفل، الكائن الذي يعيش على حساب كائن آخر يُسمى:",
+          "options": [
+            { "text": "المضيف", "correct": false },
+            { "text": "المتطفل", "correct": true },
+            { "text": "المفترس", "correct": false },
+            { "text": "الفريسة", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_03",
+      "type": "truefalse",
+      "category": "العلاقات بين الأحياء",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 8-9",
+      "subItems": [
+        { "text": "في علاقة التطفل يستفيد المتطفل ويتضرر المضيف.", "correctBool": true },
+        { "text": "علاقة التقابض تضر أحد الكائنين.", "correctBool": false },
+        { "text": "الافتراس علاقة غذائية بين كائنين.", "correctBool": true }
+      ]
+    },
+    {
+      "id": "sci6_p3_04",
+      "type": "mcq",
+      "category": "العلاقات بين الأحياء",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 8",
+      "subItems": [
+        {
+          "text": "أي مما يلي يُعدّ مثالاً على علاقة التقابض؟",
+          "options": [
+            { "text": "القرش والسمكة", "correct": false },
+            { "text": "البعوض والإنسان", "correct": false },
+            { "text": "بعض الطيور والتماسيح", "correct": true },
+            { "text": "نبات الجرة والحشرات", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_05",
+      "type": "short",
+      "category": "العلاقات بين الأحياء",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 8-9",
+      "subItems": [
+        { "text": "عرّف الافتراس واذكر مثالاً عليه من بيئتك.", "answer": "الافتراس علاقة غذائية بين كائنين يُسمى الكائن الأول مفترساً والثاني فريسة. مثال: الأسد والغزال، القرش والسمكة، القط والفأر." }
+      ]
+    },
+    {
+      "id": "sci6_p3_06",
+      "type": "mcq",
+      "category": "السلسلة الغذائية",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الثاني",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 15",
+      "subItems": [
+        {
+          "text": "السلسلة الغذائية تبدأ دائماً بـ:",
+          "options": [
+            { "text": "آكل لحوم", "correct": false },
+            { "text": "منتج (نبات أخضر)", "correct": true },
+            { "text": "محلل", "correct": false },
+            { "text": "كائن مفترس", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_07",
+      "type": "mcq",
+      "category": "السلسلة الغذائية",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الثاني",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 15",
+      "subItems": [
+        {
+          "text": "ماذا تبين السلسلة الغذائية؟",
+          "options": [
+            { "text": "شكل الحيوانات", "correct": false },
+            { "text": "انتقال الطاقة من كائن لآخر", "correct": true },
+            { "text": "ألوان النباتات", "correct": false },
+            { "text": "أحجام الكائنات", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_08",
+      "type": "order",
+      "category": "السلسلة الغذائية",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الثاني",
+      "instruction": "رتب السلسلة الغذائية التالية بالترتيب الصحيح:",
+      "notes": "صفحة 15",
+      "subItems": [
+        {
+          "text": "أجزاء السلسلة الغذائية:",
+          "sequence": [
+            "العشب (منتج)",
+            "الأرنب (آكل عشب)",
+            "الثعلب (آكل لحوم)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_09",
+      "type": "truefalse",
+      "category": "السلسلة الغذائية",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الثاني",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 15",
+      "subItems": [
+        { "text": "الشمس هي المصدر الأول للطاقة في السلسلة الغذائية.", "correctBool": true },
+        { "text": "السلسلة الغذائية يمكن أن تبدأ بحيوان مفترس.", "correctBool": false }
+      ]
+    },
+    {
+      "id": "sci6_p3_10",
+      "type": "mcq",
+      "category": "الشبكة الغذائية",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الثاني",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 15",
+      "subItems": [
+        {
+          "text": "ماذا تُسمى تداخل عدة سلاسل غذائية معاً؟",
+          "options": [
+            { "text": "الهرم الغذائي", "correct": false },
+            { "text": "الشبكة الغذائية", "correct": true },
+            { "text": "دورة الماء", "correct": false },
+            { "text": "السلسلة الغذائية", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_11",
+      "type": "short",
+      "category": "الشبكة الغذائية",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الثاني",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 15",
+      "subItems": [
+        { "text": "لماذا تتداخل بعض السلاسل الغذائية لتكوين الشبكة الغذائية؟", "answer": "لأن الكائن الحي قد يتغذى على أكثر من نوع واحد، وقد يكون غذاءً لأكثر من كائن آخر، وهذا يؤدي إلى تداخل السلاسل وتشكيل شبكة غذائية." }
+      ]
+    },
+    {
+      "id": "sci6_p3_12",
+      "type": "mcq",
+      "category": "النظام البيئي",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الثانية",
+      "lesson": "الدرس الثاني",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 20",
+      "subItems": [
+        {
+          "text": "أي مما يلي يُعدّ من المكونات غير الحية في النظام البيئي؟",
+          "options": [
+            { "text": "النباتات", "correct": false },
+            { "text": "الحيوانات", "correct": false },
+            { "text": "الماء والهواء", "correct": true },
+            { "text": "البكتيريا", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_13",
+      "type": "truefalse",
+      "category": "النظام البيئي",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الثانية",
+      "lesson": "الدرس الثاني",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 20",
+      "subItems": [
+        { "text": "المكونات الحية تشمل جميع الكائنات الحية في البيئة.", "correctBool": true },
+        { "text": "النظام البيئي يتكون من المكونات الحية فقط.", "correctBool": false }
+      ]
+    },
+    {
+      "id": "sci6_p3_14",
+      "type": "short",
+      "category": "النظام البيئي",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الثانية",
+      "lesson": "الدرس الثاني",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 20",
+      "subItems": [
+        { "text": "عرّف النظام البيئي، واذكر مكوناته الأساسية.", "answer": "النظام البيئي هو النظام الذي يضم الكائنات الحية والمكونات غير الحية في بيئة معينة، ويتكون من: مكونات حية (نباتات، حيوانات، بكتيريا) ومكونات غير حية (ماء، هواء، تربة، ضوء)." }
+      ]
+    },
+    {
+      "id": "sci6_p3_15",
+      "type": "mcq",
+      "category": "تأثير الإنسان في النظام البيئي",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الثانية",
+      "lesson": "الدرس الثالث",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 23",
+      "subItems": [
+        {
+          "text": "أي مما يلي يُعدّ أثراً سلبياً للإنسان في النظام البيئي؟",
+          "options": [
+            { "text": "زراعة الأشجار", "correct": false },
+            { "text": "تنظيف الأنهار", "correct": false },
+            { "text": "قطع الغابات", "correct": true },
+            { "text": "حماية الحيوانات", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_16",
+      "type": "mcq",
+      "category": "تأثير الإنسان في النظام البيئي",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الثانية",
+      "lesson": "الدرس الثالث",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 23",
+      "subItems": [
+        {
+          "text": "ما الفعل الذي يُسهم في تعديل دور الإنسان السلبي في البيئة؟",
+          "options": [
+            { "text": "زيادة التلوث", "correct": false },
+            { "text": "إعادة تشجير الغابات", "correct": true },
+            { "text": "الصيد الجائر", "correct": false },
+            { "text": "رمي النفايات في الأنهار", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_17",
+      "type": "short",
+      "category": "تأثير الإنسان في النظام البيئي",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الثانية",
+      "lesson": "الدرس الثالث",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 23",
+      "subItems": [
+        { "text": "اقترح ثلاثة أفعال يمكن أن يقوم بها الإنسان لتقليل أثره السلبي في البيئة.", "answer": "زراعة الأشجار، ترشيد استهلاك المياه، إعادة تدوير النفايات، استخدام الطاقة النظيفة، حماية الحياة الفطرية." }
+      ]
+    },
+    {
+      "id": "sci6_p3_18",
+      "type": "mcq",
+      "category": "القوى في الطبيعة",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الثالثة",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 30",
+      "subItems": [
+        {
+          "text": "أي مما يلي لا يُعدّ من أنواع القوى في الطبيعة؟",
+          "options": [
+            { "text": "قوة الجذب", "correct": false },
+            { "text": "قوة الاحتكاك", "correct": false },
+            { "text": "قوة التنفس", "correct": true },
+            { "text": "قوة المغناطيس", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_19",
+      "type": "truefalse",
+      "category": "القوى في الطبيعة",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الثالثة",
+      "lesson": "الدرس الأول",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 30",
+      "subItems": [
+        { "text": "قوة الجاذبية الأرضية تجذب الأجسام نحو الأرض.", "correctBool": true },
+        { "text": "قوة الاحتكاك لا تؤثر على حركة الأجسام.", "correctBool": false }
+      ]
+    },
+    {
+      "id": "sci6_p3_20",
+      "type": "mcq",
+      "category": "القوى في الطبيعة",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الثالثة",
+      "lesson": "الدرس الثاني",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 40",
+      "subItems": [
+        {
+          "text": "كيف يمكن تقليل قوة الاحتكاك بين جسمين؟",
+          "options": [
+            { "text": "زيادة خشونة السطح", "correct": false },
+            { "text": "استخدام الزيوت أو الشحوم", "correct": true },
+            { "text": "زيادة الوزن", "correct": false },
+            { "text": "زيادة السرعة", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_21",
+      "type": "short",
+      "category": "القوى في الطبيعة",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الثالثة",
+      "lesson": "الدرس الثاني",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 40",
+      "subItems": [
+        { "text": "اذكر مثالين على الاستفادة من قوة الاحتكاك في الحياة اليومية.", "answer": "المشي على الأرض (منع الانزلاق)، فرامل السيارة، الكتابة بالقلم، إشعال عود الثقاب." }
+      ]
+    },
+    {
+      "id": "sci6_p3_22",
+      "type": "mcq",
+      "category": "الإطراح",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الرابعة",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 56",
+      "subItems": [
+        {
+          "text": "أي مما يلي ليس من أعضاء الإطراح في الجسم؟",
+          "options": [
+            { "text": "الكلية", "correct": false },
+            { "text": "المثانة", "correct": false },
+            { "text": "الرئة", "correct": false },
+            { "text": "المعدة", "correct": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_23",
+      "type": "truefalse",
+      "category": "الإطراح",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الرابعة",
+      "lesson": "الدرس الأول",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 56",
+      "subItems": [
+        { "text": "الكلية تطهر الدم وتطرح الفضلات على شكل بول.", "correctBool": true },
+        { "text": "المثانة تقوم بتصفية الدم.", "correctBool": false }
+      ]
+    },
+    {
+      "id": "sci6_p3_24",
+      "type": "order",
+      "category": "الإطراح",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الرابعة",
+      "lesson": "الدرس الأول",
+      "instruction": "رتب أعضاء جهاز البول حسب مرور البول فيها:",
+      "notes": "صفحة 56",
+      "subItems": [
+        {
+          "text": "أعضاء جهاز البول:",
+          "sequence": [
+            "الكلية",
+            "الحالب",
+            "المثانة",
+            "الإحليل"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_25",
+      "type": "mcq",
+      "category": "صحة جهاز البول",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الرابعة",
+      "lesson": "الدرس الثاني",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 64",
+      "subItems": [
+        {
+          "text": "أي مما يلي يُعدّ عادة صحية تحافظ على جهاز البول؟",
+          "options": [
+            { "text": "قلة شرب الماء", "correct": false },
+            { "text": "شرب كميات كافية من الماء", "correct": true },
+            { "text": "كتم البول لفترات طويلة", "correct": false },
+            { "text": "تناول الأطعمة الحارة بكثرة", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_26",
+      "type": "truefalse",
+      "category": "صحة جهاز البول",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الرابعة",
+      "lesson": "الدرس الثاني",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 64",
+      "subItems": [
+        { "text": "شرب الماء بكثرة يساعد في طرد السموم من الجسم.", "correctBool": true },
+        { "text": "كتم البول لفترات طويلة مفيد لصحة الكلية.", "correctBool": false }
+      ]
+    },
+    {
+      "id": "sci6_p3_27",
+      "type": "mcq",
+      "category": "الإطراح لدى الفقاريات",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الرابعة",
+      "lesson": "الدرس الثالث",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 67",
+      "subItems": [
+        {
+          "text": "أي مما يلي من الفقاريات؟",
+          "options": [
+            { "text": "الضفدع", "correct": true },
+            { "text": "الديدان", "correct": false },
+            { "text": "الحشرات", "correct": false },
+            { "text": "قنديل البحر", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_28",
+      "type": "short",
+      "category": "الإطراح لدى الفقاريات",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الرابعة",
+      "lesson": "الدرس الثالث",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 67",
+      "subItems": [
+        { "text": "اذكر ثلاثة أنواع من الفقاريات.", "answer": "الأسماك، البرمائيات (الضفادع)، الزواحف (التماسيح)، الطيور، الثدييات (القطط)." }
+      ]
+    },
+    {
+      "id": "sci6_p3_29",
+      "type": "mcq",
+      "category": "ردائي الواقي",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الخامسة",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 70",
+      "subItems": [
+        {
+          "text": "ما وظيفة الجلد الرئيسية في الجسم؟",
+          "options": [
+            { "text": "تنظيم التنفس", "correct": false },
+            { "text": "حماية الجسم من العوامل الخارجية", "correct": true },
+            { "text": "تصفية الدم", "correct": false },
+            { "text": "هضم الطعام", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_30",
+      "type": "truefalse",
+      "category": "ردائي الواقي",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة الخامسة",
+      "lesson": "الدرس الأول",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 70",
+      "subItems": [
+        { "text": "الجلد هو أكبر عضو في جسم الإنسان.", "correctBool": true },
+        { "text": "الجلد لا يحمي الجسم من الجراثيم.", "correctBool": false }
+      ]
+    },
+    {
+      "id": "sci6_p3_31",
+      "type": "short",
+      "category": "صحة رداء الواقي",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الخامسة",
+      "lesson": "الدرس الثاني",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 76",
+      "subItems": [
+        { "text": "اذكر أربع عادات صحية للعناية بالجلد.", "answer": "الاستحمام المنتظم، شرب الماء بكمية كافية، استخدام واقي الشمس، تجنب المواد الكيميائية الضارة، ترطيب الجلد." }
+      ]
+    },
+    {
+      "id": "sci6_p3_32",
+      "type": "mcq",
+      "category": "السطح المائل",
+      "difficulty": "easy",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 85",
+      "subItems": [
+        {
+          "text": "أي مما يلي مثال على السطح المائل؟",
+          "options": [
+            { "text": "الرافعة", "correct": false },
+            { "text": "المنحدر", "correct": true },
+            { "text": "البكرة", "correct": false },
+            { "text": "المفتاح", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_33",
+      "type": "mcq",
+      "category": "السطح المائل",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 85",
+      "subItems": [
+        {
+          "text": "كلما زاد طول السطح المائل:",
+          "options": [
+            { "text": "زاد الجهد المطلوب", "correct": false },
+            { "text": "قل الجهد المطلوب", "correct": true },
+            { "text": "لم يتأثر الجهد", "correct": false },
+            { "text": "توقف الجسم", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_34",
+      "type": "truefalse",
+      "category": "الرافعة",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الثاني",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 93",
+      "subItems": [
+        { "text": "الرافعة تتكون من قضيب ونقطة ارتكاز.", "correctBool": true },
+        { "text": "الرافعة لا تساعد في رفع الأثقال.", "correctBool": false }
+      ]
+    },
+    {
+      "id": "sci6_p3_35",
+      "type": "mcq",
+      "category": "البكرة",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الثالث",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 100",
+      "subItems": [
+        {
+          "text": "البكرة الثابتة تغير:",
+          "options": [
+            { "text": "مقدار القوة", "correct": false },
+            { "text": "اتجاه القوة", "correct": true },
+            { "text": "كتلة الجسم", "correct": false },
+            { "text": "الوقت", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_36",
+      "type": "mcq",
+      "category": "البكرة",
+      "difficulty": "hard",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الثالث",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 100",
+      "subItems": [
+        {
+          "text": "ما فائدة استخدام البكرات في الرافعات؟",
+          "options": [
+            { "text": "زيادة الجهد المطلوب", "correct": false },
+            { "text": "تقليل الجهد المطلوب أو تغيير اتجاهه", "correct": true },
+            { "text": "منع الحركة", "correct": false },
+            { "text": "زيادة الاحتكاك", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p3_37",
+      "type": "short",
+      "category": "العجلة والمحور",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الرابع",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 108",
+      "subItems": [
+        { "text": "اذكر ثلاثة أمثلة على العجلة والمحور في الحياة اليومية.", "answer": "عجلة القيادة في السيارة، مقبض الباب، مفتاح البراغي، عجلة الدراجة، الصنبور (الحنفية)." }
+      ]
+    },
+    {
+      "id": "sci6_p3_38",
+      "type": "truefalse",
+      "category": "العجلة والمحور",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الرابع",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 108",
+      "subItems": [
+        { "text": "كلما زاد نصف قطر العجلة قل الجهد المطلوب.", "correctBool": true },
+        { "text": "العجلة والمحور نوع من الآلات المركبة.", "correctBool": false }
+      ]
+    },
+    {
+      "id": "sci6_p3_39",
+      "type": "essay",
+      "category": "الآلات البسيطة",
+      "difficulty": "hard",
+      "points": 4,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الخامس",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 85-108",
+      "subItems": [
+        { "text": "قارن بين السطح المائل والرافعة والبكرة من حيث الفائدة الميكانيكية.", "answer": "السطح المائل: يقلل الجهد عند رفع الأجسام (كلما زاد طوله قل الجهد). الرافعة: تساعد في رفع الأثقال بقوة أقل اعتماداً على نقطة الارتكاز. البكرة: الثابتة تغير اتجاه القوة، والمتحركة تقلل الجهد، والمركبة تجمع بين الميزتين." }
+      ]
+    },
+    {
+      "id": "sci6_p3_40",
+      "type": "mcq",
+      "category": "أجدادي العظماء",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الخامس",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 113",
+      "subItems": [
+        {
+          "text": "من هو العالم العربي المسلم المعروف بأنه رائد في علم البصريات؟",
+          "options": [
+            { "text": "ابن سينا", "correct": false },
+            { "text": "الحسن بن الهيثم", "correct": true },
+            { "text": "الخوارزمي", "correct": false },
+            { "text": "الجزري", "correct": false }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{
+  "meta": {
+    "version": "1.0",
+    "title": "بنك أسئلة العلوم - الصف السادس - الجزء الرابع (متقدم)",
+    "author": "مستخرج من كتاب العلوم",
+    "updatedAt": "2026-11-16",
+    "school": "وزارة التربية",
+    "subject": "العلوم",
+    "grade": "الصف السادس",
+    "semester": "الفصل الأول"
+  },
+  "questions": [
+    {
+      "id": "sci6_p4_01",
+      "type": "mcq",
+      "category": "البحث العلمي",
+      "difficulty": "hard",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 5 - تحليل",
+      "subItems": [
+        {
+          "text": "عند إجراء بحث علمي عن أثر درجة الحرارة على ذوبان السكر، ما هو المتغير المستقل؟",
+          "options": [
+            { "text": "كمية السكر المذابة", "correct": false },
+            { "text": "درجة حرارة الماء", "correct": true },
+            { "text": "حجم الماء", "correct": false },
+            { "text": "نوع السكر", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_02",
+      "type": "mcq",
+      "category": "البحث العلمي",
+      "difficulty": "hard",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 5 - تحليل",
+      "subItems": [
+        {
+          "text": "في البحث السابق نفسه، ما هو المتغير التابع؟",
+          "options": [
+            { "text": "درجة حرارة الماء", "correct": false },
+            { "text": "كمية السكر المذابة", "correct": true },
+            { "text": "نوع الوعاء", "correct": false },
+            { "text": "لون السكر", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_03",
+      "type": "fill",
+      "category": "البحث العلمي",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "أكمل الفراغات التالية:",
+      "notes": "صفحة 5-6",
+      "subItems": [
+        { "text": "الشيء الذي أبقيه في التجربة بلا تغيير يُسمى ____________.", "answer": "المتغيرات المتحكم بها (التحكم)" },
+        { "text": "الشيء الذي أقيسه في التجربة يُسمى ____________.", "answer": "المتغير التابع" }
+      ]
+    },
+    {
+      "id": "sci6_p4_04",
+      "type": "fill",
+      "category": "البحث العلمي",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "أكمل الفراغات التالية:",
+      "notes": "صفحة 6",
+      "subItems": [
+        { "text": "أفضل طريقة لتسجيل النتائج هي تصميم ____________ يساعد في ترتيب النتائج.", "answer": "جدول" },
+        { "text": "يمكنني استخدام نتائجي لأضعها في ____________ يساعدني في رؤية النتائج.", "answer": "مخطط (رسم بياني)" }
+      ]
+    },
+    {
+      "id": "sci6_p4_05",
+      "type": "mcq",
+      "category": "البحث العلمي",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 5",
+      "subItems": [
+        {
+          "text": "ما الفرق بين التوقع والتنبؤ؟",
+          "options": [
+            { "text": "لا فرق بينهما", "correct": false },
+            { "text": "التوقع يشمل ذكر السبب، بينما التنبؤ لا يشمل السبب", "correct": true },
+            { "text": "التوقع يخص الطقس فقط", "correct": false },
+            { "text": "التنبؤ يشمل ذكر السبب فقط", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_06",
+      "type": "passage",
+      "category": "البحث العلمي",
+      "difficulty": "hard",
+      "points": 5,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "اقرأ النص التالي ثم أجب عن الأسئلة:",
+      "notes": "نص علمي - البحث العلمي",
+      "passageText": "يُحاول العلماء اكتشاف العالم من حولهم عبر استخدام البحث العلمي. يبدأ البحث العلمي بطرح الأسئلة، ثم التوقع، ثم التخطيط لإجراء البحث، فإجراء البحث، ثم تسجيل النتائج، وأخيراً تقييم النتائج. في كل تجربة علمية، هناك متغيرات متحكم بها تبقى ثابتة، ومتغير مستقل يتم تغييره، ومتغير تابع يتم قياسه. تساعد الجداول والمخططات في تنظيم النتائج وإيصال الفكرة للآخرين.",
+      "passageFormat": "text",
+      "subQuestions": [
+        {
+          "type": "mcq",
+          "text": "بماذا يبدأ البحث العلمي؟",
+          "points": 1,
+          "options": [
+            { "text": "بطرح الأسئلة", "correct": true },
+            { "text": "بتسجيل النتائج", "correct": false },
+            { "text": "بالتخطيط", "correct": false },
+            { "text": "بتقييم النتائج", "correct": false }
+          ]
+        },
+        {
+          "type": "truefalse",
+          "text": "المتغيرات المتحكم بها هي التي تتغير خلال التجربة.",
+          "points": 1,
+          "correctBool": false
+        },
+        {
+          "type": "short",
+          "text": "اذكر فائدتين للجداول والمخططات في البحث العلمي.",
+          "points": 2,
+          "answer": "تنظيم النتائج، إيصال الفكرة للآخرين، رؤية الرسومات بوضوح، تسهيل المقارنة بين النتائج."
+        },
+        {
+          "type": "mcq",
+          "text": "أي من التالي ليس من خطوات البحث العلمي المذكورة في النص؟",
+          "points": 1,
+          "options": [
+            { "text": "طرح الأسئلة", "correct": false },
+            { "text": "قراءة القصص", "correct": true },
+            { "text": "التوقع", "correct": false },
+            { "text": "تقييم النتائج", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_07",
+      "type": "mcq",
+      "category": "العلاقات بين الأحياء",
+      "difficulty": "hard",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 9 - تحليل",
+      "subItems": [
+        {
+          "text": "ما الفرق الأساسي بين الافتراس والتطفل؟",
+          "options": [
+            { "text": "لا فرق بينهما", "correct": false },
+            { "text": "المفترس يقتل فريسته عادةً، بينما المتطفل يعيش على حساب المضيف دون قتله فوراً", "correct": true },
+            { "text": "التطفل يحدث بين النباتات فقط", "correct": false },
+            { "text": "الافتراس علاقة تكافلية", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_08",
+      "type": "mcq",
+      "category": "العلاقات بين الأحياء",
+      "difficulty": "hard",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 9 - تحليل",
+      "subItems": [
+        {
+          "text": "كيف تدافع الفرائس عن نفسها من المفترسات؟",
+          "options": [
+            { "text": "بالتخفي والتمويه", "correct": true },
+            { "text": "بالاعتماد على الحيوانات الأخرى", "correct": false },
+            { "text": "بالبقاء ساكنة تماماً", "correct": false },
+            { "text": "لا تمتلك أي وسيلة دفاع", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_09",
+      "type": "fill",
+      "category": "العلاقات بين الأحياء",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "أكمل الفراغات التالية:",
+      "notes": "صفحة 8-9",
+      "subItems": [
+        { "text": "الافتراس علاقة غذائية بين كائنين يُسمى الأول ____________ والثاني ____________.", "answer": "مفترساً - فريسة" },
+        { "text": "نبات الجرة من النباتات ____________ التي تتغذى على الحشرات والديدان.", "answer": "المفترسة" }
+      ]
+    },
+    {
+      "id": "sci6_p4_10",
+      "type": "match",
+      "category": "العلاقات بين الأحياء",
+      "difficulty": "hard",
+      "points": 3,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "صل بين الكائن وعلاقته بالكائن الآخر:",
+      "notes": "صفحة 9",
+      "subItems": [
+        {
+          "text": "العلاقات الغذائية:",
+          "pairs": [
+            { "left": "القرش", "right": "مفترس" },
+            { "left": "السمكة", "right": "فريسة" },
+            { "left": "نبات الجرة", "right": "نبات مفترس" },
+            { "left": "البعوض", "right": "متطفل" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_11",
+      "type": "mcq",
+      "category": "السلسلة الغذائية",
+      "difficulty": "hard",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الثاني",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 15 - تحليل",
+      "subItems": [
+        {
+          "text": "ماذا يحدث إذا اختفى المنتج (النبات الأخضر) من السلسلة الغذائية؟",
+          "options": [
+            { "text": "لا شيء يحدث", "correct": false },
+            { "text": "تختل السلسلة الغذائية بأكملها", "correct": true },
+            { "text": "تزداد أعداد الحيوانات", "correct": false },
+            { "text": "يزداد عدد المفترسات", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_12",
+      "type": "fill",
+      "category": "السلسلة الغذائية",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الثاني",
+      "instruction": "أكمل الفراغات التالية:",
+      "notes": "صفحة 15",
+      "subItems": [
+        { "text": "تنتقل ____________ من كائن حي إلى آخر عبر السلسلة الغذائية.", "answer": "الطاقة" },
+        { "text": "تداخل عدة سلاسل غذائية معاً يُسمى ____________ الغذائية.", "answer": "الشبكة" }
+      ]
+    },
+    {
+      "id": "sci6_p4_13",
+      "type": "passage",
+      "category": "السلسلة الغذائية",
+      "difficulty": "hard",
+      "points": 6,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الثاني",
+      "instruction": "اقرأ النص التالي ثم أجب عن الأسئلة:",
+      "notes": "نص علمي - السلسلة الغذائية",
+      "passageText": "السلسلة الغذائية هي تسلسل يبين انتقال الطاقة من كائن حي إلى كائن حي آخر. تبدأ السلسلة الغذائية دائماً بالمنتجات (النباتات الخضراء) التي تصنع غذاءها بنفسها مستخدمة طاقة الشمس. ثم تأتي الكائنات المستهلكة (آكلات العشب) التي تتغذى على النباتات، ثم آكلات اللحوم التي تتغذى على آكلات العشب. عند تداخل عدة سلاسل غذائية معاً تتشكل الشبكة الغذائية التي تعكس تعقيد العلاقات في النظام البيئي.",
+      "passageFormat": "text",
+      "subQuestions": [
+        {
+          "type": "mcq",
+          "text": "بماذا تبدأ السلسلة الغذائية؟",
+          "points": 1,
+          "options": [
+            { "text": "بآكلات اللحوم", "correct": false },
+            { "text": "بالمنتجات (النباتات الخضراء)", "correct": true },
+            { "text": "بالمحللات", "correct": false },
+            { "text": "بآكلات العشب", "correct": false }
+          ]
+        },
+        {
+          "type": "truefalse",
+          "text": "السلسلة الغذائية تبين انتقال الطاقة من كائن إلى آخر.",
+          "points": 1,
+          "correctBool": true
+        },
+        {
+          "type": "short",
+          "text": "ما مصدر الطاقة الأولي في السلسلة الغذائية؟",
+          "points": 1,
+          "answer": "الشمس"
+        },
+        {
+          "type": "mcq",
+          "text": "ماذا يحدث عند تداخل عدة سلاسل غذائية؟",
+          "points": 1,
+          "options": [
+            { "text": "تتشكل الشبكة الغذائية", "correct": true },
+            { "text": "تختفي جميع الكائنات", "correct": false },
+            { "text": "تتشكل السلسلة الغذائية فقط", "correct": false },
+            { "text": "لا يحدث شيء", "correct": false }
+          ]
+        },
+        {
+          "type": "order",
+          "text": "رتب السلسلة الغذائية التالية:",
+          "points": 2,
+          "sequence": [
+            "النبات الأخضر",
+            "الجراد",
+            "الضفدع",
+            "الأفعى"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_14",
+      "type": "mcq",
+      "category": "النظام البيئي",
+      "difficulty": "hard",
+      "points": 1,
+      "unit": "الوحدة الثانية",
+      "lesson": "الدرس الثاني",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 20 - تحليل",
+      "subItems": [
+        {
+          "text": "ما أهمية المكونات غير الحية (الماء، الهواء، التربة) للنظام البيئي؟",
+          "options": [
+            { "text": "لا أهمية لها", "correct": false },
+            { "text": "ضرورية لحياة الكائنات الحية", "correct": true },
+            { "text": "تضر الكائنات الحية", "correct": false },
+            { "text": "تستخدم للزينة فقط", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_15",
+      "type": "fill",
+      "category": "النظام البيئي",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الثانية",
+      "lesson": "الدرس الثاني",
+      "instruction": "أكمل الفراغات التالية:",
+      "notes": "صفحة 20",
+      "subItems": [
+        { "text": "النظام البيئي يتكون من مكونات ____________ ومكونات ____________.", "answer": "حية - غير حية" },
+        { "text": "من أمثلة المكونات غير الحية: ____________ و____________.", "answer": "الماء - الهواء (أو التربة، ضوء الشمس)" }
+      ]
+    },
+    {
+      "id": "sci6_p4_16",
+      "type": "mcq",
+      "category": "تأثير الإنسان في النظام البيئي",
+      "difficulty": "hard",
+      "points": 1,
+      "unit": "الوحدة الثانية",
+      "lesson": "الدرس الثالث",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 23 - تحليل",
+      "subItems": [
+        {
+          "text": "ما النتيجة المتوقعة لاستمرار قطع الغابات؟",
+          "options": [
+            { "text": "زيادة الأكسجين", "correct": false },
+            { "text": "انخفاض نسبة الأكسجين وزيادة ثاني أكسيد الكربون", "correct": true },
+            { "text": "زيادة الأمطار", "correct": false },
+            { "text": "زيادة أعداد الحيوانات", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_17",
+      "type": "passage",
+      "category": "تأثير الإنسان في النظام البيئي",
+      "difficulty": "hard",
+      "points": 5,
+      "unit": "الوحدة الثانية",
+      "lesson": "الدرس الثالث",
+      "instruction": "اقرأ النص التالي ثم أجب عن الأسئلة:",
+      "notes": "نص علمي - تأثير الإنسان",
+      "passageText": "يؤثر الإنسان في النظام البيئي سلبياً وإيجابياً. من الآثار السلبية: قطع الأشجار، تلويث المياه والهواء، الصيد الجائر للحيوانات، ورمي النفايات في الأنهار والبحار. أما الآثار الإيجابية فتشمل: زراعة الأشجار، إنشاء المحميات الطبيعية، إعادة تدوير النفايات، وترشيد استهلاك الموارد الطبيعية. يمكن لكل فرد أن يسهم في حماية البيئة بأفعال بسيطة يومية.",
+      "passageFormat": "text",
+      "subQuestions": [
+        {
+          "type": "mcq",
+          "text": "أي مما يلي من الآثار السلبية للإنسان على البيئة؟",
+          "points": 1,
+          "options": [
+            { "text": "زراعة الأشجار", "correct": false },
+            { "text": "الصيد الجائر", "correct": true },
+            { "text": "إنشاء المحميات", "correct": false },
+            { "text": "إعادة التدوير", "correct": false }
+          ]
+        },
+        {
+          "type": "truefalse",
+          "text": "إعادة تدوير النفايات من الآثار الإيجابية للإنسان على البيئة.",
+          "points": 1,
+          "correctBool": true
+        },
+        {
+          "type": "short",
+          "text": "اذكر أثرين إيجابيين للإنسان في البيئة.",
+          "points": 2,
+          "answer": "زراعة الأشجار، إنشاء المحميات الطبيعية، إعادة تدوير النفايات، ترشيد استهلاك الموارد."
+        },
+        {
+          "type": "mcq",
+          "text": "ما الفكرة الرئيسية للنص؟",
+          "points": 1,
+          "options": [
+            { "text": "الإنسان لا يؤثر في البيئة", "correct": false },
+            { "text": "تأثير الإنسان في البيئة سلبي وإيجابي", "correct": true },
+            { "text": "البيئة لا تتأثر بالإنسان", "correct": false },
+            { "text": "الحيوانات فقط تؤثر في البيئة", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_18",
+      "type": "fill",
+      "category": "القوى في الطبيعة",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الثالثة",
+      "lesson": "الدرس الأول",
+      "instruction": "أكمل الفراغات التالية:",
+      "notes": "صفحة 30",
+      "subItems": [
+        { "text": "القوة التي تعيق حركة الأجسام تُسمى قوة ____________.", "answer": "الاحتكاك" },
+        { "text": "القوة التي تجذب الأجسام نحو الأرض تُسمى قوة ____________.", "answer": "الجاذبية" }
+      ]
+    },
+    {
+      "id": "sci6_p4_19",
+      "type": "mcq",
+      "category": "القوى في الطبيعة",
+      "difficulty": "hard",
+      "points": 1,
+      "unit": "الوحدة الثالثة",
+      "lesson": "الدرس الثاني",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 40 - تحليل",
+      "subItems": [
+        {
+          "text": "لماذا يصعب المشي على أرضية مبللة بالماء والصابون؟",
+          "options": [
+            { "text": "لأن قوة الجذب تزداد", "correct": false },
+            { "text": "لأن قوة الاحتكاك تقل", "correct": true },
+            { "text": "لأن الجاذبية تختفي", "correct": false },
+            { "text": "لأن الوزن يزداد", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_20",
+      "type": "match",
+      "category": "القوى في الطبيعة",
+      "difficulty": "medium",
+      "points": 3,
+      "unit": "الوحدة الثالثة",
+      "lesson": "الدرس الثاني",
+      "instruction": "صل بين القوة وتأثيرها:",
+      "notes": "صفحة 30-40",
+      "subItems": [
+        {
+          "text": "أنواع القوى:",
+          "pairs": [
+            { "left": "الجاذبية", "right": "تجذب الأجسام نحو الأرض" },
+            { "left": "الاحتكاك", "right": "تعيق الحركة بين الأسطح" },
+            { "left": "المغناطيسية", "right": "تجذب الحديد والنيكل" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_21",
+      "type": "truefalse",
+      "category": "القوى في الطبيعة",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الثالثة",
+      "lesson": "الدرس الثاني",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 40",
+      "subItems": [
+        { "text": "قوة الاحتكاك تفيد في بعض الحالات وتضر في حالات أخرى.", "correctBool": true },
+        { "text": "استخدام الزيوت يزيد من قوة الاحتكاك.", "correctBool": false }
+      ]
+    },
+    {
+      "id": "sci6_p4_22",
+      "type": "mcq",
+      "category": "الإطراح",
+      "difficulty": "hard",
+      "points": 1,
+      "unit": "الوحدة الرابعة",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 56 - تحليل",
+      "subItems": [
+        {
+          "text": "لماذا يحتاج جسم الإنسان إلى التخلص من الفضلات؟",
+          "options": [
+            { "text": "لتوفير المساحة في الجسم", "correct": false },
+            { "text": "لأن تراكم الفضلات يضر بصحة الجسم", "correct": true },
+            { "text": "لتقليل وزن الجسم فقط", "correct": false },
+            { "text": "لأنها لا تفيد شيئاً", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_23",
+      "type": "passage",
+      "category": "الإطراح",
+      "difficulty": "hard",
+      "points": 6,
+      "unit": "الوحدة الرابعة",
+      "lesson": "الدرس الأول",
+      "instruction": "اقرأ النص التالي ثم أجب عن الأسئلة:",
+      "notes": "نص علمي - جهاز البول",
+      "passageText": "يتكون جهاز البول في الإنسان من: الكليتين، والحالبين، والمثانة، والإحليل. تقوم الكلية بتصفية الدم من الفضلات والسموم، فيتكون البول الذي يمر عبر الحالب إلى المثانة التي تخزنه، ثم يخرج عبر الإحليل. للحفاظ على صحة جهاز البول يجب شرب كميات كافية من الماء، وعدم كتم البول، والحفاظ على النظافة الشخصية.",
+      "passageFormat": "text",
+      "subQuestions": [
+        {
+          "type": "mcq",
+          "text": "ما العضو الذي يصفّي الدم من الفضلات؟",
+          "points": 1,
+          "options": [
+            { "text": "المثانة", "correct": false },
+            { "text": "الكلية", "correct": true },
+            { "text": "الحالب", "correct": false },
+            { "text": "الإحليل", "correct": false }
+          ]
+        },
+        {
+          "type": "truefalse",
+          "text": "المثانة تخزن البول مؤقتاً.",
+          "points": 1,
+          "correctBool": true
+        },
+        {
+          "type": "short",
+          "text": "اذكر ثلاث عادات صحية للحفاظ على جهاز البول.",
+          "points": 3,
+          "answer": "شرب كمية كافية من الماء، عدم كتم البول، الحفاظ على النظافة الشخصية."
+        },
+        {
+          "type": "order",
+          "text": "رتب مرور البول في الجهاز:",
+          "points": 1,
+          "sequence": [
+            "الكلية",
+            "الحالب",
+            "المثانة",
+            "الإحليل"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_24",
+      "type": "fill",
+      "category": "الإطراح",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الرابعة",
+      "lesson": "الدرس الأول",
+      "instruction": "أكمل الفراغات التالية:",
+      "notes": "صفحة 56",
+      "subItems": [
+        { "text": "يقوم جهاز البول بتصفية ____________ من الفضلات.", "answer": "الدم" },
+        { "text": "العضو الذي يخزن البول قبل خروجه هو ____________.", "answer": "المثانة" }
+      ]
+    },
+    {
+      "id": "sci6_p4_25",
+      "type": "mcq",
+      "category": "ردائي الواقي",
+      "difficulty": "hard",
+      "points": 1,
+      "unit": "الوحدة الخامسة",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 70 - تحليل",
+      "subItems": [
+        {
+          "text": "ما أهمية الجلد في تنظيم حرارة الجسم؟",
+          "options": [
+            { "text": "لا علاقة له بحرارة الجسم", "correct": false },
+            { "text": "يساعد في التعرق لتبريد الجسم", "correct": true },
+            { "text": "يزيد حرارة الجسم فقط", "correct": false },
+            { "text": "يمنع التعرق تماماً", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_26",
+      "type": "fill",
+      "category": "ردائي الواقي",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة الخامسة",
+      "lesson": "الدرس الثاني",
+      "instruction": "أكمل الفراغات التالية:",
+      "notes": "صفحة 70-76",
+      "subItems": [
+        { "text": "الجلد يحمي الجسم من ____________ و____________.", "answer": "الجراثيم - العوامل الخارجية" },
+        { "text": "للحفاظ على صحة الجلد يجب ____________ بانتظام.", "answer": "الاستحمام" }
+      ]
+    },
+    {
+      "id": "sci6_p4_27",
+      "type": "mcq",
+      "category": "السطح المائل",
+      "difficulty": "hard",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 85 - تحليل",
+      "subItems": [
+        {
+          "text": "لماذا يكون الطريق الجبلي المتعرج أسهل من الطريق المستقيم؟",
+          "options": [
+            { "text": "لأنه أقصر", "correct": false },
+            { "text": "لأنه سطح مائل أطول يقلل الجهد", "correct": true },
+            { "text": "لأنه أجمل منظراً", "correct": false },
+            { "text": "لأنه يحتوي على سياج", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_28",
+      "type": "mcq",
+      "category": "الرافعة",
+      "difficulty": "hard",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الثاني",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 93 - تحليل",
+      "subItems": [
+        {
+          "text": "أي من الأدوات التالية يُعدّ رافعة؟",
+          "options": [
+            { "text": "المقص", "correct": true },
+            { "text": "المنحدر", "correct": false },
+            { "text": "البكرة", "correct": false },
+            { "text": "البرغي", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_29",
+      "type": "fill",
+      "category": "الآلات البسيطة",
+      "difficulty": "medium",
+      "points": 3,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الخامس",
+      "instruction": "أكمل الفراغات التالية:",
+      "notes": "صفحة 85-108",
+      "subItems": [
+        { "text": "السطح المائل يقلل ____________ المطلوب لرفع الأجسام.", "answer": "الجهد" },
+        { "text": "الرافعة تتكون من ____________ ونقطة ارتكاز.", "answer": "قضيب" },
+        { "text": "البكرة الثابتة تغير ____________ القوة.", "answer": "اتجاه" }
+      ]
+    },
+    {
+      "id": "sci6_p4_30",
+      "type": "match",
+      "category": "الآلات البسيطة",
+      "difficulty": "hard",
+      "points": 4,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الخامس",
+      "instruction": "صل بين الآلة البسيطة ومثالها:",
+      "notes": "صفحة 85-108",
+      "subItems": [
+        {
+          "text": "الآلات البسيطة وأمثلتها:",
+          "pairs": [
+            { "left": "السطح المائل", "right": "المنحدر" },
+            { "left": "الرافعة", "right": "المقص" },
+            { "left": "البكرة", "right": "آلة رفع الأثقال" },
+            { "left": "العجلة والمحور", "right": "مقبض الباب" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_31",
+      "type": "truefalse",
+      "category": "الآلات البسيطة",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الخامس",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 85-108",
+      "subItems": [
+        { "text": "الآلات البسيطة تسهل العمل لكنها لا تلغيه.", "correctBool": true },
+        { "text": "الرافعة والبكرة والسطح المائل من الآلات البسيطة.", "correctBool": true },
+        { "text": "الآلات البسيطة تزيد الجهد دائماً.", "correctBool": false }
+      ]
+    },
+    {
+      "id": "sci6_p4_32",
+      "type": "passage",
+      "category": "الآلات البسيطة",
+      "difficulty": "hard",
+      "points": 5,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الخامس",
+      "instruction": "اقرأ النص التالي ثم أجب عن الأسئلة:",
+      "notes": "نص علمي - الآلات البسيطة",
+      "passageText": "الآلات البسيطة أدوات تسهل العمل وتقلل الجهد المبذول. من أهمها: السطح المائل الذي يقلل الجهد عند رفع الأجسام (وكلما زاد طوله قل الجهد)، والرافعة التي تتكون من قضيب يدور حول نقطة ارتكاز وتساعد في رفع الأثقال، والبكرة التي تتكون من عجلة يمر فيها حبل (فالثابتة تغير اتجاه القوة، والمتحركة تقلل الجهد)، والعجلة والمحور التي تستخدم في عجلة القيادة ومقبض الباب.",
+      "passageFormat": "text",
+      "subQuestions": [
+        {
+          "type": "mcq",
+          "text": "أي مما يلي يُعدّ من الآلات البسيطة؟",
+          "points": 1,
+          "options": [
+            { "text": "الحاسوب", "correct": false },
+            { "text": "الرافعة", "correct": true },
+            { "text": "التلفاز", "correct": false },
+            { "text": "السيارة", "correct": false }
+          ]
+        },
+        {
+          "type": "truefalse",
+          "text": "كلما زاد طول السطح المائل قل الجهد المطلوب.",
+          "points": 1,
+          "correctBool": true
+        },
+        {
+          "type": "short",
+          "text": "ما الفرق بين البكرة الثابتة والبكرة المتحركة؟",
+          "points": 2,
+          "answer": "البكرة الثابتة تغير اتجاه القوة فقط، أما البكرة المتحركة فتقليل الجهد المطلوب."
+        },
+        {
+          "type": "mcq",
+          "text": "أي من التالي ليس من الآلات البسيطة المذكورة في النص؟",
+          "points": 1,
+          "options": [
+            { "text": "السطح المائل", "correct": false },
+            { "text": "الرافعة", "correct": false },
+            { "text": "المحرك الكهربائي", "correct": true },
+            { "text": "البكرة", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_33",
+      "type": "mcq",
+      "category": "البحث العلمي",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 4 - مراجعة",
+      "subItems": [
+        {
+          "text": "أي العبارات التالية تُعدّ سؤالاً علمياً جيداً؟",
+          "options": [
+            { "text": "هل الطقس جميل اليوم؟", "correct": false },
+            { "text": "ما المشروبات التي تحتوي على أعلى نسبة من السكر؟", "correct": true },
+            { "text": "هل تحب الشوكولاتة؟", "correct": false },
+            { "text": "ما أجمل لون؟", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_34",
+      "type": "mcq",
+      "category": "العلاقات بين الأحياء",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 8",
+      "subItems": [
+        {
+          "text": "لماذا تقيم الكائنات الحية علاقات فيما بينها؟",
+          "options": [
+            { "text": "للعب فقط", "correct": false },
+            { "text": "للحصول على الغذاء والمأوى والحماية", "correct": true },
+            { "text": "للتسلية", "correct": false },
+            { "text": "لا تقيم علاقات", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_35",
+      "type": "short",
+      "category": "العلاقات بين الأحياء",
+      "difficulty": "hard",
+      "points": 3,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 8-9 - تحليل",
+      "subItems": [
+        { "text": "قارن بين الافتراس والتطفل من حيث: الكائن المستفيد، الكائن المتضرر، ومصير الكائن المتضرر.", "answer": "الافتراس: المستفيد هو المفترس، المتضرر هو الفريسة التي تُقتل عادة. التطفل: المستفيد هو المتطفل، المتضرر هو المضيف الذي يعيش على حسابه دون قتله فوراً." }
+      ]
+    },
+    {
+      "id": "sci6_p4_36",
+      "type": "truefalse",
+      "category": "السلسلة الغذائية",
+      "difficulty": "hard",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الثاني",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 15",
+      "subItems": [
+        { "text": "الطاقة تنتقل في السلسلة الغذائية في اتجاه واحد.", "correctBool": true },
+        { "text": "الشبكة الغذائية أقل تعقيداً من السلسلة الغذائية.", "correctBool": false },
+        { "text": "المنتجات هي الأساس في أي سلسلة غذائية.", "correctBool": true }
+      ]
+    },
+    {
+      "id": "sci6_p4_37",
+      "type": "mcq",
+      "category": "النظام البيئي",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الثانية",
+      "lesson": "الدرس الثاني",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 20",
+      "subItems": [
+        {
+          "text": "أي مما يلي يُعدّ نظاماً بيئياً؟",
+          "options": [
+            { "text": "بركة ماء مع نباتاتها وأسماكها", "correct": true },
+            { "text": "سيارة واقفة في المرآب", "correct": false },
+            { "text": "كتاب على الرف", "correct": false },
+            { "text": "حاسوب في المكتب", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_38",
+      "type": "short",
+      "category": "القوى في الطبيعة",
+      "difficulty": "hard",
+      "points": 3,
+      "unit": "الوحدة الثالثة",
+      "lesson": "الدرس الثاني",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 40 - تحليل",
+      "subItems": [
+        { "text": "اذكر مثالين على فوائد قوة الاحتكاك ومثالين على أضرارها.", "answer": "الفوائد: المشي على الأرض، توقف السيارة بالفرامل، الكتابة بالقلم. الأضرار: تآكل أجزاء الآلات، صعوبة تحريك الأثقال، توليد الحرارة في المحركات." }
+      ]
+    },
+    {
+      "id": "sci6_p4_39",
+      "type": "essay",
+      "category": "العلوم العامة",
+      "difficulty": "hard",
+      "points": 5,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "مراجعة شاملة",
+      "subItems": [
+        { "text": "اشرح بأسلوبك كيف يمكن للبحث العلمي أن يساعد في حل مشكلة بيئية مثل تلوث المياه.", "answer": "يمكن للبحث العلمي أن يساعد في حل مشكلة تلوث المياه عبر: ١- طرح أسئلة مثل: ما مصادر تلوث المياه؟ ٢- التوقع مع ذكر السبب. ٣- التخطيط لإجراء بحث يشمل جمع عينات من المياه في مناطق مختلفة. ٤- إجراء البحث وتحليل العينات. ٥- تسجيل النتائج في جداول ومخططات. ٦- تقييم النتائج واقتراح حلول مناسبة مثل معالجة مياه الصرف الصحي." }
+      ]
+    },
+    {
+      "id": "sci6_p4_40",
+      "type": "mcq",
+      "category": "العلوم العامة",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "مراجعة شاملة",
+      "subItems": [
+        {
+          "text": "أي من الشخصيات التالية اشتهر في علم البصريات؟",
+          "options": [
+            { "text": "الخوارزمي", "correct": false },
+            { "text": "الحسن بن الهيثم", "correct": true },
+            { "text": "ابن سينا", "correct": false },
+            { "text": "الجزري", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_41",
+      "type": "mcq",
+      "category": "العلوم العامة",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "مراجعة شاملة",
+      "subItems": [
+        {
+          "text": "ما أهمية الشمس في النظام البيئي؟",
+          "options": [
+            { "text": "لا أهمية لها", "correct": false },
+            { "text": "مصدر الطاقة الأولي للحياة", "correct": true },
+            { "text": "تضر النباتات", "correct": false },
+            { "text": "تقتل الحيوانات", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_42",
+      "type": "fill",
+      "category": "العلوم العامة",
+      "difficulty": "medium",
+      "points": 3,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "أكمل الفراغات التالية:",
+      "notes": "مراجعة شاملة",
+      "subItems": [
+        { "text": "العلاقة التي يستفيد منها كلا الكائنين تُسمى ____________.", "answer": "التقابض (التكافل)" },
+        { "text": "الكائن الذي يصنع غذاءه بنفسه يُسمى ____________.", "answer": "المنتج" },
+        { "text": "تداخل عدة سلاسل غذائية يُسمى ____________.", "answer": "الشبكة الغذائية" }
+      ]
+    },
+    {
+      "id": "sci6_p4_43",
+      "type": "mcq",
+      "category": "الإطراح",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الرابعة",
+      "lesson": "الدرس الثالث",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 67",
+      "subItems": [
+        {
+          "text": "أي مما يلي ليس من الفقاريات؟",
+          "options": [
+            { "text": "الضفدع", "correct": false },
+            { "text": "التمساح", "correct": false },
+            { "text": "الديدان", "correct": true },
+            { "text": "الحمامة", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_44",
+      "type": "truefalse",
+      "category": "الإطراح",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الرابعة",
+      "lesson": "الدرس الثالث",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "صفحة 67",
+      "subItems": [
+        { "text": "الأسماك من الفقاريات.", "correctBool": true },
+        { "text": "جميع الفقاريات لها نفس أسلوب الإطراح.", "correctBool": false }
+      ]
+    },
+    {
+      "id": "sci6_p4_45",
+      "type": "mcq",
+      "category": "البحث العلمي",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 6",
+      "subItems": [
+        {
+          "text": "عند تقييم نتائج البحث، أي سؤال من التالي يجب أن نطرحه؟",
+          "options": [
+            { "text": "هل كان توقعي صحيحاً؟", "correct": true },
+            { "text": "ما أجمل نتيجة؟", "correct": false },
+            { "text": "هل أحببت البحث؟", "correct": false },
+            { "text": "هل البحث طويل؟", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_46",
+      "type": "mcq",
+      "category": "الآلات البسيطة",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الخامس",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "صفحة 85-108",
+      "subItems": [
+        {
+          "text": "أي مما يلي يستخدم مبدأ البكرة؟",
+          "options": [
+            { "text": "المنحدر", "correct": false },
+            { "text": "آلة رفع الأثقال", "correct": true },
+            { "text": "المقص", "correct": false },
+            { "text": "البرغي", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sci6_p4_47",
+      "type": "short",
+      "category": "الآلات البسيطة",
+      "difficulty": "medium",
+      "points": 2,
+      "unit": "الوحدة السادسة",
+      "lesson": "الدرس الخامس",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "صفحة 85-108",
+      "subItems": [
+        { "text": "اذكر أربعة أنواع من الآلات البسيطة.", "answer": "السطح المائل، الرافعة، البكرة، العجلة والمحور." }
+      ]
+    },
+    {
+      "id": "sci6_p4_48",
+      "type": "truefalse",
+      "category": "العلوم العامة",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "ضع علامة (✓) أو (✗) أمام العبارات التالية:",
+      "notes": "مراجعة شاملة",
+      "subItems": [
+        { "text": "البحث العلمي ينتهي دائماً بإجابة نهائية.", "correctBool": false },
+        { "text": "البحث العلمي قد يؤدي إلى أبحاث أخرى جديدة.", "correctBool": true }
+      ]
+    },
+    {
+      "id": "sci6_p4_49",
+      "type": "essay",
+      "category": "العلوم العامة",
+      "difficulty": "hard",
+      "points": 4,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "أجب عن السؤال التالي:",
+      "notes": "مراجعة شاملة",
+      "subItems": [
+        { "text": "اشرح أهمية العلاقات بين الكائنات الحية في الحفاظ على توازن النظام البيئي.", "answer": "العلاقات بين الكائنات الحية مهمة لتوازن النظام البيئي، فتساعد في انتقال الطاقة عبر السلاسل الغذائية، وتنظيم أعداد الكائنات (الافتراس يمنع تكاثر نوع واحد بشكل مفرط)، وتوفير الغذاء والمأوى (التكافل)، وتحلل المواد العضوية (المحللات)، وبالتالي تحافظ على استمرارية الحياة وتوازن البيئة." }
+      ]
+    },
+    {
+      "id": "sci6_p4_50",
+      "type": "mcq",
+      "category": "العلوم العامة",
+      "difficulty": "medium",
+      "points": 1,
+      "unit": "الوحدة الأولى",
+      "lesson": "الدرس الأول",
+      "instruction": "اختر الإجابة الصحيحة:",
+      "notes": "مراجعة شاملة",
+      "subItems": [
+        {
+          "text": "أي مما يلي يُعدّ من واجباتنا تجاه البيئة؟",
+          "options": [
+            { "text": "قطع الأشجار بكثرة", "correct": false },
+            { "text": "حماية البيئة والحفاظ عليها", "correct": true },
+            { "text": "رمي النفايات في الأنهار", "correct": false },
+            { "text": "الصيد الجائر", "correct": false }
+          ]
         }
       ]
     }
